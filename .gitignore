@@ -1,5 +1,5 @@
 # Ignore Python cache
-__pycache__/
+__pycache__
 *.py[cod]
 *.pyo
 
@@ -56,3 +56,6 @@ scripts/setup_env.sh
 # Ignore IDE or editor specific files (VSCode)
 .vscode/
 .idea/
+
+
+.gitignore
