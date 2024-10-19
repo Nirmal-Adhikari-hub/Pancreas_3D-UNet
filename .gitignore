@@ -1,0 +1,58 @@
+# Ignore Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Ignore logs
+logs/
+*.log
+
+# Ignore tensorboard logs and checkpoints
+logs/checkpoints/
+logs/tensorboard/
+
+# Ignore virtual environments (if any)
+env/
+venv/
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore shell script backup files
+*.sh~
+
+# Ignore experiments results if auto-generated
+# experiments/
+
+# Ignore dataset-related directories (assuming these are raw/generated data, not code)
+# data/
+
+# Ignore model weights and checkpoints
+models/checkpoints/
+train/checkpoint.py
+
+# Ignore temporary files and compiled code
+*.tmp
+*.temp
+*.out
+*.o
+
+# Ignore image files (if not necessary for version control)
+*.png
+
+# Ignore setup and environment configuration scripts (if they change frequently or are user-specific)
+scripts/setup_env.sh
+
+# Ignore trials (if it's used for experimental or debugging code only)
+# trials/
+
+# Ignore sensitive files (example)
+*.env
+
+# Ignore Jupyter Notebook checkpoints (if you use Jupyter)
+.ipynb_checkpoints/
+
+# Ignore IDE or editor specific files (VSCode)
+.vscode/
+.idea/
