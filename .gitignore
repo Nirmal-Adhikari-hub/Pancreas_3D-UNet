@@ -58,4 +58,4 @@ scripts/setup_env.sh
 .idea/
 
 
-.gitignore
+*.gitignore
