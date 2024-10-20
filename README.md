@@ -28,37 +28,3 @@ transformation in this file according to your preferences.
 
 All the configurations and hyperparameters are set in the config.py file.
 Please note that you need to change the path to the dataset directory in the config.py file before running the model.
-
-**Parameters:**
-
-- DATASET_PATH -> the directory path to dataset .tar files
-
-- TASK_ID -> specifies the the segmentation task ID (see the dict below for hints)
-
-- IN_CHANNELS -> number of input channels
-
-- NUM_CLASSES -> specifies the number of output channels for dispirate classes
-
-- BACKGROUND_AS_CLASS -> if True, the model treats background as a class
-
-- TRAIN_VAL_TEST_SPLIT -> delineates the ratios in which the dataset shoud be splitted. The length of the array should be 3.
-
-- TRAINING_EPOCH -> number of training epochs
-
-- VAL_BATCH_SIZE -> specifies the batch size of the training DataLoader
-
-- TEST_BATCH_SIZE -> specifies the batch size of the test DataLoader
-
-- TRAIN_CUDA -> if True, moves the model and inference onto GPU
-
-- BCE_WEIGHTS -> the class weights for the Binary Cross Entropy loss
-
-## Training
-
-After configure config.py, you can start to train by running
-
-`python train.py`
-
-We also employ tensorboard to visualize the training process.
-
-`tensorboard --logdir=runs/`
