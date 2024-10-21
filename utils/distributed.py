@@ -1,32 +1,28 @@
 import math
 
-def get_patch_slices(volume_shape, depth, height, width, overlap):
+def get_patch_slices(volume_shape, depth, overlap):
     """
-    Get the slices for extracting overlapping patches from a 3D volume.
+    Get the slices for extracting overlapping patches along the depth axis from a 3D volume.
     :param volume_shape: Tuple (D, H, W) indicating the dimensions of the input volume.
     :param depth: Depth of each patch.
-    :param height: Height of each patch.
-    :param width: Width of each patch.
-    :param overlap: Overlap between patches.
+    :param overlap: Overlap between patches along the depth axis.
     :return: List of tuples, each containing slice objects for patch extraction.
     """
-    d, h, w = volume_shape
-
-    # Compute the step size (distance between patch starts)
-    step_d = depth - overlap
-    step_h = height - overlap
-    step_w = width - overlap
-
-    # Ensure we don't step beyond the volume boundaries
+    d, h, w = volume_shape  # We are only interested in the depth axis, so h and w are ignored for slicing.
+    # print(f"Volume Shape: {volume_shape}")
+    
+    step_d = depth - overlap  # Step size in depth direction
     patches_slices = []
-    for z in range(0, d - depth + 1, step_d):
-        for y in range(0, h - height + 1, step_h):
-            for x in range(0, w - width + 1, step_w):
-                patch_slice = (
-                    slice(z, z + depth),
-                    slice(y, y + height),
-                    slice(x, x + width)
-                )
-                patches_slices.append(patch_slice)
+
+    # Generate slices along the depth axis, adjusting for the final patch to always have depth = 32
+    for z in range(0, d, step_d):
+        end_z = min(z + depth, d)  # Ensure the depth doesn't exceed the volume
+        if end_z - z < depth:  # If we can't get a full 32-depth patch
+            z = d - depth  # Move the starting point to ensure the last patch has depth of 32
+            end_z = d  # Adjust the end to fit exactly to the end of the volume
+        patches_slices.append((slice(z, end_z), slice(0, h), slice(0, w)))
+        if end_z == d:  # Stop when we reach the end of the depth
+            break
 
     return patches_slices
+

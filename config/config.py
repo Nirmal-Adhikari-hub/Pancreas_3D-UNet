@@ -46,6 +46,7 @@ class Config:
         self.in_channels = 1  # Number of input channels (for grayscale)
         self.num_classes = 3  # Number of output classes (segmentation classes)
         self.input_size = (32, 512, 512)  # Fixed size input patches for the model
+        self.augmented_samples = 2 # If > 1 then augmnetation is done else original is fed
 
         # Model Architecture
         self.level_channels = [64, 128, 256, 512]  # Channel sizes for U-Net encoder layers
@@ -61,14 +62,15 @@ class Config:
         self.optimizer = os.getenv('OPTIMIZER', 'adam')  # Optimizer type
         
         # Data paths (fixed for your project)
-        self.dataset_json = os.getenv('DATASET_JSON', 'D:/Nirmal/pancreas/Task07_Pancreas/Task07_Pancreas/dataset.json')
-        self.dataset_path = os.getenv('DATASET_PATH', 'D:/Nirmal/pancreas/Task07_Pancreas/Task07_Pancreas')
-        self.checkpoint_dir = os.getenv('CKPT_DIR', 'D:/Nirmal/pancreas/3D-UNet/checkpoints')
-        self.log_dir = os.getenv('LOG_DIR', 'D:/Nirmal/pancreas/3D-UNet/logs')
+        self.dataset_json = os.getenv('DATASET_JSON', '/shared/home/xvoice/nirmal/data/Task07_Pancreas/dataset.json')
+        self.dataset_path = os.getenv('DATASET_PATH', '/shared/home/xvoice/nirmal/data/Task07_Pancreas')
+        self.checkpoint_dir = os.getenv('CKPT_DIR', '/shared/home/xvoice/nirmal/exp/3d-unet/checkpoints')
+        self.log_dir = os.getenv('LOG_DIR', '/shared/home/xvoice/nirmal/exp/3d-unet/log-common')
 
         # Distributed Training Settings
         self.world_size = self.get_world_size()  # Dynamically find world size
         self.local_rank = self.get_local_rank()  # Dynamically find local rank
+        
 
     def update(self, args):
         """ Update config dynamically using parsed arguments (if needed) """
