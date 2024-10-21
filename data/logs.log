@@ -2119,3 +2119,132 @@ train_loader, val_loader = get_dataloaders(config)  File "/shared/home/xvoice/an
 ValueErrorValueErrorValueError: : : Default process group has not been initialized, please make sure to call init_process_group.Default process group has not been initialized, please make sure to call init_process_group.Default process group has not been initialized, please make sure to call init_process_group.
 
 
+Using 3 GPUs on cudaUsing 3 GPUs on cuda
+
+DIST.IS_AVAILABLE(): True DIST.IS_INITIALIZED(): FalseDIST.IS_AVAILABLE(): True DIST.IS_INITIALIZED(): False
+
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/shared/home/xvoice/nirmal/project/Unet_seg/Pancreas_3D-UNet/data/dataloader.py", line 198, in <module>
+  File "/shared/home/xvoice/nirmal/project/Unet_seg/Pancreas_3D-UNet/data/dataloader.py", line 198, in <module>
+  File "/shared/home/xvoice/nirmal/project/Unet_seg/Pancreas_3D-UNet/data/dataloader.py", line 198, in <module>
+            train_loader, val_loader = get_dataloaders(config)train_loader, val_loader = get_dataloaders(config)train_loader, val_loader = get_dataloaders(config)
+
+
+                                                                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+  File "/shared/home/xvoice/nirmal/project/Unet_seg/Pancreas_3D-UNet/data/dataloader.py", line 158, in get_dataloaders
+  File "/shared/home/xvoice/nirmal/project/Unet_seg/Pancreas_3D-UNet/data/dataloader.py", line 158, in get_dataloaders
+  File "/shared/home/xvoice/nirmal/project/Unet_seg/Pancreas_3D-UNet/data/dataloader.py", line 158, in get_dataloaders
+            if torch.distributed.get_rank() == 0:  # Ensure only the main process logsif torch.distributed.get_rank() == 0:  # Ensure only the main process logsif torch.distributed.get_rank() == 0:  # Ensure only the main process logs
+
+
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+  File "/shared/home/xvoice/anaconda3/envs/transformer_mm/lib/python3.12/site-packages/torch/distributed/distributed_c10d.py", line 1809, in get_rank
+  File "/shared/home/xvoice/anaconda3/envs/transformer_mm/lib/python3.12/site-packages/torch/distributed/distributed_c10d.py", line 1809, in get_rank
+  File "/shared/home/xvoice/anaconda3/envs/transformer_mm/lib/python3.12/site-packages/torch/distributed/distributed_c10d.py", line 1809, in get_rank
+            default_pg = _get_default_group()default_pg = _get_default_group()default_pg = _get_default_group()
+
+
+                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+  File "/shared/home/xvoice/anaconda3/envs/transformer_mm/lib/python3.12/site-packages/torch/distributed/distributed_c10d.py", line 1025, in _get_default_group
+  File "/shared/home/xvoice/anaconda3/envs/transformer_mm/lib/python3.12/site-packages/torch/distributed/distributed_c10d.py", line 1025, in _get_default_group
+  File "/shared/home/xvoice/anaconda3/envs/transformer_mm/lib/python3.12/site-packages/torch/distributed/distributed_c10d.py", line 1025, in _get_default_group
+            raise ValueError(raise ValueError(raise ValueError(
+
+
+ValueErrorValueErrorValueError: : : Default process group has not been initialized, please make sure to call init_process_group.Default process group has not been initialized, please make sure to call init_process_group.Default process group has not been initialized, please make sure to call init_process_group.
+
+
+Using 3 GPUs on cudaUsing 3 GPUs on cuda
+
+DIST.IS_AVAILABLE(): True DIST.IS_INITIALIZED(): FalseDIST.IS_AVAILABLE(): True DIST.IS_INITIALIZED(): False
+
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/shared/home/xvoice/nirmal/project/Unet_seg/Pancreas_3D-UNet/data/dataloader.py", line 198, in <module>
+  File "/shared/home/xvoice/nirmal/project/Unet_seg/Pancreas_3D-UNet/data/dataloader.py", line 198, in <module>
+  File "/shared/home/xvoice/nirmal/project/Unet_seg/Pancreas_3D-UNet/data/dataloader.py", line 198, in <module>
+            train_loader, val_loader = get_dataloaders(config)train_loader, val_loader = get_dataloaders(config)train_loader, val_loader = get_dataloaders(config)
+
+
+                                                                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+  File "/shared/home/xvoice/nirmal/project/Unet_seg/Pancreas_3D-UNet/data/dataloader.py", line 158, in get_dataloaders
+  File "/shared/home/xvoice/nirmal/project/Unet_seg/Pancreas_3D-UNet/data/dataloader.py", line 158, in get_dataloaders
+  File "/shared/home/xvoice/nirmal/project/Unet_seg/Pancreas_3D-UNet/data/dataloader.py", line 158, in get_dataloaders
+            if torch.distributed.get_rank() == 0:  # Ensure only the main process logsif torch.distributed.get_rank() == 0:  # Ensure only the main process logsif torch.distributed.get_rank() == 0:  # Ensure only the main process logs
+
+
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+  File "/shared/home/xvoice/anaconda3/envs/transformer_mm/lib/python3.12/site-packages/torch/distributed/distributed_c10d.py", line 1809, in get_rank
+  File "/shared/home/xvoice/anaconda3/envs/transformer_mm/lib/python3.12/site-packages/torch/distributed/distributed_c10d.py", line 1809, in get_rank
+  File "/shared/home/xvoice/anaconda3/envs/transformer_mm/lib/python3.12/site-packages/torch/distributed/distributed_c10d.py", line 1809, in get_rank
+            default_pg = _get_default_group()default_pg = _get_default_group()default_pg = _get_default_group()
+
+
+                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+  File "/shared/home/xvoice/anaconda3/envs/transformer_mm/lib/python3.12/site-packages/torch/distributed/distributed_c10d.py", line 1025, in _get_default_group
+  File "/shared/home/xvoice/anaconda3/envs/transformer_mm/lib/python3.12/site-packages/torch/distributed/distributed_c10d.py", line 1025, in _get_default_group
+  File "/shared/home/xvoice/anaconda3/envs/transformer_mm/lib/python3.12/site-packages/torch/distributed/distributed_c10d.py", line 1025, in _get_default_group
+            raise ValueError(raise ValueError(raise ValueError(
+
+
+ValueErrorValueErrorValueError: : : Default process group has not been initialized, please make sure to call init_process_group.Default process group has not been initialized, please make sure to call init_process_group.Default process group has not been initialized, please make sure to call init_process_group.
+
+
+Using 3 GPUs on cudaUsing 3 GPUs on cuda
+
+DIST.IS_AVAILABLE(): True DIST.IS_INITIALIZED(): FalseDIST.IS_AVAILABLE(): True DIST.IS_INITIALIZED(): False
+
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/shared/home/xvoice/nirmal/project/Unet_seg/Pancreas_3D-UNet/data/dataloader.py", line 198, in <module>
+  File "/shared/home/xvoice/nirmal/project/Unet_seg/Pancreas_3D-UNet/data/dataloader.py", line 198, in <module>
+  File "/shared/home/xvoice/nirmal/project/Unet_seg/Pancreas_3D-UNet/data/dataloader.py", line 198, in <module>
+            train_loader, val_loader = get_dataloaders(config)train_loader, val_loader = get_dataloaders(config)train_loader, val_loader = get_dataloaders(config)
+
+
+                                                                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+  File "/shared/home/xvoice/nirmal/project/Unet_seg/Pancreas_3D-UNet/data/dataloader.py", line 158, in get_dataloaders
+  File "/shared/home/xvoice/nirmal/project/Unet_seg/Pancreas_3D-UNet/data/dataloader.py", line 158, in get_dataloaders
+  File "/shared/home/xvoice/nirmal/project/Unet_seg/Pancreas_3D-UNet/data/dataloader.py", line 158, in get_dataloaders
+            if torch.distributed.get_rank() == 0:  # Ensure only the main process logsif torch.distributed.get_rank() == 0:  # Ensure only the main process logsif torch.distributed.get_rank() == 0:  # Ensure only the main process logs
+
+
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+  File "/shared/home/xvoice/anaconda3/envs/transformer_mm/lib/python3.12/site-packages/torch/distributed/distributed_c10d.py", line 1809, in get_rank
+  File "/shared/home/xvoice/anaconda3/envs/transformer_mm/lib/python3.12/site-packages/torch/distributed/distributed_c10d.py", line 1809, in get_rank
+  File "/shared/home/xvoice/anaconda3/envs/transformer_mm/lib/python3.12/site-packages/torch/distributed/distributed_c10d.py", line 1809, in get_rank
+            default_pg = _get_default_group()default_pg = _get_default_group()default_pg = _get_default_group()
+
+
+                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+  File "/shared/home/xvoice/anaconda3/envs/transformer_mm/lib/python3.12/site-packages/torch/distributed/distributed_c10d.py", line 1025, in _get_default_group
+  File "/shared/home/xvoice/anaconda3/envs/transformer_mm/lib/python3.12/site-packages/torch/distributed/distributed_c10d.py", line 1025, in _get_default_group
+  File "/shared/home/xvoice/anaconda3/envs/transformer_mm/lib/python3.12/site-packages/torch/distributed/distributed_c10d.py", line 1025, in _get_default_group
+            raise ValueError(raise ValueError(raise ValueError(
+
+
+ValueErrorValueErrorValueError: : : Default process group has not been initialized, please make sure to call init_process_group.Default process group has not been initialized, please make sure to call init_process_group.Default process group has not been initialized, please make sure to call init_process_group.
+
+
