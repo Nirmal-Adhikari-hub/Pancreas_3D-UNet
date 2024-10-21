@@ -1,2 +1,2 @@
 # !/bin/bash
-torchrun --nproc_per_node=1 dataloader.py
+torchrun --nproc_per_node=3 dataloader.py
