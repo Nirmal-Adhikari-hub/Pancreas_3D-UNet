@@ -113,7 +113,7 @@ class PancreasDataset(Dataset):
 
                         
                         # Convert augmented patch back to tensor
-                        aug_patch_tensor = torch.tensor(aug_patch)
+                        aug_patch_tensor = torch.from_numpy(aug_patch)
                         # print(f"Augmented patch shape: {aug_patch_tensor.shape}")
                         
                         # Append the augmented patch and the corresponding label tensor
@@ -155,7 +155,8 @@ def get_dataloaders(config):
     # Get the distributed rank and world size (for distributed training)
     rank = config.local_rank
     world_size = config.world_size
-    print(f"World Size: {world_size} \n Local Rank: {rank}")
+    if torch.distributed.get_rank() == 0:  # Ensure only the main process logs
+        print(f"World Size: {world_size} \n Local Rank: {rank}")
 
     # For distributed data loading
     if world_size > 1:
