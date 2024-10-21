@@ -1961,3 +1961,38 @@ Traceback (most recent call last):
 ValueErrorValueErrorValueError: : : Default process group has not been initialized, please make sure to call init_process_group.Default process group has not been initialized, please make sure to call init_process_group.Default process group has not been initialized, please make sure to call init_process_group.
 
 
+Using 1 GPUs on cudaUsing 1 GPUs on cuda
+
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "d:\Nirmal\pancreas\3D-UNet\data\dataloader.py", line 196, in <module>
+  File "d:\Nirmal\pancreas\3D-UNet\data\dataloader.py", line 196, in <module>
+  File "d:\Nirmal\pancreas\3D-UNet\data\dataloader.py", line 196, in <module>
+            train_loader, val_loader = get_dataloaders(config)train_loader, val_loader = get_dataloaders(config)train_loader, val_loader = get_dataloaders(config)
+
+
+                                                                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+  File "d:\Nirmal\pancreas\3D-UNet\data\dataloader.py", line 152, in get_dataloaders
+  File "d:\Nirmal\pancreas\3D-UNet\data\dataloader.py", line 152, in get_dataloaders
+  File "d:\Nirmal\pancreas\3D-UNet\data\dataloader.py", line 152, in get_dataloaders
+            train_dataset = PancreasDataset(config, train=True)train_dataset = PancreasDataset(config, train=True)train_dataset = PancreasDataset(config, train=True)
+
+
+                                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+  File "d:\Nirmal\pancreas\3D-UNet\data\dataloader.py", line 51, in __init__
+  File "d:\Nirmal\pancreas\3D-UNet\data\dataloader.py", line 51, in __init__
+  File "d:\Nirmal\pancreas\3D-UNet\data\dataloader.py", line 51, in __init__
+            with open(config.dataset_json, 'r') as f:with open(config.dataset_json, 'r') as f:with open(config.dataset_json, 'r') as f:
+
+
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+FileNotFoundErrorFileNotFoundErrorFileNotFoundError: : : [Errno 2] No such file or directory: '/shared/home/xvoice/nirmal/data/Task07_Pancreas/dataset.json'[Errno 2] No such file or directory: '/shared/home/xvoice/nirmal/data/Task07_Pancreas/dataset.json'[Errno 2] No such file or directory: '/shared/home/xvoice/nirmal/data/Task07_Pancreas/dataset.json'
+
+
