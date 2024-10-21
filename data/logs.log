@@ -1,0 +1,395 @@
+Using 3 GPUs on cudaUsing 3 GPUs on cuda
+
+DIST.IS_AVAILABLE(): True DIST.IS_INITIALIZED(): TrueDIST.IS_AVAILABLE(): True DIST.IS_INITIALIZED(): True
+
+World Size: 1 
+ Local Rank: 0World Size: 1 
+ Local Rank: 0
+
+Using 3 GPUs on cudaUsing 3 GPUs on cuda
+
+DIST.IS_AVAILABLE(): True DIST.IS_INITIALIZED(): TrueDIST.IS_AVAILABLE(): True DIST.IS_INITIALIZED(): True
+
+World Size: 1 
+ Local Rank: 0World Size: 1 
+ Local Rank: 0
+
+Using 3 GPUs on cudaUsing 3 GPUs on cuda
+
+DIST.IS_AVAILABLE(): True DIST.IS_INITIALIZED(): TrueDIST.IS_AVAILABLE(): True DIST.IS_INITIALIZED(): True
+
+World Size: 1 
+ Local Rank: 0World Size: 1 
+ Local Rank: 0
+
+Number of patches: 4, 
+ Number of Labels: 4Number of patches: 4, 
+ Number of Labels: 4
+
+Number of patches: 5, 
+ Number of Labels: 5Number of patches: 5, 
+ Number of Labels: 5
+
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/shared/home/xvoice/nirmal/project/Unet_seg/Pancreas_3D-UNet/data/dataloader.py", line 209, in <module>
+[rank0]:     for batch_data, batch_labels in train_loader:
+[rank0]:                                     ^^^^^^^^^^^^
+[rank0]:   File "/shared/home/xvoice/anaconda3/envs/transformer_mm/lib/python3.12/site-packages/torch/utils/data/dataloader.py", line 630, in __next__
+[rank0]:     data = self._next_data()
+[rank0]:            ^^^^^^^^^^^^^^^^^
+[rank0]:   File "/shared/home/xvoice/anaconda3/envs/transformer_mm/lib/python3.12/site-packages/torch/utils/data/dataloader.py", line 1344, in _next_data
+[rank0]:     return self._process_data(data)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/shared/home/xvoice/anaconda3/envs/transformer_mm/lib/python3.12/site-packages/torch/utils/data/dataloader.py", line 1370, in _process_data
+[rank0]:     data.reraise()
+[rank0]:   File "/shared/home/xvoice/anaconda3/envs/transformer_mm/lib/python3.12/site-packages/torch/_utils.py", line 706, in reraise
+[rank0]:     raise exception
+[rank0]: RuntimeError: Caught RuntimeError in DataLoader worker process 0.
+[rank0]: Original Traceback (most recent call last):
+[rank0]:   File "/shared/home/xvoice/anaconda3/envs/transformer_mm/lib/python3.12/site-packages/monai/transforms/transform.py", line 141, in apply_transform
+[rank0]:     return _apply_transform(transform, data, unpack_items, lazy, overrides, log_stats)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/shared/home/xvoice/anaconda3/envs/transformer_mm/lib/python3.12/site-packages/monai/transforms/transform.py", line 98, in _apply_transform
+[rank0]:     return transform(data, lazy=lazy) if isinstance(transform, LazyTrait) else transform(data)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/shared/home/xvoice/anaconda3/envs/transformer_mm/lib/python3.12/site-packages/monai/transforms/spatial/array.py", line 1437, in __call__
+[rank0]:     out = self.flipper(img, lazy=lazy_) if self._do_transform else img
+[rank0]:           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/shared/home/xvoice/anaconda3/envs/transformer_mm/lib/python3.12/site-packages/monai/transforms/spatial/array.py", line 701, in __call__
+[rank0]:     return flip(img, self.spatial_axis, lazy=lazy_, transform_info=self.get_transform_info())  # type: ignore
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/shared/home/xvoice/anaconda3/envs/transformer_mm/lib/python3.12/site-packages/monai/transforms/spatial/functional.py", line 258, in flip
+[rank0]:     xform[sp, sp], xform[sp, -1] = xform[sp, sp] * -1, sp_size[sp] - 1
+[rank0]:                                                        ~~~~~~~^^^^
+[rank0]: IndexError: list index out of range
+
+[rank0]: The above exception was the direct cause of the following exception:
+
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/shared/home/xvoice/anaconda3/envs/transformer_mm/lib/python3.12/site-packages/torch/utils/data/_utils/worker.py", line 309, in _worker_loop
+[rank0]:     data = fetcher.fetch(index)  # type: ignore[possibly-undefined]
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/shared/home/xvoice/anaconda3/envs/transformer_mm/lib/python3.12/site-packages/torch/utils/data/_utils/fetch.py", line 52, in fetch
+[rank0]:     data = [self.dataset[idx] for idx in possibly_batched_index]
+[rank0]:             ~~~~~~~~~~~~^^^^^
+[rank0]:   File "/shared/home/xvoice/nirmal/project/Unet_seg/Pancreas_3D-UNet/data/dataloader.py", line 109, in __getitem__
+[rank0]:     aug_patch = self.transforms(patch)
+[rank0]:                 ^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/shared/home/xvoice/anaconda3/envs/transformer_mm/lib/python3.12/site-packages/monai/transforms/compose.py", line 335, in __call__
+[rank0]:     result = execute_compose(
+[rank0]:              ^^^^^^^^^^^^^^^^
+[rank0]:   File "/shared/home/xvoice/anaconda3/envs/transformer_mm/lib/python3.12/site-packages/monai/transforms/compose.py", line 111, in execute_compose
+[rank0]:     data = apply_transform(
+[rank0]:            ^^^^^^^^^^^^^^^^
+[rank0]:   File "/shared/home/xvoice/anaconda3/envs/transformer_mm/lib/python3.12/site-packages/monai/transforms/transform.py", line 171, in apply_transform
+[rank0]:     raise RuntimeError(f"applying transform {transform}") from e
+[rank0]: RuntimeError: applying transform <monai.transforms.spatial.array.RandFlip object at 0x7fcf9e88ca10>
+
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/shared/home/xvoice/nirmal/project/Unet_seg/Pancreas_3D-UNet/data/dataloader.py", line 209, in <module>
+[rank0]:     for batch_data, batch_labels in train_loader:
+[rank0]:                                     ^^^^^^^^^^^^
+[rank0]:   File "/shared/home/xvoice/anaconda3/envs/transformer_mm/lib/python3.12/site-packages/torch/utils/data/dataloader.py", line 630, in __next__
+[rank0]:     data = self._next_data()
+[rank0]:            ^^^^^^^^^^^^^^^^^
+[rank0]:   File "/shared/home/xvoice/anaconda3/envs/transformer_mm/lib/python3.12/site-packages/torch/utils/data/dataloader.py", line 1344, in _next_data
+[rank0]:     return self._process_data(data)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/shared/home/xvoice/anaconda3/envs/transformer_mm/lib/python3.12/site-packages/torch/utils/data/dataloader.py", line 1370, in _process_data
+[rank0]:     data.reraise()
+[rank0]:   File "/shared/home/xvoice/anaconda3/envs/transformer_mm/lib/python3.12/site-packages/torch/_utils.py", line 706, in reraise
+[rank0]:     raise exception
+[rank0]: RuntimeError: Caught RuntimeError in DataLoader worker process 0.
+[rank0]: Original Traceback (most recent call last):
+[rank0]:   File "/shared/home/xvoice/anaconda3/envs/transformer_mm/lib/python3.12/site-packages/monai/transforms/transform.py", line 141, in apply_transform
+[rank0]:     return _apply_transform(transform, data, unpack_items, lazy, overrides, log_stats)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/shared/home/xvoice/anaconda3/envs/transformer_mm/lib/python3.12/site-packages/monai/transforms/transform.py", line 98, in _apply_transform
+[rank0]:     return transform(data, lazy=lazy) if isinstance(transform, LazyTrait) else transform(data)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/shared/home/xvoice/anaconda3/envs/transformer_mm/lib/python3.12/site-packages/monai/transforms/spatial/array.py", line 1437, in __call__
+[rank0]:     out = self.flipper(img, lazy=lazy_) if self._do_transform else img
+[rank0]:           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/shared/home/xvoice/anaconda3/envs/transformer_mm/lib/python3.12/site-packages/monai/transforms/spatial/array.py", line 701, in __call__
+[rank0]:     return flip(img, self.spatial_axis, lazy=lazy_, transform_info=self.get_transform_info())  # type: ignore
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/shared/home/xvoice/anaconda3/envs/transformer_mm/lib/python3.12/site-packages/monai/transforms/spatial/functional.py", line 258, in flip
+[rank0]:     xform[sp, sp], xform[sp, -1] = xform[sp, sp] * -1, sp_size[sp] - 1
+[rank0]:                                                        ~~~~~~~^^^^
+[rank0]: IndexError: list index out of range
+
+[rank0]: The above exception was the direct cause of the following exception:
+
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/shared/home/xvoice/anaconda3/envs/transformer_mm/lib/python3.12/site-packages/torch/utils/data/_utils/worker.py", line 309, in _worker_loop
+[rank0]:     data = fetcher.fetch(index)  # type: ignore[possibly-undefined]
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/shared/home/xvoice/anaconda3/envs/transformer_mm/lib/python3.12/site-packages/torch/utils/data/_utils/fetch.py", line 52, in fetch
+[rank0]:     data = [self.dataset[idx] for idx in possibly_batched_index]
+[rank0]:             ~~~~~~~~~~~~^^^^^
+[rank0]:   File "/shared/home/xvoice/nirmal/project/Unet_seg/Pancreas_3D-UNet/data/dataloader.py", line 109, in __getitem__
+[rank0]:     aug_patch = self.transforms(patch)
+[rank0]:                 ^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/shared/home/xvoice/anaconda3/envs/transformer_mm/lib/python3.12/site-packages/monai/transforms/compose.py", line 335, in __call__
+[rank0]:     result = execute_compose(
+[rank0]:              ^^^^^^^^^^^^^^^^
+[rank0]:   File "/shared/home/xvoice/anaconda3/envs/transformer_mm/lib/python3.12/site-packages/monai/transforms/compose.py", line 111, in execute_compose
+[rank0]:     data = apply_transform(
+[rank0]:            ^^^^^^^^^^^^^^^^
+[rank0]:   File "/shared/home/xvoice/anaconda3/envs/transformer_mm/lib/python3.12/site-packages/monai/transforms/transform.py", line 171, in apply_transform
+[rank0]:     raise RuntimeError(f"applying transform {transform}") from e
+[rank0]: RuntimeError: applying transform <monai.transforms.spatial.array.RandFlip object at 0x7fcf9e88ca10>
+
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/shared/home/xvoice/nirmal/project/Unet_seg/Pancreas_3D-UNet/data/dataloader.py", line 209, in <module>
+[rank0]:     for batch_data, batch_labels in train_loader:
+[rank0]:                                     ^^^^^^^^^^^^
+[rank0]:   File "/shared/home/xvoice/anaconda3/envs/transformer_mm/lib/python3.12/site-packages/torch/utils/data/dataloader.py", line 630, in __next__
+[rank0]:     data = self._next_data()
+[rank0]:            ^^^^^^^^^^^^^^^^^
+[rank0]:   File "/shared/home/xvoice/anaconda3/envs/transformer_mm/lib/python3.12/site-packages/torch/utils/data/dataloader.py", line 1344, in _next_data
+[rank0]:     return self._process_data(data)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/shared/home/xvoice/anaconda3/envs/transformer_mm/lib/python3.12/site-packages/torch/utils/data/dataloader.py", line 1370, in _process_data
+[rank0]:     data.reraise()
+[rank0]:   File "/shared/home/xvoice/anaconda3/envs/transformer_mm/lib/python3.12/site-packages/torch/_utils.py", line 706, in reraise
+[rank0]:     raise exception
+[rank0]: RuntimeError: Caught RuntimeError in DataLoader worker process 0.
+[rank0]: Original Traceback (most recent call last):
+[rank0]:   File "/shared/home/xvoice/anaconda3/envs/transformer_mm/lib/python3.12/site-packages/monai/transforms/transform.py", line 141, in apply_transform
+[rank0]:     return _apply_transform(transform, data, unpack_items, lazy, overrides, log_stats)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/shared/home/xvoice/anaconda3/envs/transformer_mm/lib/python3.12/site-packages/monai/transforms/transform.py", line 98, in _apply_transform
+[rank0]:     return transform(data, lazy=lazy) if isinstance(transform, LazyTrait) else transform(data)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/shared/home/xvoice/anaconda3/envs/transformer_mm/lib/python3.12/site-packages/monai/transforms/spatial/array.py", line 1437, in __call__
+[rank0]:     out = self.flipper(img, lazy=lazy_) if self._do_transform else img
+[rank0]:           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/shared/home/xvoice/anaconda3/envs/transformer_mm/lib/python3.12/site-packages/monai/transforms/spatial/array.py", line 701, in __call__
+[rank0]:     return flip(img, self.spatial_axis, lazy=lazy_, transform_info=self.get_transform_info())  # type: ignore
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/shared/home/xvoice/anaconda3/envs/transformer_mm/lib/python3.12/site-packages/monai/transforms/spatial/functional.py", line 258, in flip
+[rank0]:     xform[sp, sp], xform[sp, -1] = xform[sp, sp] * -1, sp_size[sp] - 1
+[rank0]:                                                        ~~~~~~~^^^^
+[rank0]: IndexError: list index out of range
+
+[rank0]: The above exception was the direct cause of the following exception:
+
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/shared/home/xvoice/anaconda3/envs/transformer_mm/lib/python3.12/site-packages/torch/utils/data/_utils/worker.py", line 309, in _worker_loop
+[rank0]:     data = fetcher.fetch(index)  # type: ignore[possibly-undefined]
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/shared/home/xvoice/anaconda3/envs/transformer_mm/lib/python3.12/site-packages/torch/utils/data/_utils/fetch.py", line 52, in fetch
+[rank0]:     data = [self.dataset[idx] for idx in possibly_batched_index]
+[rank0]:             ~~~~~~~~~~~~^^^^^
+[rank0]:   File "/shared/home/xvoice/nirmal/project/Unet_seg/Pancreas_3D-UNet/data/dataloader.py", line 109, in __getitem__
+[rank0]:     aug_patch = self.transforms(patch)
+[rank0]:                 ^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/shared/home/xvoice/anaconda3/envs/transformer_mm/lib/python3.12/site-packages/monai/transforms/compose.py", line 335, in __call__
+[rank0]:     result = execute_compose(
+[rank0]:              ^^^^^^^^^^^^^^^^
+[rank0]:   File "/shared/home/xvoice/anaconda3/envs/transformer_mm/lib/python3.12/site-packages/monai/transforms/compose.py", line 111, in execute_compose
+[rank0]:     data = apply_transform(
+[rank0]:            ^^^^^^^^^^^^^^^^
+[rank0]:   File "/shared/home/xvoice/anaconda3/envs/transformer_mm/lib/python3.12/site-packages/monai/transforms/transform.py", line 171, in apply_transform
+[rank0]:     raise RuntimeError(f"applying transform {transform}") from e
+[rank0]: RuntimeError: applying transform <monai.transforms.spatial.array.RandFlip object at 0x7fcf9e88ca10>
+
+Number of patches: 5, 
+ Number of Labels: 5Number of patches: 5, 
+ Number of Labels: 5
+
+Number of patches: 5, 
+ Number of Labels: 5Number of patches: 5, 
+ Number of Labels: 5
+
+Number of patches: 5, 
+ Number of Labels: 5Number of patches: 5, 
+ Number of Labels: 5
+
+Number of patches: 6, 
+ Number of Labels: 6Number of patches: 6, 
+ Number of Labels: 6
+
+Number of patches: 4, 
+ Number of Labels: 4Number of patches: 4, 
+ Number of Labels: 4
+
+Number of patches: 5, 
+ Number of Labels: 5Number of patches: 5, 
+ Number of Labels: 5
+
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/shared/home/xvoice/nirmal/project/Unet_seg/Pancreas_3D-UNet/data/dataloader.py", line 209, in <module>
+[rank0]:     for batch_data, batch_labels in train_loader:
+[rank0]:                                     ^^^^^^^^^^^^
+[rank0]:   File "/shared/home/xvoice/anaconda3/envs/transformer_mm/lib/python3.12/site-packages/torch/utils/data/dataloader.py", line 630, in __next__
+[rank0]:     data = self._next_data()
+[rank0]:            ^^^^^^^^^^^^^^^^^
+[rank0]:   File "/shared/home/xvoice/anaconda3/envs/transformer_mm/lib/python3.12/site-packages/torch/utils/data/dataloader.py", line 1344, in _next_data
+[rank0]:     return self._process_data(data)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/shared/home/xvoice/anaconda3/envs/transformer_mm/lib/python3.12/site-packages/torch/utils/data/dataloader.py", line 1370, in _process_data
+[rank0]:     data.reraise()
+[rank0]:   File "/shared/home/xvoice/anaconda3/envs/transformer_mm/lib/python3.12/site-packages/torch/_utils.py", line 706, in reraise
+[rank0]:     raise exception
+[rank0]: TypeError: Caught TypeError in DataLoader worker process 0.
+[rank0]: Original Traceback (most recent call last):
+[rank0]:   File "/shared/home/xvoice/anaconda3/envs/transformer_mm/lib/python3.12/site-packages/torch/utils/data/_utils/worker.py", line 309, in _worker_loop
+[rank0]:     data = fetcher.fetch(index)  # type: ignore[possibly-undefined]
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/shared/home/xvoice/anaconda3/envs/transformer_mm/lib/python3.12/site-packages/torch/utils/data/_utils/fetch.py", line 52, in fetch
+[rank0]:     data = [self.dataset[idx] for idx in possibly_batched_index]
+[rank0]:             ~~~~~~~~~~~~^^^^^
+[rank0]:   File "/shared/home/xvoice/nirmal/project/Unet_seg/Pancreas_3D-UNet/data/dataloader.py", line 116, in __getitem__
+[rank0]:     aug_patch_tensor = torch.from_numpy(aug_patch)
+[rank0]:                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]: TypeError: expected np.ndarray (got MetaTensor)
+
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/shared/home/xvoice/nirmal/project/Unet_seg/Pancreas_3D-UNet/data/dataloader.py", line 209, in <module>
+[rank0]:     for batch_data, batch_labels in train_loader:
+[rank0]:                                     ^^^^^^^^^^^^
+[rank0]:   File "/shared/home/xvoice/anaconda3/envs/transformer_mm/lib/python3.12/site-packages/torch/utils/data/dataloader.py", line 630, in __next__
+[rank0]:     data = self._next_data()
+[rank0]:            ^^^^^^^^^^^^^^^^^
+[rank0]:   File "/shared/home/xvoice/anaconda3/envs/transformer_mm/lib/python3.12/site-packages/torch/utils/data/dataloader.py", line 1344, in _next_data
+[rank0]:     return self._process_data(data)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/shared/home/xvoice/anaconda3/envs/transformer_mm/lib/python3.12/site-packages/torch/utils/data/dataloader.py", line 1370, in _process_data
+[rank0]:     data.reraise()
+[rank0]:   File "/shared/home/xvoice/anaconda3/envs/transformer_mm/lib/python3.12/site-packages/torch/_utils.py", line 706, in reraise
+[rank0]:     raise exception
+[rank0]: TypeError: Caught TypeError in DataLoader worker process 0.
+[rank0]: Original Traceback (most recent call last):
+[rank0]:   File "/shared/home/xvoice/anaconda3/envs/transformer_mm/lib/python3.12/site-packages/torch/utils/data/_utils/worker.py", line 309, in _worker_loop
+[rank0]:     data = fetcher.fetch(index)  # type: ignore[possibly-undefined]
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/shared/home/xvoice/anaconda3/envs/transformer_mm/lib/python3.12/site-packages/torch/utils/data/_utils/fetch.py", line 52, in fetch
+[rank0]:     data = [self.dataset[idx] for idx in possibly_batched_index]
+[rank0]:             ~~~~~~~~~~~~^^^^^
+[rank0]:   File "/shared/home/xvoice/nirmal/project/Unet_seg/Pancreas_3D-UNet/data/dataloader.py", line 116, in __getitem__
+[rank0]:     aug_patch_tensor = torch.from_numpy(aug_patch)
+[rank0]:                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]: TypeError: expected np.ndarray (got MetaTensor)
+
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/shared/home/xvoice/nirmal/project/Unet_seg/Pancreas_3D-UNet/data/dataloader.py", line 209, in <module>
+[rank0]:     for batch_data, batch_labels in train_loader:
+[rank0]:                                     ^^^^^^^^^^^^
+[rank0]:   File "/shared/home/xvoice/anaconda3/envs/transformer_mm/lib/python3.12/site-packages/torch/utils/data/dataloader.py", line 630, in __next__
+[rank0]:     data = self._next_data()
+[rank0]:            ^^^^^^^^^^^^^^^^^
+[rank0]:   File "/shared/home/xvoice/anaconda3/envs/transformer_mm/lib/python3.12/site-packages/torch/utils/data/dataloader.py", line 1344, in _next_data
+[rank0]:     return self._process_data(data)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/shared/home/xvoice/anaconda3/envs/transformer_mm/lib/python3.12/site-packages/torch/utils/data/dataloader.py", line 1370, in _process_data
+[rank0]:     data.reraise()
+[rank0]:   File "/shared/home/xvoice/anaconda3/envs/transformer_mm/lib/python3.12/site-packages/torch/_utils.py", line 706, in reraise
+[rank0]:     raise exception
+[rank0]: TypeError: Caught TypeError in DataLoader worker process 0.
+[rank0]: Original Traceback (most recent call last):
+[rank0]:   File "/shared/home/xvoice/anaconda3/envs/transformer_mm/lib/python3.12/site-packages/torch/utils/data/_utils/worker.py", line 309, in _worker_loop
+[rank0]:     data = fetcher.fetch(index)  # type: ignore[possibly-undefined]
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/shared/home/xvoice/anaconda3/envs/transformer_mm/lib/python3.12/site-packages/torch/utils/data/_utils/fetch.py", line 52, in fetch
+[rank0]:     data = [self.dataset[idx] for idx in possibly_batched_index]
+[rank0]:             ~~~~~~~~~~~~^^^^^
+[rank0]:   File "/shared/home/xvoice/nirmal/project/Unet_seg/Pancreas_3D-UNet/data/dataloader.py", line 116, in __getitem__
+[rank0]:     aug_patch_tensor = torch.from_numpy(aug_patch)
+[rank0]:                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]: TypeError: expected np.ndarray (got MetaTensor)
+
+Number of patches: 5, 
+ Number of Labels: 5Number of patches: 5, 
+ Number of Labels: 5
+
+Number of patches: 6, 
+ Number of Labels: 6Number of patches: 6, 
+ Number of Labels: 6
+
+Number of patches: 3, 
+ Number of Labels: 3Number of patches: 3, 
+ Number of Labels: 3
+
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/shared/home/xvoice/nirmal/project/Unet_seg/Pancreas_3D-UNet/data/dataloader.py", line 209, in <module>
+[rank0]:     for batch_data, batch_labels in train_loader:
+[rank0]:                                     ^^^^^^^^^^^^
+[rank0]:   File "/shared/home/xvoice/anaconda3/envs/transformer_mm/lib/python3.12/site-packages/torch/utils/data/dataloader.py", line 630, in __next__
+[rank0]:     data = self._next_data()
+[rank0]:            ^^^^^^^^^^^^^^^^^
+[rank0]:   File "/shared/home/xvoice/anaconda3/envs/transformer_mm/lib/python3.12/site-packages/torch/utils/data/dataloader.py", line 1344, in _next_data
+[rank0]:     return self._process_data(data)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/shared/home/xvoice/anaconda3/envs/transformer_mm/lib/python3.12/site-packages/torch/utils/data/dataloader.py", line 1370, in _process_data
+[rank0]:     data.reraise()
+[rank0]:   File "/shared/home/xvoice/anaconda3/envs/transformer_mm/lib/python3.12/site-packages/torch/_utils.py", line 706, in reraise
+[rank0]:     raise exception
+[rank0]: TypeError: Caught TypeError in DataLoader worker process 0.
+[rank0]: Original Traceback (most recent call last):
+[rank0]:   File "/shared/home/xvoice/anaconda3/envs/transformer_mm/lib/python3.12/site-packages/torch/utils/data/_utils/worker.py", line 309, in _worker_loop
+[rank0]:     data = fetcher.fetch(index)  # type: ignore[possibly-undefined]
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/shared/home/xvoice/anaconda3/envs/transformer_mm/lib/python3.12/site-packages/torch/utils/data/_utils/fetch.py", line 52, in fetch
+[rank0]:     data = [self.dataset[idx] for idx in possibly_batched_index]
+[rank0]:             ~~~~~~~~~~~~^^^^^
+[rank0]:   File "/shared/home/xvoice/nirmal/project/Unet_seg/Pancreas_3D-UNet/data/dataloader.py", line 116, in __getitem__
+[rank0]:     aug_patch_tensor = torch.from_numpy(aug_patch)
+[rank0]:                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]: TypeError: expected np.ndarray (got MetaTensor)
+
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/shared/home/xvoice/nirmal/project/Unet_seg/Pancreas_3D-UNet/data/dataloader.py", line 209, in <module>
+[rank0]:     for batch_data, batch_labels in train_loader:
+[rank0]:                                     ^^^^^^^^^^^^
+[rank0]:   File "/shared/home/xvoice/anaconda3/envs/transformer_mm/lib/python3.12/site-packages/torch/utils/data/dataloader.py", line 630, in __next__
+[rank0]:     data = self._next_data()
+[rank0]:            ^^^^^^^^^^^^^^^^^
+[rank0]:   File "/shared/home/xvoice/anaconda3/envs/transformer_mm/lib/python3.12/site-packages/torch/utils/data/dataloader.py", line 1344, in _next_data
+[rank0]:     return self._process_data(data)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/shared/home/xvoice/anaconda3/envs/transformer_mm/lib/python3.12/site-packages/torch/utils/data/dataloader.py", line 1370, in _process_data
+[rank0]:     data.reraise()
+[rank0]:   File "/shared/home/xvoice/anaconda3/envs/transformer_mm/lib/python3.12/site-packages/torch/_utils.py", line 706, in reraise
+[rank0]:     raise exception
+[rank0]: TypeError: Caught TypeError in DataLoader worker process 0.
+[rank0]: Original Traceback (most recent call last):
+[rank0]:   File "/shared/home/xvoice/anaconda3/envs/transformer_mm/lib/python3.12/site-packages/torch/utils/data/_utils/worker.py", line 309, in _worker_loop
+[rank0]:     data = fetcher.fetch(index)  # type: ignore[possibly-undefined]
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/shared/home/xvoice/anaconda3/envs/transformer_mm/lib/python3.12/site-packages/torch/utils/data/_utils/fetch.py", line 52, in fetch
+[rank0]:     data = [self.dataset[idx] for idx in possibly_batched_index]
+[rank0]:             ~~~~~~~~~~~~^^^^^
+[rank0]:   File "/shared/home/xvoice/nirmal/project/Unet_seg/Pancreas_3D-UNet/data/dataloader.py", line 116, in __getitem__
+[rank0]:     aug_patch_tensor = torch.from_numpy(aug_patch)
+[rank0]:                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]: TypeError: expected np.ndarray (got MetaTensor)
+
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/shared/home/xvoice/nirmal/project/Unet_seg/Pancreas_3D-UNet/data/dataloader.py", line 209, in <module>
+[rank0]:     for batch_data, batch_labels in train_loader:
+[rank0]:                                     ^^^^^^^^^^^^
+[rank0]:   File "/shared/home/xvoice/anaconda3/envs/transformer_mm/lib/python3.12/site-packages/torch/utils/data/dataloader.py", line 630, in __next__
+[rank0]:     data = self._next_data()
+[rank0]:            ^^^^^^^^^^^^^^^^^
+[rank0]:   File "/shared/home/xvoice/anaconda3/envs/transformer_mm/lib/python3.12/site-packages/torch/utils/data/dataloader.py", line 1344, in _next_data
+[rank0]:     return self._process_data(data)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/shared/home/xvoice/anaconda3/envs/transformer_mm/lib/python3.12/site-packages/torch/utils/data/dataloader.py", line 1370, in _process_data
+[rank0]:     data.reraise()
+[rank0]:   File "/shared/home/xvoice/anaconda3/envs/transformer_mm/lib/python3.12/site-packages/torch/_utils.py", line 706, in reraise
+[rank0]:     raise exception
+[rank0]: TypeError: Caught TypeError in DataLoader worker process 0.
+[rank0]: Original Traceback (most recent call last):
+[rank0]:   File "/shared/home/xvoice/anaconda3/envs/transformer_mm/lib/python3.12/site-packages/torch/utils/data/_utils/worker.py", line 309, in _worker_loop
+[rank0]:     data = fetcher.fetch(index)  # type: ignore[possibly-undefined]
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/shared/home/xvoice/anaconda3/envs/transformer_mm/lib/python3.12/site-packages/torch/utils/data/_utils/fetch.py", line 52, in fetch
+[rank0]:     data = [self.dataset[idx] for idx in possibly_batched_index]
+[rank0]:             ~~~~~~~~~~~~^^^^^
+[rank0]:   File "/shared/home/xvoice/nirmal/project/Unet_seg/Pancreas_3D-UNet/data/dataloader.py", line 116, in __getitem__
+[rank0]:     aug_patch_tensor = torch.from_numpy(aug_patch)
+[rank0]:                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]: TypeError: expected np.ndarray (got MetaTensor)
+
