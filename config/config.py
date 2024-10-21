@@ -39,10 +39,13 @@
 
 import os
 import torch.distributed as dist
+import torch
 
 class Config:
     def __init__(self):
         # General
+        self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")  # Default to GPU if available
+        self.num_gpus = int(os.getenv('NUM_GPU', torch.cuda.device_count()))  # Number of GPUs to use
         self.in_channels = 1  # Number of input channels (for grayscale)
         self.num_classes = 3  # Number of output classes (segmentation classes)
         self.input_size = (32, 512, 512)  # Fixed size input patches for the model
@@ -68,6 +71,7 @@ class Config:
         self.log_dir = os.getenv('LOG_DIR', '/shared/home/xvoice/nirmal/exp/3d-unet/log-common')
 
         # Distributed Training Settings
+        self.distributed = dist.is_available() and dist.is_initialized()
         self.world_size = self.get_world_size()  # Dynamically find world size
         self.local_rank = self.get_local_rank()  # Dynamically find local rank
         
@@ -79,13 +83,7 @@ class Config:
                 setattr(self, key, value)
 
     def get_world_size(self):
-        """ Dynamically find the total number of processes for distributed training """
-        if dist.is_available() and dist.is_initialized():
-            return dist.get_world_size()
-        return 1  # If not distributed, return 1 as default
+        return dist.get_world_size() if self.distributed else 1
 
     def get_local_rank(self):
-        """ Dynamically find the local rank (process ID within a node) """
-        if dist.is_available() and dist.is_initialized():
-            return dist.get_rank()
-        return 0  # Return 0 if not in distributed mode
+        return dist.get_rank() if self.distributed else 0

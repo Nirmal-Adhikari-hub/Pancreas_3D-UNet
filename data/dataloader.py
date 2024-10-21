@@ -73,7 +73,7 @@ class PancreasDataset(Dataset):
         patches, labels = self.get_patches(image, label, depth, height, width)
 
         # print(f"patches Shape: {len(patches), patches[:1]}, \n =========================patches Labels Shape: {len(labels), labels[:1]}")
-        print(f"patches Shape: {len(patches)}, \n patches Labels Shape: {len(labels)}")
+        print(f"Number of patches: {len(patches)}, \n Number of Labels: {len(labels)}")
 
         augmented_patches, augmented_labels = [], []
 
@@ -85,24 +85,24 @@ class PancreasDataset(Dataset):
                 
                 # Generate the required number of augmented samples
                 for _ in range(self.config.augmented_samples - 1):
-                    print(f"Original patch shape: {patch.shape}")
+                    # print(f"Original patch shape: {patch.shape}")
                     if self.transforms:
                         assert len(patch.shape) == 3, f"Patch shape must be 3D, got {patch.shape}"
-                        print(f"====================== AUGMENTATION ============================")
+                        # print(f"====================== AUGMENTATION ============================")
                         
                         # Apply augmentation (operates on NumPy arrays)
                         aug_patch = self.transforms(patch)
                         
                         # Convert augmented patch back to tensor
                         aug_patch_tensor = torch.tensor(aug_patch)
-                        print(f"Augmented patch shape: {aug_patch_tensor.shape}")
+                        # print(f"Augmented patch shape: {aug_patch_tensor.shape}")
                         
                         # Append the augmented patch and the corresponding label tensor
                         augmented_patches.append(aug_patch_tensor)
                         augmented_labels.append(torch.tensor(label_patch))  # Convert label to tensor (consistent with patch)
 
             # Stack the augmented patches and labels
-            print(f"Augmentation: Patches - {torch.stack(augmented_patches).shape}, Labels -> {torch.stack(augmented_labels).shape}")
+            print(f"After Augmentation: \n Patches - {torch.stack(augmented_patches).shape}, Labels -> {torch.stack(augmented_labels).shape}")
 
             return torch.stack(augmented_patches), torch.stack(augmented_labels)
         else:
@@ -117,7 +117,7 @@ class PancreasDataset(Dataset):
         :return: Patches from image and corresponding label patches
         """
         patch_slices = get_patch_slices(image.shape, depth, self.config.patch_overlap)
-        print(f"PATCH_SLICES: {len(patch_slices)}")
+        # print(f"PATCH_SLICES: {len(patch_slices)}")
         patches, labels = [], []
 
         for sl in patch_slices:
@@ -163,6 +163,8 @@ if __name__ == "__main__":
     from data.dataloader import get_dataloaders
 
     config = Config()
+
+    print(f"Using {config.num_gpus} GPUs on {config.device}")
 
     # Initialize dataloaders
     train_loader, val_loader = get_dataloaders(config)
