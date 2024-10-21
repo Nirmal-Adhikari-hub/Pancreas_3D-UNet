@@ -153,8 +153,8 @@ def get_dataloaders(config):
     val_dataset = PancreasDataset(config, train=False)
 
     # Get the distributed rank and world size (for distributed training)
-    rank = config.local_rank
-    world_size = config.world_size
+    rank = config.get_local_rank
+    world_size = config.get_world_size
     if torch.distributed.get_rank() == 0:  # Ensure only the main process logs
         print(f"World Size: {world_size} \n Local Rank: {rank}")
 
@@ -185,6 +185,8 @@ if __name__ == "__main__":
     from data.dataloader import get_dataloaders
 
     config = Config()
+
+    config.init_distributed()
 
     # Set the correct local rank for each process
     local_rank = int(os.getenv("LOCAL_RANK", 0))
