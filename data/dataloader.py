@@ -34,7 +34,7 @@ sys.stderr = TeeLogger(log_filename)
 
 # Add the parent directory to the Python path for module imports
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from utils.distributed import get_patch_slices
+from utils.distributed import get_patch_slices, pad_if_needed
 
 
 class PancreasDataset(Dataset):
@@ -113,6 +113,10 @@ class PancreasDataset(Dataset):
                         
                         # Apply augmentation (operates on NumPy arrays)
                         aug_patch = self.transforms(patch)
+
+                        # Assert the shape after augmentation
+                        assert aug_patch.shape == (32, 512, 512), f"Augmented patch shape mismatch: expected (32, 512, 512), got {aug_patch.shape}"
+
                         
                         # Convert augmented patch back to tensor
                         aug_patch_tensor = torch.tensor(aug_patch)
@@ -137,6 +141,8 @@ class PancreasDataset(Dataset):
         :param label: 3D numpy array (Segmentation mask)
         :return: Patches from image and corresponding label patches
         """
+        image = pad_if_needed(image, depth)
+        label = pad_if_needed(label, depth)
         patch_slices = get_patch_slices(image.shape, depth, self.config.patch_overlap)
         # print(f"PATCH_SLICES: {len(patch_slices)}")
         patches, labels = [], []

@@ -257,6 +257,3 @@ Original Traceback (most recent call last):
     out = elem.new(storage).resize_(len(batch), *list(elem.size()))
           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 RuntimeError: Trying to resize storage that is not resizable
-
-
-

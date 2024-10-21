@@ -1,4 +1,5 @@
 import math
+import numpy as np
 
 def get_patch_slices(volume_shape, depth, overlap):
     """
@@ -26,3 +27,12 @@ def get_patch_slices(volume_shape, depth, overlap):
 
     return patches_slices
 
+
+def pad_if_needed(volume, target_depth):
+    """ Pad the volume if the depth is smaller than the target depth. """
+    d, h, w = volume.shape
+    if d < target_depth:
+        pad_size = target_depth - d
+        padding = ((0, pad_size), (0, 0), (0, 0))  # Pad depth dimension only
+        volume = np.pad(volume, padding, mode='constant', constant_values=0)
+    return volume

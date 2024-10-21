@@ -74,7 +74,15 @@ class Config:
         self.distributed = dist.is_available() and dist.is_initialized()
         self.world_size = self.get_world_size()  # Dynamically find world size
         self.local_rank = self.get_local_rank()  # Dynamically find local rank
+
+        # Initialize the process group if distributed training is set
+        if self.distributed:
+            self.init_distributed()
+
         
+    def init_distributed(self):
+        """ Initialize the process group for distributed training."""
+        dist.init_process_group(backend='nccl', world_size=self.world_size, rank=self.get_local_rank())
 
     def update(self, args):
         """ Update config dynamically using parsed arguments (if needed) """
