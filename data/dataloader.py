@@ -87,13 +87,10 @@ class PancreasDataset(Dataset):
         image = np.transpose(np.array(img_nifti.get_fdata(), dtype=np.float32), (2, 0, 1))  # Shape: (D, H, W)
         label = np.transpose(np.array(label_nifti.get_fdata(), dtype=np.uint8), (2, 0, 1))  # Shape: (D, H, W)
 
-        # print(f"Image Shape: {image.shape}, Label Shape: {label.shape}")
-
         # Apply patch extraction based on the configuration settings
         depth, height, width = self.config.input_size
         patches, labels = self.get_patches(image, label, depth, height, width)
 
-        # print(f"patches Shape: {len(patches), patches[:1]}, \n =========================patches Labels Shape: {len(labels), labels[:1]}")
         print(f"Number of patches: {len(patches)}, \n Number of Labels: {len(labels)}")
 
         augmented_patches, augmented_labels = [], []
@@ -107,10 +104,7 @@ class PancreasDataset(Dataset):
                 # Generate the required number of augmented samples
                 for _ in range(self.config.augmented_samples - 1):
                     # print(f"Original patch shape: {patch.shape}")
-                    if self.transforms:
-                        assert len(patch.shape) == 3, f"Patch shape must be 3D, got {patch.shape}"
-                        # print(f"====================== AUGMENTATION ============================")
-                        
+                    if self.transforms:                        
                         # Apply augmentation (operates on NumPy arrays)
                         aug_patch = self.transforms(patch)
 
@@ -144,7 +138,6 @@ class PancreasDataset(Dataset):
         image = pad_if_needed(image, depth)
         label = pad_if_needed(label, depth)
         patch_slices = get_patch_slices(image.shape, depth, self.config.patch_overlap)
-        # print(f"PATCH_SLICES: {len(patch_slices)}")
         patches, labels = [], []
 
         for sl in patch_slices:
@@ -187,14 +180,25 @@ def get_dataloaders(config):
 if __name__ == "__main__":
     sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
     from config.config import Config
+    from models.unet3d import UNet3D
     from data.dataloader import get_dataloaders
 
     config = Config()
+
+    # Set the correct local rank for each process
+    local_rank = int(os.getenv("LOCAL_RANK", 0))
+    torch.cuda.set_device(local_rank)
 
     print(f"Using {config.num_gpus} GPUs on {config.device}")
 
     # Initialize dataloaders
     train_loader, val_loader = get_dataloaders(config)
+
+    # Initialize the model, DDP wraps it around
+    model = UNet3D(config.in_channels, config.num_classes).to(config.device)
+    if config.world_size > 1:
+        model = torch.nn.parallel.DistributedDataParallel(model, device_ids=[local_rank])
+
 
     # Testing with one batch from the train_loader
     for batch_data, batch_labels in train_loader:
