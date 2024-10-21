@@ -10,6 +10,27 @@ from monai.transforms import (
 )
 import nibabel as nib  # To load the NIfTI files
 import sys
+import logging
+
+# Logger class to log stdout and stderr to both terminal and file
+class TeeLogger:
+    def __init__(self, log_file):
+        self.terminal = sys.stdout
+        self.log_file = open(log_file, "a")
+
+    def write(self, message):
+        self.terminal.write(message)
+        self.log_file.write(message)
+        self.log_file.flush()
+
+    def flush(self):
+        self.terminal.flush()
+        self.log_file.flush()
+
+# Set up the log file and redirect stdout/stderr
+log_filename = "logs.log"
+sys.stdout = TeeLogger(log_filename)
+sys.stderr = TeeLogger(log_filename)
 
 # Add the parent directory to the Python path for module imports
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
