@@ -192,6 +192,8 @@ if __name__ == "__main__":
 
     print(f"Using {config.num_gpus} GPUs on {config.device}")
 
+    print(f"DIST.IS_AVAILABLE(): {dist.is_available()} DIST.IS_INITIALIZED(): {dist.is_initialized()}")
+
     # Initialize dataloaders
     train_loader, val_loader = get_dataloaders(config)
 
