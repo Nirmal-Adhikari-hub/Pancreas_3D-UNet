@@ -2248,3 +2248,99 @@ Traceback (most recent call last):
 ValueErrorValueErrorValueError: : : Default process group has not been initialized, please make sure to call init_process_group.Default process group has not been initialized, please make sure to call init_process_group.Default process group has not been initialized, please make sure to call init_process_group.
 
 
+Using 3 GPUs on cudaUsing 3 GPUs on cuda
+
+DIST.IS_AVAILABLE(): True DIST.IS_INITIALIZED(): TrueDIST.IS_AVAILABLE(): True DIST.IS_INITIALIZED(): True
+
+World Size: <bound method Config.get_world_size of <config.config.Config object at 0x7f913eb8d2e0>> 
+ Local Rank: <bound method Config.get_local_rank of <config.config.Config object at 0x7f913eb8d2e0>>World Size: <bound method Config.get_world_size of <config.config.Config object at 0x7f913eb8d2e0>> 
+ Local Rank: <bound method Config.get_local_rank of <config.config.Config object at 0x7f913eb8d2e0>>
+
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/shared/home/xvoice/nirmal/project/Unet_seg/Pancreas_3D-UNet/data/dataloader.py", line 200, in <module>
+[rank0]:     train_loader, val_loader = get_dataloaders(config)
+[rank0]:                                ^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/shared/home/xvoice/nirmal/project/Unet_seg/Pancreas_3D-UNet/data/dataloader.py", line 162, in get_dataloaders
+[rank0]:     if world_size > 1:
+[rank0]:        ^^^^^^^^^^^^^^
+[rank0]: TypeError: '>' not supported between instances of 'method' and 'int'
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/shared/home/xvoice/nirmal/project/Unet_seg/Pancreas_3D-UNet/data/dataloader.py", line 200, in <module>
+[rank0]:     train_loader, val_loader = get_dataloaders(config)
+[rank0]:                                ^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/shared/home/xvoice/nirmal/project/Unet_seg/Pancreas_3D-UNet/data/dataloader.py", line 162, in get_dataloaders
+[rank0]:     if world_size > 1:
+[rank0]:        ^^^^^^^^^^^^^^
+[rank0]: TypeError: '>' not supported between instances of 'method' and 'int'
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/shared/home/xvoice/nirmal/project/Unet_seg/Pancreas_3D-UNet/data/dataloader.py", line 200, in <module>
+[rank0]:     train_loader, val_loader = get_dataloaders(config)
+[rank0]:                                ^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/shared/home/xvoice/nirmal/project/Unet_seg/Pancreas_3D-UNet/data/dataloader.py", line 162, in get_dataloaders
+[rank0]:     if world_size > 1:
+[rank0]:        ^^^^^^^^^^^^^^
+[rank0]: TypeError: '>' not supported between instances of 'method' and 'int'
+Using 3 GPUs on cudaUsing 3 GPUs on cudaUsing 3 GPUs on cudaUsing 3 GPUs on cuda
+
+
+
+DIST.IS_AVAILABLE(): True DIST.IS_INITIALIZED(): TrueDIST.IS_AVAILABLE(): True DIST.IS_INITIALIZED(): TrueDIST.IS_AVAILABLE(): True DIST.IS_INITIALIZED(): TrueDIST.IS_AVAILABLE(): True DIST.IS_INITIALIZED(): True
+
+
+
+World Size: <bound method Config.get_world_size of <config.config.Config object at 0x7f62dfa8eb40>> 
+ Local Rank: <bound method Config.get_local_rank of <config.config.Config object at 0x7f62dfa8eb40>>World Size: <bound method Config.get_world_size of <config.config.Config object at 0x7f477d6a5880>> 
+ Local Rank: <bound method Config.get_local_rank of <config.config.Config object at 0x7f477d6a5880>>World Size: <bound method Config.get_world_size of <config.config.Config object at 0x7f62dfa8eb40>> 
+ Local Rank: <bound method Config.get_local_rank of <config.config.Config object at 0x7f62dfa8eb40>>World Size: <bound method Config.get_world_size of <config.config.Config object at 0x7f477d6a5880>> 
+ Local Rank: <bound method Config.get_local_rank of <config.config.Config object at 0x7f477d6a5880>>
+
+
+
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/shared/home/xvoice/nirmal/project/Unet_seg/Pancreas_3D-UNet/data/dataloader.py", line 200, in <module>
+[rank0]:     train_loader, val_loader = get_dataloaders(config)
+[rank0]:                                ^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/shared/home/xvoice/nirmal/project/Unet_seg/Pancreas_3D-UNet/data/dataloader.py", line 162, in get_dataloaders
+[rank0]:     if world_size > 1:
+[rank0]:        ^^^^^^^^^^^^^^
+[rank0]: TypeError: '>' not supported between instances of 'method' and 'int'
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/shared/home/xvoice/nirmal/project/Unet_seg/Pancreas_3D-UNet/data/dataloader.py", line 200, in <module>
+[rank0]:     train_loader, val_loader = get_dataloaders(config)
+[rank0]:                                ^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/shared/home/xvoice/nirmal/project/Unet_seg/Pancreas_3D-UNet/data/dataloader.py", line 162, in get_dataloaders
+[rank0]:     if world_size > 1:
+[rank0]:        ^^^^^^^^^^^^^^
+[rank0]: TypeError: '>' not supported between instances of 'method' and 'int'
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/shared/home/xvoice/nirmal/project/Unet_seg/Pancreas_3D-UNet/data/dataloader.py", line 200, in <module>
+[rank0]:     train_loader, val_loader = get_dataloaders(config)
+[rank0]:                                ^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/shared/home/xvoice/nirmal/project/Unet_seg/Pancreas_3D-UNet/data/dataloader.py", line 162, in get_dataloaders
+[rank0]:     if world_size > 1:
+[rank0]:        ^^^^^^^^^^^^^^
+[rank0]: TypeError: '>' not supported between instances of 'method' and 'int'
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/shared/home/xvoice/nirmal/project/Unet_seg/Pancreas_3D-UNet/data/dataloader.py", line 200, in <module>
+[rank0]:     train_loader, val_loader = get_dataloaders(config)
+[rank0]:                                ^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/shared/home/xvoice/nirmal/project/Unet_seg/Pancreas_3D-UNet/data/dataloader.py", line 162, in get_dataloaders
+[rank0]:     if world_size > 1:
+[rank0]:        ^^^^^^^^^^^^^^
+[rank0]: TypeError: '>' not supported between instances of 'method' and 'int'
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/shared/home/xvoice/nirmal/project/Unet_seg/Pancreas_3D-UNet/data/dataloader.py", line 200, in <module>
+[rank0]:     train_loader, val_loader = get_dataloaders(config)
+[rank0]:                                ^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/shared/home/xvoice/nirmal/project/Unet_seg/Pancreas_3D-UNet/data/dataloader.py", line 162, in get_dataloaders
+[rank0]:     if world_size > 1:
+[rank0]:        ^^^^^^^^^^^^^^
+[rank0]: TypeError: '>' not supported between instances of 'method' and 'int'
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/shared/home/xvoice/nirmal/project/Unet_seg/Pancreas_3D-UNet/data/dataloader.py", line 200, in <module>
+[rank0]:     train_loader, val_loader = get_dataloaders(config)
+[rank0]:                                ^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/shared/home/xvoice/nirmal/project/Unet_seg/Pancreas_3D-UNet/data/dataloader.py", line 162, in get_dataloaders
+[rank0]:     if world_size > 1:
+[rank0]:        ^^^^^^^^^^^^^^
+[rank0]: TypeError: '>' not supported between instances of 'method' and 'int'
