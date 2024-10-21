@@ -153,8 +153,8 @@ def get_dataloaders(config):
     val_dataset = PancreasDataset(config, train=False)
 
     # Get the distributed rank and world size (for distributed training)
-    rank = config.get_local_rank
-    world_size = config.get_world_size
+    rank = config.get_local_rank()
+    world_size = config.get_world_size()
     if torch.distributed.get_rank() == 0:  # Ensure only the main process logs
         print(f"World Size: {world_size} \n Local Rank: {rank}")
 
