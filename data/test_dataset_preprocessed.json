@@ -1,0 +1,120 @@
+{
+    "test": [
+        {
+            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/./imagesTr/pancreas_361.nii.gz",
+            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/./labelsTr/pancreas_361.nii.gz"
+        },
+        {
+            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/./imagesTr/pancreas_301.nii.gz",
+            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/./labelsTr/pancreas_301.nii.gz"
+        },
+        {
+            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/./imagesTr/pancreas_374.nii.gz",
+            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/./labelsTr/pancreas_374.nii.gz"
+        },
+        {
+            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/./imagesTr/pancreas_084.nii.gz",
+            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/./labelsTr/pancreas_084.nii.gz"
+        },
+        {
+            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/./imagesTr/pancreas_388.nii.gz",
+            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/./labelsTr/pancreas_388.nii.gz"
+        },
+        {
+            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/./imagesTr/pancreas_103.nii.gz",
+            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/./labelsTr/pancreas_103.nii.gz"
+        },
+        {
+            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/./imagesTr/pancreas_358.nii.gz",
+            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/./labelsTr/pancreas_358.nii.gz"
+        },
+        {
+            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/./imagesTr/pancreas_372.nii.gz",
+            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/./labelsTr/pancreas_372.nii.gz"
+        },
+        {
+            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/./imagesTr/pancreas_092.nii.gz",
+            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/./labelsTr/pancreas_092.nii.gz"
+        },
+        {
+            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/./imagesTr/pancreas_201.nii.gz",
+            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/./labelsTr/pancreas_201.nii.gz"
+        },
+        {
+            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/./imagesTr/pancreas_080.nii.gz",
+            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/./labelsTr/pancreas_080.nii.gz"
+        },
+        {
+            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/./imagesTr/pancreas_178.nii.gz",
+            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/./labelsTr/pancreas_178.nii.gz"
+        },
+        {
+            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/./imagesTr/pancreas_276.nii.gz",
+            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/./labelsTr/pancreas_276.nii.gz"
+        },
+        {
+            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/./imagesTr/pancreas_051.nii.gz",
+            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/./labelsTr/pancreas_051.nii.gz"
+        },
+        {
+            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/./imagesTr/pancreas_345.nii.gz",
+            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/./labelsTr/pancreas_345.nii.gz"
+        },
+        {
+            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/./imagesTr/pancreas_106.nii.gz",
+            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/./labelsTr/pancreas_106.nii.gz"
+        },
+        {
+            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/./imagesTr/pancreas_170.nii.gz",
+            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/./labelsTr/pancreas_170.nii.gz"
+        },
+        {
+            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/./imagesTr/pancreas_105.nii.gz",
+            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/./labelsTr/pancreas_105.nii.gz"
+        },
+        {
+            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/./imagesTr/pancreas_243.nii.gz",
+            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/./labelsTr/pancreas_243.nii.gz"
+        },
+        {
+            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/./imagesTr/pancreas_325.nii.gz",
+            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/./labelsTr/pancreas_325.nii.gz"
+        },
+        {
+            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/./imagesTr/pancreas_350.nii.gz",
+            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/./labelsTr/pancreas_350.nii.gz"
+        },
+        {
+            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/./imagesTr/pancreas_327.nii.gz",
+            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/./labelsTr/pancreas_327.nii.gz"
+        },
+        {
+            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/./imagesTr/pancreas_409.nii.gz",
+            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/./labelsTr/pancreas_409.nii.gz"
+        },
+        {
+            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/./imagesTr/pancreas_299.nii.gz",
+            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/./labelsTr/pancreas_299.nii.gz"
+        },
+        {
+            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/./imagesTr/pancreas_334.nii.gz",
+            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/./labelsTr/pancreas_334.nii.gz"
+        },
+        {
+            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/./imagesTr/pancreas_222.nii.gz",
+            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/./labelsTr/pancreas_222.nii.gz"
+        },
+        {
+            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/./imagesTr/pancreas_001.nii.gz",
+            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/./labelsTr/pancreas_001.nii.gz"
+        },
+        {
+            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/./imagesTr/pancreas_402.nii.gz",
+            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/./labelsTr/pancreas_402.nii.gz"
+        },
+        {
+            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/./imagesTr/pancreas_004.nii.gz",
+            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/./labelsTr/pancreas_004.nii.gz"
+        }
+    ]
+}
