@@ -5,6 +5,8 @@ import nibabel as nib  # To load NIfTI files
 from sklearn.model_selection import train_test_split
 import sys
 import logging
+import glob
+
 
 # Logger class to log stdout and stderr to both terminal and file
 class TeeLogger:
@@ -119,31 +121,47 @@ class PreprocessPancreasDataset:
         print(f"Extracted {len(patches)} patches from the CT scan.")  # Debugging
         return patches, labels
 
-    def save_patches(self, phase, patches, labels, image_name):
+    def save_patches(self, phase, patches, labels, image_filename):
         """
-        Save the patches and labels, and store their metadata for the preprocessed JSON.
+        Save the patches and corresponding labels as .npy files to the preprocessed directories.
+        If previous patches exist, they are deleted before saving new ones.
+        :param phase: 'train', 'val', or 'test' phase
+        :param patches: List of image patches
+        :param labels: List of label patches
+        :param image_filename: Original image filename to be used in patch filenames
         """
-        phase_dir = os.path.join(self.output_dir, phase)
+        # Get the base name of the image file (e.g., pancreas_308)
+        image_basename = os.path.basename(image_filename).replace('.nii.gz', '')
+
+        # Define the target directory based on the phase (train/val/test)
+        phase_dir = os.path.join(self.config.preprocessed_dir, phase)
+
+        # Ensure the directory exists
         if not os.path.exists(phase_dir):
             os.makedirs(phase_dir)
 
-        patch_paths = []
-        for i, (patch, label_patch) in enumerate(zip(patches, labels)):
-            patch_file = f"{image_name}_patch_{i}.npy"
-            label_file = f"{image_name}_label_{i}.npy"
+        # Clean up old patches for the current image if they exist
+        old_patch_files = glob.glob(os.path.join(phase_dir, f"{image_basename}_patch_*.npy"))
+        old_label_files = glob.glob(os.path.join(phase_dir, f"{image_basename}_label_*.npy"))
 
-            # Save patch and label as .npy files
+        if old_patch_files or old_label_files:
+            print(f"Found existing patches/labels for {image_basename}. Removing them.")
+            for f in old_patch_files + old_label_files:
+                os.remove(f)  # Remove the old files
+            print(f"Cleaned old patches/labels for {image_basename}.")
+
+        # Iterate through the patches and labels and save them as .npy files
+        for i, (patch, label) in enumerate(zip(patches, labels)):
+            patch_file = f"{image_basename}_patch_{i}.npy"
+            label_file = f"{image_basename}_label_{i}.npy"
+
+            # Save patch and label numpy arrays
             np.save(os.path.join(phase_dir, patch_file), patch)
-            np.save(os.path.join(phase_dir, label_file), label_patch)
+            np.save(os.path.join(phase_dir, label_file), label)
 
-            # Add paths to the preprocessed dataset JSON
-            patch_paths.append({
-                "patch": os.path.join(phase_dir, patch_file),
-                "label": os.path.join(phase_dir, label_file)
-            })
-
-        print(f"Saved {len(patches)} patches for {image_name} in {phase} phase.")  # Debugging
-        self.preprocessed_data[phase].extend(patch_paths)
+            # Debugging print statements to confirm saving
+            print(f"Saved patch: {os.path.join(phase_dir, patch_file)}")
+            print(f"Saved label: {os.path.join(phase_dir, label_file)}")
 
     def save_json(self):
         """
