@@ -62,10 +62,10 @@ class PancreasDataset(Dataset):
                 RandFlip(spatial_axis=[1], prob=0.5),  # Flip along x-axis
                 RandFlip(spatial_axis=[2], prob=0.5),  # Flip along y-axis
                 RandFlip(spatial_axis=[0], prob=0.5),  # Flip along z-axis
-                RandRotate90(prob=0.5, max_k=3, spatial_axes=(1, 2)),  # Random 90-degree rotation on XY plane
-                RandScaleIntensity(factors=0.1, prob=0.5),  # Random intensity scaling
-                RandZoom(min_zoom=0.9, max_zoom=1.1, prob=0.5),  # Random zooming
-                RandGaussianNoise(prob=0.2),  # Adding Gaussian noise
+                # RandRotate90(prob=0.5, max_k=3, spatial_axes=(1, 2)),  # Random 90-degree rotation on XY plane
+                # RandScaleIntensity(factors=0.1, prob=0.5),  # Random intensity scaling
+                # RandZoom(min_zoom=0.9, max_zoom=1.1, prob=0.5),  # Random zooming
+                # RandGaussianNoise(prob=0.2),  # Adding Gaussian noise
                 # RandElasticDeformation(prob=0.3, sigma_range=(5, 10))  # Elastic deformation for tissue-like distortion
             ]) if self.augmented_samples > 1 else None
         else:
