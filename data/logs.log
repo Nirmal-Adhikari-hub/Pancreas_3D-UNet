@@ -393,3 +393,84 @@ Number of patches: 3,
 [rank0]:                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 [rank0]: TypeError: expected np.ndarray (got MetaTensor)
 
+Train Size: 226, Val Size: 26, Test Size: 29
+Processing /shared/home/xvoice/nirmal/data/Task07_Pancreas/./imagesTr/pancreas_308.nii.gz for train phase.
+Train Size: 226, Val Size: 26, Test Size: 29
+Processing /shared/home/xvoice/nirmal/data/Task07_Pancreas/./imagesTr/pancreas_308.nii.gz for train phase.
+Train Size: 226, Val Size: 26, Test Size: 29
+Processing /shared/home/xvoice/nirmal/data/Task07_Pancreas/./imagesTr/pancreas_308.nii.gz for train phase.
+Extracted 7 patches from the CT scan.
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/shared/home/xvoice/nirmal/project/Unet_seg/Pancreas_3D-UNet/data/dataset_split.py", line 178, in <module>
+  File "/shared/home/xvoice/nirmal/project/Unet_seg/Pancreas_3D-UNet/data/dataset_split.py", line 178, in <module>
+        preprocessor.process_and_save()preprocessor.process_and_save()
+
+  File "/shared/home/xvoice/nirmal/project/Unet_seg/Pancreas_3D-UNet/data/dataset_split.py", line 88, in process_and_save
+  File "/shared/home/xvoice/nirmal/project/Unet_seg/Pancreas_3D-UNet/data/dataset_split.py", line 88, in process_and_save
+        self.save_patches(phase, patches, labels, entry['image'])  # Save them offlineself.save_patches(phase, patches, labels, entry['image'])  # Save them offline
+
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/shared/home/xvoice/nirmal/project/Unet_seg/Pancreas_3D-UNet/data/dataset_split.py", line 136, in save_patches
+  File "/shared/home/xvoice/nirmal/project/Unet_seg/Pancreas_3D-UNet/data/dataset_split.py", line 136, in save_patches
+        np.save(os.path.join(phase_dir, patch_file), patch)np.save(os.path.join(phase_dir, patch_file), patch)
+
+  File "/shared/home/xvoice/anaconda3/envs/transformer_mm/lib/python3.12/site-packages/numpy/lib/npyio.py", line 542, in save
+  File "/shared/home/xvoice/anaconda3/envs/transformer_mm/lib/python3.12/site-packages/numpy/lib/npyio.py", line 542, in save
+        file_ctx = open(file, "wb")file_ctx = open(file, "wb")
+
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+FileNotFoundErrorFileNotFoundError: : [Errno 2] No such file or directory: '/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/train/./imagesTr/pancreas_308.nii.gz_patch_0.npy'[Errno 2] No such file or directory: '/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/train/./imagesTr/pancreas_308.nii.gz_patch_0.npy'
+
+Extracted 7 patches from the CT scan.
+Extracted 7 patches from the CT scan.
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/shared/home/xvoice/nirmal/project/Unet_seg/Pancreas_3D-UNet/data/dataset_split.py", line 178, in <module>
+  File "/shared/home/xvoice/nirmal/project/Unet_seg/Pancreas_3D-UNet/data/dataset_split.py", line 178, in <module>
+  File "/shared/home/xvoice/nirmal/project/Unet_seg/Pancreas_3D-UNet/data/dataset_split.py", line 178, in <module>
+  File "/shared/home/xvoice/nirmal/project/Unet_seg/Pancreas_3D-UNet/data/dataset_split.py", line 178, in <module>
+                preprocessor.process_and_save()preprocessor.process_and_save()preprocessor.process_and_save()preprocessor.process_and_save()
+
+
+
+  File "/shared/home/xvoice/nirmal/project/Unet_seg/Pancreas_3D-UNet/data/dataset_split.py", line 88, in process_and_save
+  File "/shared/home/xvoice/nirmal/project/Unet_seg/Pancreas_3D-UNet/data/dataset_split.py", line 88, in process_and_save
+  File "/shared/home/xvoice/nirmal/project/Unet_seg/Pancreas_3D-UNet/data/dataset_split.py", line 88, in process_and_save
+  File "/shared/home/xvoice/nirmal/project/Unet_seg/Pancreas_3D-UNet/data/dataset_split.py", line 88, in process_and_save
+                self.save_patches(phase, patches, labels, entry['image'])  # Save them offlineself.save_patches(phase, patches, labels, entry['image'])  # Save them offlineself.save_patches(phase, patches, labels, entry['image'])  # Save them offlineself.save_patches(phase, patches, labels, entry['image'])  # Save them offline
+
+
+
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+
+  File "/shared/home/xvoice/nirmal/project/Unet_seg/Pancreas_3D-UNet/data/dataset_split.py", line 136, in save_patches
+  File "/shared/home/xvoice/nirmal/project/Unet_seg/Pancreas_3D-UNet/data/dataset_split.py", line 136, in save_patches
+  File "/shared/home/xvoice/nirmal/project/Unet_seg/Pancreas_3D-UNet/data/dataset_split.py", line 136, in save_patches
+  File "/shared/home/xvoice/nirmal/project/Unet_seg/Pancreas_3D-UNet/data/dataset_split.py", line 136, in save_patches
+                np.save(os.path.join(phase_dir, patch_file), patch)np.save(os.path.join(phase_dir, patch_file), patch)np.save(os.path.join(phase_dir, patch_file), patch)np.save(os.path.join(phase_dir, patch_file), patch)
+
+
+
+  File "/shared/home/xvoice/anaconda3/envs/transformer_mm/lib/python3.12/site-packages/numpy/lib/npyio.py", line 542, in save
+  File "/shared/home/xvoice/anaconda3/envs/transformer_mm/lib/python3.12/site-packages/numpy/lib/npyio.py", line 542, in save
+  File "/shared/home/xvoice/anaconda3/envs/transformer_mm/lib/python3.12/site-packages/numpy/lib/npyio.py", line 542, in save
+  File "/shared/home/xvoice/anaconda3/envs/transformer_mm/lib/python3.12/site-packages/numpy/lib/npyio.py", line 542, in save
+            file_ctx = open(file, "wb")    file_ctx = open(file, "wb")file_ctx = open(file, "wb")
+file_ctx = open(file, "wb")
+
+
+                                                           ^ ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^
+
+
+FileNotFoundErrorFileNotFoundErrorFileNotFoundErrorFileNotFoundError: : : : [Errno 2] No such file or directory: '/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/train/./imagesTr/pancreas_308.nii.gz_patch_0.npy'[Errno 2] No such file or directory: '/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/train/./imagesTr/pancreas_308.nii.gz_patch_0.npy'[Errno 2] No such file or directory: '/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/train/./imagesTr/pancreas_308.nii.gz_patch_0.npy'
+[Errno 2] No such file or directory: '/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/train/./imagesTr/pancreas_308.nii.gz_patch_0.npy'
+
+
