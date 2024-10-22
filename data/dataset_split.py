@@ -12,7 +12,7 @@ import glob
 class TeeLogger:
     def __init__(self, log_file):
         self.terminal = sys.stdout
-        self.log_file = open(log_file, "w")
+        self.log_file = open(log_file, "w", buffering=1)
 
     def write(self, message):
         self.terminal.write(message)
