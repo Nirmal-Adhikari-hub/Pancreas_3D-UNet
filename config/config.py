@@ -1,42 +1,3 @@
-
-# """""
-# Dataset configurations:
-#     :param DATASET_PATH -> the directory path to dataset .tar files
-#     :param TASK_ID -> specifies the the segmentation task ID (see the dict below for hints)
-#     :param IN_CHANNELS -> number of input channels
-#     :param NUM_CLASSES -> specifies the number of output channels for dispirate classes
-#     :param BACKGROUND_AS_CLASS -> if True, the model treats background as a class
-
-# """""
-# DATASET_PATH = '/PATH/TO/THE/DATASET'
-# TASK_ID = 9
-# IN_CHANNELS = 1
-# NUM_CLASSES = 3
-# BACKGROUND_AS_CLASS = False
-
-
-# """""
-# Training configurations:
-#     :param TRAIN_VAL_TEST_SPLIT -> delineates the ratios in which the dataset shoud be splitted. The length of the array should be 3.
-#     :param SPLIT_SEED -> the random seed with which the dataset is splitted
-#     :param TRAINING_EPOCH -> number of training epochs
-#     :param VAL_BATCH_SIZE -> specifies the batch size of the training DataLoader
-#     :param TEST_BATCH_SIZE -> specifies the batch size of the test DataLoader
-#     :param TRAIN_CUDA -> if True, moves the model and inference onto GPU
-#     :param BCE_WEIGHTS -> the class weights for the Binary Cross Entropy loss
-# """""
-# TRAIN_VAL_TEST_SPLIT = [0.8, 0.1, 0.1]
-# SPLIT_SEED = 42
-# TRAINING_EPOCH = 100
-# TRAIN_BATCH_SIZE = 1
-# VAL_BATCH_SIZE = 1
-# TEST_BATCH_SIZE = 1
-# TRAIN_CUDA = True
-# BCE_WEIGHTS = [0.004, 0.996]
-
-
-
-
 import os
 import torch.distributed as dist
 import torch
@@ -65,6 +26,8 @@ class Config:
         self.optimizer = os.getenv('OPTIMIZER', 'adam')  # Optimizer type
         
         # Data paths (fixed for your project)
+        self.preprocessed_dir = '/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed'
+        
         self.dataset_json = os.getenv('DATASET_JSON', '/shared/home/xvoice/nirmal/data/Task07_Pancreas/dataset.json')
         self.dataset_path = os.getenv('DATASET_PATH', '/shared/home/xvoice/nirmal/data/Task07_Pancreas')
         self.checkpoint_dir = os.getenv('CKPT_DIR', '/shared/home/xvoice/nirmal/exp/3d-unet/checkpoints')
@@ -72,17 +35,17 @@ class Config:
 
         # Distributed Training Settings
         self.distributed = dist.is_available() and dist.is_initialized()
-        self.world_size = self.get_world_size()  # Dynamically find world size
-        self.local_rank = self.get_local_rank()  # Dynamically find local rank
+        # self.world_size = self.get_world_size()  # Dynamically find world size
+        # self.local_rank = self.get_local_rank()  # Dynamically find local rank
 
-        # Initialize the process group if distributed training is set
-        if self.distributed:
-            self.init_distributed()
+        # # Initialize the process group if distributed training is set
+        # if self.distributed:
+        #     self.init_distributed()
 
         
     def init_distributed(self):
         """ Initialize the process group for distributed training."""
-        dist.init_process_group(backend='nccl', world_size=self.world_size, rank=self.get_local_rank())
+        dist.init_process_group(backend='nccl', init_method='env://', world_size=self.get_world_size(), rank=self.get_local_rank())
 
     def update(self, args):
         """ Update config dynamically using parsed arguments (if needed) """
