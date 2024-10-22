@@ -1,11 +1,9 @@
 import os
 import numpy as np
 import json
-import nibabel as nib  # To load NIfTI files
+import nibabel as nib
 from sklearn.model_selection import train_test_split
 import sys
-import logging
-import glob
 
 
 # Logger class to log stdout and stderr to both terminal and file
@@ -28,7 +26,7 @@ log_filename = "logs.log"
 sys.stdout = TeeLogger(log_filename)
 sys.stderr = TeeLogger(log_filename)
 
-# Add the parent directory to the Python path for module imports
+# Add parent directory to the Python path for module imports
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from utils.distributed import get_patch_slices, pad_if_needed
 
@@ -41,22 +39,22 @@ class PreprocessPancreasDataset:
         if not os.path.exists(output_dir):
             os.makedirs(output_dir)
 
-        # Load dataset info (dataset.json)
+        #Load dataset info (dataset.json)
         with open(config.dataset_json, 'r') as f:
             dataset_info = json.load(f)
-        
+
         # Full training data paths
         self.data_info = dataset_info['training']
 
-        # Step 1: Split into train, validation, and test sets (CT scan level)
+        # Step 1: Split into train, val and test set (CT scan levels)
         self.train_data, self.test_data = train_test_split(self.data_info, test_size=0.1, random_state=42)
 
-        # Split train data into train/val split
+        # Split the train data into train/val split
         self.train_data, self.val_data = train_test_split(self.train_data, test_size=0.1, random_state=42)
 
         print(f"Train Size: {len(self.train_data)}, Val Size: {len(self.val_data)}, Test Size: {len(self.test_data)}")
 
-        # Prepare dictionaries to store the paths of preprocessed patches and labels
+        # Prepare the directories to store the paths of preprocessed patches and labels
         self.preprocessed_data = {
             "train": [],
             "val": [],
@@ -65,90 +63,100 @@ class PreprocessPancreasDataset:
 
     def process_and_save(self):
         """
-        Process the train and validation sets by slicing patches, saving them,
-        and storing their metadata in a new JSON file.
+        Process the train and validation sets by slicing patches, saving them, and storing 
+        their metadata in a new JSON file.
         The test set is kept as raw volumes.
         """
-        # Process Train and Validation sets
+
+        # Ensure train, val, and test directories are created
+        train_dir = os.path.join(self.output_dir, 'train')
+        val_dir = os.path.join(self.output_dir, 'val')
+        test_dir = os.path.join(self.output_dir, 'test')
+
+        if not os.path.exists(train_dir):
+            os.makedirs(train_dir)
+        if not os.path.exists(val_dir):
+            os.makedirs(val_dir)
+        if not os.path.exists(test_dir):
+            os.makedirs(test_dir)
+
+        # Process train and validation sets
         for phase, data in zip(['train', 'val'], [self.train_data, self.val_data]):
             for entry in data:
                 img_path = os.path.join(self.config.dataset_path, entry['image'])
                 label_path = os.path.join(self.config.dataset_path, entry['label'])
-                
-                print(f"Processing {img_path} for {phase} phase.")  # Debugging
+
+                print(f"Preprocessing {os.path.basename(img_path).replace('.nii.gz', '')} for {phase} phase.")
 
                 # Load the NIfTI files
                 img_nifti = nib.load(img_path)
                 label_nifti = nib.load(label_path)
 
                 # Convert to numpy arrays and ensure correct axes order
-                image = np.transpose(np.array(img_nifti.get_fdata(), dtype=np.float32), (2, 0, 1))  # Shape: (D, H, W)
-                label = np.transpose(np.array(label_nifti.get_fdata(), dtype=np.uint8), (2, 0, 1))  # Shape: (D, H, W)
+                image = np.transpose(np.array(img_nifti.get_fdata(), dtype=np.float32), (2, 0, 1)) # Shape: (D, H, W)
+                label = np.transpose(np.array(label_nifti.get_fdata(), dtype=np.uint8), (2, 0, 1)) # Shape: (D, H, W)
 
-                # Slice the patches and save them
+                # Slice the pathces and save them
                 patches, labels = self.get_patches(image, label)
-                self.save_patches(phase, patches, labels, entry['image'])  # Save them offline
+                self.save_patches(phase, patches, labels, entry['image'])
 
         # Process the Test set (no slicing, just save the full scans)
         for entry in self.test_data:
             img_path = os.path.join(self.config.dataset_path, entry['image'])
             label_path = os.path.join(self.config.dataset_path, entry['label'])
 
-            print(f"Saving {img_path} for test phase.")  # Debugging
+            print(f"Saving raw scan for test: {img_path}")
 
-            # Copy the raw CT scan file paths to the preprocessed JSON
+            # Create destination paths inside the test directory
+            image_filename = os.path.basename(img_path)
+            label_filename = os.path.basename(label_path).replace('.nii.gz', '_label.nii.gz')
+            dest_img_path = os.path.join(test_dir, image_filename)
+            dest_label_path = os.path.join(test_dir, label_filename)
+
+            # Copy the raw CT scan files to the test folder
+            nib.save(nib.load(img_path), dest_img_path)
+            nib.save(nib.load(label_path), dest_label_path)
+
+            # Store the paths in the preprocessed data
             self.preprocessed_data['test'].append({
-                "image": img_path,
-                "label": label_path
+                "image": dest_img_path,
+                "label": dest_label_path
             })
 
-        # Write the preprocessed dataset to new JSON files
+
         self.save_json()
+
 
     def get_patches(self, image, label):
         """
         Extract patches from a 3D image and corresponding labels.
         """
         depth, height, width = self.config.input_size
-        image = pad_if_needed(image, depth)
-        label = pad_if_needed(label, depth)
         patch_slices = get_patch_slices(image.shape, depth, self.config.patch_overlap)
-        
+
         patches, labels = [], []
         for sl in patch_slices:
             patches.append(image[sl].copy())
             labels.append(label[sl].copy())
-        print(f"Extracted {len(patches)} patches from the CT scan.")  # Debugging
+        print(f"Extracted {len(patches)} patches from the CT scan of size {image.shape}")
         return patches, labels
-
+    
     def save_patches(self, phase, patches, labels, image_filename):
         """
-        Save the patches and corresponding labels as .npy files to the preprocessed directories.
+        Save the patches and corresponding labels as .npy files to the 
+        preprocessed directories.
         If previous patches exist, they are deleted before saving new ones.
-        :param phase: 'train', 'val', or 'test' phase
-        :param patches: List of image patches
-        :param labels: List of label patches
-        :param image_filename: Original image filename to be used in patch filenames
         """
-        # Get the base name of the image file (e.g., pancreas_308)
+
+        # Get the basename of the image file (eg pancreas_001)
         image_basename = os.path.basename(image_filename).replace('.nii.gz', '')
 
-        # Define the target directory based on the phase (train/val/test)
-        phase_dir = os.path.join(self.config.preprocessed_dir, phase)
+        # Define the target directory based on the phase (train/val)
+        phase_dir = os.path.join(self.output_dir, phase)
 
         # Ensure the directory exists
         if not os.path.exists(phase_dir):
             os.makedirs(phase_dir)
-
-        # Clean up old patches for the current image if they exist
-        old_patch_files = glob.glob(os.path.join(phase_dir, f"{image_basename}_patch_*.npy"))
-        old_label_files = glob.glob(os.path.join(phase_dir, f"{image_basename}_label_*.npy"))
-
-        if old_patch_files or old_label_files:
-            print(f"Found existing patches/labels for {image_basename}. Removing them.")
-            for f in old_patch_files + old_label_files:
-                os.remove(f)  # Remove the old files
-            print(f"Cleaned old patches/labels for {image_basename}.")
 
         # Iterate through the patches and labels and save them as .npy files
         for i, (patch, label) in enumerate(zip(patches, labels)):
@@ -159,9 +167,15 @@ class PreprocessPancreasDataset:
             np.save(os.path.join(phase_dir, patch_file), patch)
             np.save(os.path.join(phase_dir, label_file), label)
 
-            # Debugging print statements to confirm saving
-            print(f"Saved patch: {os.path.join(phase_dir, patch_file)}")
-            print(f"Saved label: {os.path.join(phase_dir, label_file)}")
+            # Append metadata for the preprocessed data for saving to JSON later
+            self.preprocessed_data[phase].append({
+                "image": os.path.join(phase_dir, patch_file),
+                "label": os.path.join(phase_dir, label_file)
+            })
+
+            print(f"Saved patch: {os.path.join(phase_dir, patch_file)} from {image_basename}")
+            print(f"Saved label: {os.path.join(phase_dir, label_file)} from {image_basename}")
+
 
     def save_json(self):
         """
@@ -180,17 +194,15 @@ class PreprocessPancreasDataset:
         with open(test_json_path, 'w') as f:
             json.dump({"test": self.preprocessed_data['test']}, f, indent=4)
 
-        print(f"Preprocessed dataset JSON files saved.")  # Debugging
+        print(f"Preprocessed dataset JSON files saved: {train_json_path}\n {val_json_path} \n {test_json_path}")
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-    from config.config import Config  # Assuming you already have your Config class
-    from utils.distributed import get_patch_slices, pad_if_needed
+    from config.config import Config
+
     config = Config()
 
-    # Initialize the preprocessor
     preprocessor = PreprocessPancreasDataset(config)
 
-    # Start processing and saving patches
     preprocessor.process_and_save()
