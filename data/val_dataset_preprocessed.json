@@ -1,1548 +1,1548 @@
 {
     "val": [
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_081_patch_0.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_081_label_0.npy"
+            "image": "val/pancreas_081_patch_0.npy",
+            "label": "val/pancreas_081_label_0.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_081_patch_1.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_081_label_1.npy"
+            "image": "val/pancreas_081_patch_1.npy",
+            "label": "val/pancreas_081_label_1.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_081_patch_2.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_081_label_2.npy"
+            "image": "val/pancreas_081_patch_2.npy",
+            "label": "val/pancreas_081_label_2.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_081_patch_3.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_081_label_3.npy"
+            "image": "val/pancreas_081_patch_3.npy",
+            "label": "val/pancreas_081_label_3.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_081_patch_4.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_081_label_4.npy"
+            "image": "val/pancreas_081_patch_4.npy",
+            "label": "val/pancreas_081_label_4.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_081_patch_5.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_081_label_5.npy"
+            "image": "val/pancreas_081_patch_5.npy",
+            "label": "val/pancreas_081_label_5.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_081_patch_6.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_081_label_6.npy"
+            "image": "val/pancreas_081_patch_6.npy",
+            "label": "val/pancreas_081_label_6.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_081_patch_7.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_081_label_7.npy"
+            "image": "val/pancreas_081_patch_7.npy",
+            "label": "val/pancreas_081_label_7.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_081_patch_8.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_081_label_8.npy"
+            "image": "val/pancreas_081_patch_8.npy",
+            "label": "val/pancreas_081_label_8.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_081_patch_9.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_081_label_9.npy"
+            "image": "val/pancreas_081_patch_9.npy",
+            "label": "val/pancreas_081_label_9.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_081_patch_10.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_081_label_10.npy"
+            "image": "val/pancreas_081_patch_10.npy",
+            "label": "val/pancreas_081_label_10.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_081_patch_11.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_081_label_11.npy"
+            "image": "val/pancreas_081_patch_11.npy",
+            "label": "val/pancreas_081_label_11.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_081_patch_12.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_081_label_12.npy"
+            "image": "val/pancreas_081_patch_12.npy",
+            "label": "val/pancreas_081_label_12.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_081_patch_13.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_081_label_13.npy"
+            "image": "val/pancreas_081_patch_13.npy",
+            "label": "val/pancreas_081_label_13.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_093_patch_0.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_093_label_0.npy"
+            "image": "val/pancreas_093_patch_0.npy",
+            "label": "val/pancreas_093_label_0.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_093_patch_1.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_093_label_1.npy"
+            "image": "val/pancreas_093_patch_1.npy",
+            "label": "val/pancreas_093_label_1.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_093_patch_2.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_093_label_2.npy"
+            "image": "val/pancreas_093_patch_2.npy",
+            "label": "val/pancreas_093_label_2.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_093_patch_3.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_093_label_3.npy"
+            "image": "val/pancreas_093_patch_3.npy",
+            "label": "val/pancreas_093_label_3.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_093_patch_4.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_093_label_4.npy"
+            "image": "val/pancreas_093_patch_4.npy",
+            "label": "val/pancreas_093_label_4.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_093_patch_5.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_093_label_5.npy"
+            "image": "val/pancreas_093_patch_5.npy",
+            "label": "val/pancreas_093_label_5.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_093_patch_6.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_093_label_6.npy"
+            "image": "val/pancreas_093_patch_6.npy",
+            "label": "val/pancreas_093_label_6.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_093_patch_7.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_093_label_7.npy"
+            "image": "val/pancreas_093_patch_7.npy",
+            "label": "val/pancreas_093_label_7.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_093_patch_8.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_093_label_8.npy"
+            "image": "val/pancreas_093_patch_8.npy",
+            "label": "val/pancreas_093_label_8.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_093_patch_9.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_093_label_9.npy"
+            "image": "val/pancreas_093_patch_9.npy",
+            "label": "val/pancreas_093_label_9.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_093_patch_10.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_093_label_10.npy"
+            "image": "val/pancreas_093_patch_10.npy",
+            "label": "val/pancreas_093_label_10.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_093_patch_11.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_093_label_11.npy"
+            "image": "val/pancreas_093_patch_11.npy",
+            "label": "val/pancreas_093_label_11.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_093_patch_12.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_093_label_12.npy"
+            "image": "val/pancreas_093_patch_12.npy",
+            "label": "val/pancreas_093_label_12.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_093_patch_13.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_093_label_13.npy"
+            "image": "val/pancreas_093_patch_13.npy",
+            "label": "val/pancreas_093_label_13.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_093_patch_14.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_093_label_14.npy"
+            "image": "val/pancreas_093_patch_14.npy",
+            "label": "val/pancreas_093_label_14.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_093_patch_15.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_093_label_15.npy"
+            "image": "val/pancreas_093_patch_15.npy",
+            "label": "val/pancreas_093_label_15.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_093_patch_16.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_093_label_16.npy"
+            "image": "val/pancreas_093_patch_16.npy",
+            "label": "val/pancreas_093_label_16.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_093_patch_17.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_093_label_17.npy"
+            "image": "val/pancreas_093_patch_17.npy",
+            "label": "val/pancreas_093_label_17.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_167_patch_0.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_167_label_0.npy"
+            "image": "val/pancreas_167_patch_0.npy",
+            "label": "val/pancreas_167_label_0.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_167_patch_1.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_167_label_1.npy"
+            "image": "val/pancreas_167_patch_1.npy",
+            "label": "val/pancreas_167_label_1.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_167_patch_2.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_167_label_2.npy"
+            "image": "val/pancreas_167_patch_2.npy",
+            "label": "val/pancreas_167_label_2.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_167_patch_3.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_167_label_3.npy"
+            "image": "val/pancreas_167_patch_3.npy",
+            "label": "val/pancreas_167_label_3.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_167_patch_4.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_167_label_4.npy"
+            "image": "val/pancreas_167_patch_4.npy",
+            "label": "val/pancreas_167_label_4.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_167_patch_5.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_167_label_5.npy"
+            "image": "val/pancreas_167_patch_5.npy",
+            "label": "val/pancreas_167_label_5.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_167_patch_6.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_167_label_6.npy"
+            "image": "val/pancreas_167_patch_6.npy",
+            "label": "val/pancreas_167_label_6.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_167_patch_7.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_167_label_7.npy"
+            "image": "val/pancreas_167_patch_7.npy",
+            "label": "val/pancreas_167_label_7.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_167_patch_8.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_167_label_8.npy"
+            "image": "val/pancreas_167_patch_8.npy",
+            "label": "val/pancreas_167_label_8.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_167_patch_9.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_167_label_9.npy"
+            "image": "val/pancreas_167_patch_9.npy",
+            "label": "val/pancreas_167_label_9.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_167_patch_10.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_167_label_10.npy"
+            "image": "val/pancreas_167_patch_10.npy",
+            "label": "val/pancreas_167_label_10.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_167_patch_11.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_167_label_11.npy"
+            "image": "val/pancreas_167_patch_11.npy",
+            "label": "val/pancreas_167_label_11.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_167_patch_12.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_167_label_12.npy"
+            "image": "val/pancreas_167_patch_12.npy",
+            "label": "val/pancreas_167_label_12.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_167_patch_13.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_167_label_13.npy"
+            "image": "val/pancreas_167_patch_13.npy",
+            "label": "val/pancreas_167_label_13.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_167_patch_14.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_167_label_14.npy"
+            "image": "val/pancreas_167_patch_14.npy",
+            "label": "val/pancreas_167_label_14.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_300_patch_0.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_300_label_0.npy"
+            "image": "val/pancreas_300_patch_0.npy",
+            "label": "val/pancreas_300_label_0.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_300_patch_1.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_300_label_1.npy"
+            "image": "val/pancreas_300_patch_1.npy",
+            "label": "val/pancreas_300_label_1.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_300_patch_2.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_300_label_2.npy"
+            "image": "val/pancreas_300_patch_2.npy",
+            "label": "val/pancreas_300_label_2.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_300_patch_3.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_300_label_3.npy"
+            "image": "val/pancreas_300_patch_3.npy",
+            "label": "val/pancreas_300_label_3.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_300_patch_4.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_300_label_4.npy"
+            "image": "val/pancreas_300_patch_4.npy",
+            "label": "val/pancreas_300_label_4.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_300_patch_5.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_300_label_5.npy"
+            "image": "val/pancreas_300_patch_5.npy",
+            "label": "val/pancreas_300_label_5.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_300_patch_6.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_300_label_6.npy"
+            "image": "val/pancreas_300_patch_6.npy",
+            "label": "val/pancreas_300_label_6.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_300_patch_7.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_300_label_7.npy"
+            "image": "val/pancreas_300_patch_7.npy",
+            "label": "val/pancreas_300_label_7.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_300_patch_8.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_300_label_8.npy"
+            "image": "val/pancreas_300_patch_8.npy",
+            "label": "val/pancreas_300_label_8.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_300_patch_9.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_300_label_9.npy"
+            "image": "val/pancreas_300_patch_9.npy",
+            "label": "val/pancreas_300_label_9.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_300_patch_10.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_300_label_10.npy"
+            "image": "val/pancreas_300_patch_10.npy",
+            "label": "val/pancreas_300_label_10.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_300_patch_11.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_300_label_11.npy"
+            "image": "val/pancreas_300_patch_11.npy",
+            "label": "val/pancreas_300_label_11.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_300_patch_12.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_300_label_12.npy"
+            "image": "val/pancreas_300_patch_12.npy",
+            "label": "val/pancreas_300_label_12.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_028_patch_0.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_028_label_0.npy"
+            "image": "val/pancreas_028_patch_0.npy",
+            "label": "val/pancreas_028_label_0.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_028_patch_1.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_028_label_1.npy"
+            "image": "val/pancreas_028_patch_1.npy",
+            "label": "val/pancreas_028_label_1.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_028_patch_2.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_028_label_2.npy"
+            "image": "val/pancreas_028_patch_2.npy",
+            "label": "val/pancreas_028_label_2.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_028_patch_3.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_028_label_3.npy"
+            "image": "val/pancreas_028_patch_3.npy",
+            "label": "val/pancreas_028_label_3.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_028_patch_4.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_028_label_4.npy"
+            "image": "val/pancreas_028_patch_4.npy",
+            "label": "val/pancreas_028_label_4.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_028_patch_5.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_028_label_5.npy"
+            "image": "val/pancreas_028_patch_5.npy",
+            "label": "val/pancreas_028_label_5.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_028_patch_6.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_028_label_6.npy"
+            "image": "val/pancreas_028_patch_6.npy",
+            "label": "val/pancreas_028_label_6.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_028_patch_7.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_028_label_7.npy"
+            "image": "val/pancreas_028_patch_7.npy",
+            "label": "val/pancreas_028_label_7.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_028_patch_8.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_028_label_8.npy"
+            "image": "val/pancreas_028_patch_8.npy",
+            "label": "val/pancreas_028_label_8.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_028_patch_9.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_028_label_9.npy"
+            "image": "val/pancreas_028_patch_9.npy",
+            "label": "val/pancreas_028_label_9.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_028_patch_10.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_028_label_10.npy"
+            "image": "val/pancreas_028_patch_10.npy",
+            "label": "val/pancreas_028_label_10.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_028_patch_11.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_028_label_11.npy"
+            "image": "val/pancreas_028_patch_11.npy",
+            "label": "val/pancreas_028_label_11.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_148_patch_0.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_148_label_0.npy"
+            "image": "val/pancreas_148_patch_0.npy",
+            "label": "val/pancreas_148_label_0.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_148_patch_1.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_148_label_1.npy"
+            "image": "val/pancreas_148_patch_1.npy",
+            "label": "val/pancreas_148_label_1.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_148_patch_2.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_148_label_2.npy"
+            "image": "val/pancreas_148_patch_2.npy",
+            "label": "val/pancreas_148_label_2.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_148_patch_3.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_148_label_3.npy"
+            "image": "val/pancreas_148_patch_3.npy",
+            "label": "val/pancreas_148_label_3.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_148_patch_4.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_148_label_4.npy"
+            "image": "val/pancreas_148_patch_4.npy",
+            "label": "val/pancreas_148_label_4.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_148_patch_5.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_148_label_5.npy"
+            "image": "val/pancreas_148_patch_5.npy",
+            "label": "val/pancreas_148_label_5.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_148_patch_6.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_148_label_6.npy"
+            "image": "val/pancreas_148_patch_6.npy",
+            "label": "val/pancreas_148_label_6.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_148_patch_7.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_148_label_7.npy"
+            "image": "val/pancreas_148_patch_7.npy",
+            "label": "val/pancreas_148_label_7.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_148_patch_8.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_148_label_8.npy"
+            "image": "val/pancreas_148_patch_8.npy",
+            "label": "val/pancreas_148_label_8.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_148_patch_9.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_148_label_9.npy"
+            "image": "val/pancreas_148_patch_9.npy",
+            "label": "val/pancreas_148_label_9.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_148_patch_10.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_148_label_10.npy"
+            "image": "val/pancreas_148_patch_10.npy",
+            "label": "val/pancreas_148_label_10.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_148_patch_11.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_148_label_11.npy"
+            "image": "val/pancreas_148_patch_11.npy",
+            "label": "val/pancreas_148_label_11.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_148_patch_12.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_148_label_12.npy"
+            "image": "val/pancreas_148_patch_12.npy",
+            "label": "val/pancreas_148_label_12.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_387_patch_0.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_387_label_0.npy"
+            "image": "val/pancreas_387_patch_0.npy",
+            "label": "val/pancreas_387_label_0.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_387_patch_1.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_387_label_1.npy"
+            "image": "val/pancreas_387_patch_1.npy",
+            "label": "val/pancreas_387_label_1.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_387_patch_2.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_387_label_2.npy"
+            "image": "val/pancreas_387_patch_2.npy",
+            "label": "val/pancreas_387_label_2.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_387_patch_3.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_387_label_3.npy"
+            "image": "val/pancreas_387_patch_3.npy",
+            "label": "val/pancreas_387_label_3.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_387_patch_4.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_387_label_4.npy"
+            "image": "val/pancreas_387_patch_4.npy",
+            "label": "val/pancreas_387_label_4.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_387_patch_5.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_387_label_5.npy"
+            "image": "val/pancreas_387_patch_5.npy",
+            "label": "val/pancreas_387_label_5.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_387_patch_6.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_387_label_6.npy"
+            "image": "val/pancreas_387_patch_6.npy",
+            "label": "val/pancreas_387_label_6.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_387_patch_7.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_387_label_7.npy"
+            "image": "val/pancreas_387_patch_7.npy",
+            "label": "val/pancreas_387_label_7.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_387_patch_8.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_387_label_8.npy"
+            "image": "val/pancreas_387_patch_8.npy",
+            "label": "val/pancreas_387_label_8.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_387_patch_9.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_387_label_9.npy"
+            "image": "val/pancreas_387_patch_9.npy",
+            "label": "val/pancreas_387_label_9.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_387_patch_10.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_387_label_10.npy"
+            "image": "val/pancreas_387_patch_10.npy",
+            "label": "val/pancreas_387_label_10.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_387_patch_11.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_387_label_11.npy"
+            "image": "val/pancreas_387_patch_11.npy",
+            "label": "val/pancreas_387_label_11.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_387_patch_12.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_387_label_12.npy"
+            "image": "val/pancreas_387_patch_12.npy",
+            "label": "val/pancreas_387_label_12.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_387_patch_13.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_387_label_13.npy"
+            "image": "val/pancreas_387_patch_13.npy",
+            "label": "val/pancreas_387_label_13.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_387_patch_14.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_387_label_14.npy"
+            "image": "val/pancreas_387_patch_14.npy",
+            "label": "val/pancreas_387_label_14.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_362_patch_0.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_362_label_0.npy"
+            "image": "val/pancreas_362_patch_0.npy",
+            "label": "val/pancreas_362_label_0.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_362_patch_1.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_362_label_1.npy"
+            "image": "val/pancreas_362_patch_1.npy",
+            "label": "val/pancreas_362_label_1.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_362_patch_2.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_362_label_2.npy"
+            "image": "val/pancreas_362_patch_2.npy",
+            "label": "val/pancreas_362_label_2.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_362_patch_3.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_362_label_3.npy"
+            "image": "val/pancreas_362_patch_3.npy",
+            "label": "val/pancreas_362_label_3.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_362_patch_4.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_362_label_4.npy"
+            "image": "val/pancreas_362_patch_4.npy",
+            "label": "val/pancreas_362_label_4.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_362_patch_5.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_362_label_5.npy"
+            "image": "val/pancreas_362_patch_5.npy",
+            "label": "val/pancreas_362_label_5.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_362_patch_6.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_362_label_6.npy"
+            "image": "val/pancreas_362_patch_6.npy",
+            "label": "val/pancreas_362_label_6.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_362_patch_7.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_362_label_7.npy"
+            "image": "val/pancreas_362_patch_7.npy",
+            "label": "val/pancreas_362_label_7.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_362_patch_8.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_362_label_8.npy"
+            "image": "val/pancreas_362_patch_8.npy",
+            "label": "val/pancreas_362_label_8.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_362_patch_9.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_362_label_9.npy"
+            "image": "val/pancreas_362_patch_9.npy",
+            "label": "val/pancreas_362_label_9.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_362_patch_10.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_362_label_10.npy"
+            "image": "val/pancreas_362_patch_10.npy",
+            "label": "val/pancreas_362_label_10.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_362_patch_11.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_362_label_11.npy"
+            "image": "val/pancreas_362_patch_11.npy",
+            "label": "val/pancreas_362_label_11.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_362_patch_12.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_362_label_12.npy"
+            "image": "val/pancreas_362_patch_12.npy",
+            "label": "val/pancreas_362_label_12.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_362_patch_13.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_362_label_13.npy"
+            "image": "val/pancreas_362_patch_13.npy",
+            "label": "val/pancreas_362_label_13.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_207_patch_0.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_207_label_0.npy"
+            "image": "val/pancreas_207_patch_0.npy",
+            "label": "val/pancreas_207_label_0.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_207_patch_1.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_207_label_1.npy"
+            "image": "val/pancreas_207_patch_1.npy",
+            "label": "val/pancreas_207_label_1.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_207_patch_2.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_207_label_2.npy"
+            "image": "val/pancreas_207_patch_2.npy",
+            "label": "val/pancreas_207_label_2.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_207_patch_3.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_207_label_3.npy"
+            "image": "val/pancreas_207_patch_3.npy",
+            "label": "val/pancreas_207_label_3.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_207_patch_4.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_207_label_4.npy"
+            "image": "val/pancreas_207_patch_4.npy",
+            "label": "val/pancreas_207_label_4.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_207_patch_5.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_207_label_5.npy"
+            "image": "val/pancreas_207_patch_5.npy",
+            "label": "val/pancreas_207_label_5.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_207_patch_6.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_207_label_6.npy"
+            "image": "val/pancreas_207_patch_6.npy",
+            "label": "val/pancreas_207_label_6.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_207_patch_7.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_207_label_7.npy"
+            "image": "val/pancreas_207_patch_7.npy",
+            "label": "val/pancreas_207_label_7.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_207_patch_8.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_207_label_8.npy"
+            "image": "val/pancreas_207_patch_8.npy",
+            "label": "val/pancreas_207_label_8.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_207_patch_9.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_207_label_9.npy"
+            "image": "val/pancreas_207_patch_9.npy",
+            "label": "val/pancreas_207_label_9.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_207_patch_10.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_207_label_10.npy"
+            "image": "val/pancreas_207_patch_10.npy",
+            "label": "val/pancreas_207_label_10.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_207_patch_11.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_207_label_11.npy"
+            "image": "val/pancreas_207_patch_11.npy",
+            "label": "val/pancreas_207_label_11.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_135_patch_0.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_135_label_0.npy"
+            "image": "val/pancreas_135_patch_0.npy",
+            "label": "val/pancreas_135_label_0.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_135_patch_1.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_135_label_1.npy"
+            "image": "val/pancreas_135_patch_1.npy",
+            "label": "val/pancreas_135_label_1.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_135_patch_2.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_135_label_2.npy"
+            "image": "val/pancreas_135_patch_2.npy",
+            "label": "val/pancreas_135_label_2.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_135_patch_3.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_135_label_3.npy"
+            "image": "val/pancreas_135_patch_3.npy",
+            "label": "val/pancreas_135_label_3.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_135_patch_4.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_135_label_4.npy"
+            "image": "val/pancreas_135_patch_4.npy",
+            "label": "val/pancreas_135_label_4.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_135_patch_5.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_135_label_5.npy"
+            "image": "val/pancreas_135_patch_5.npy",
+            "label": "val/pancreas_135_label_5.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_135_patch_6.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_135_label_6.npy"
+            "image": "val/pancreas_135_patch_6.npy",
+            "label": "val/pancreas_135_label_6.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_135_patch_7.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_135_label_7.npy"
+            "image": "val/pancreas_135_patch_7.npy",
+            "label": "val/pancreas_135_label_7.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_135_patch_8.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_135_label_8.npy"
+            "image": "val/pancreas_135_patch_8.npy",
+            "label": "val/pancreas_135_label_8.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_135_patch_9.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_135_label_9.npy"
+            "image": "val/pancreas_135_patch_9.npy",
+            "label": "val/pancreas_135_label_9.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_135_patch_10.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_135_label_10.npy"
+            "image": "val/pancreas_135_patch_10.npy",
+            "label": "val/pancreas_135_label_10.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_135_patch_11.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_135_label_11.npy"
+            "image": "val/pancreas_135_patch_11.npy",
+            "label": "val/pancreas_135_label_11.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_135_patch_12.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_135_label_12.npy"
+            "image": "val/pancreas_135_patch_12.npy",
+            "label": "val/pancreas_135_label_12.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_135_patch_13.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_135_label_13.npy"
+            "image": "val/pancreas_135_patch_13.npy",
+            "label": "val/pancreas_135_label_13.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_135_patch_14.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_135_label_14.npy"
+            "image": "val/pancreas_135_patch_14.npy",
+            "label": "val/pancreas_135_label_14.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_135_patch_15.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_135_label_15.npy"
+            "image": "val/pancreas_135_patch_15.npy",
+            "label": "val/pancreas_135_label_15.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_135_patch_16.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_135_label_16.npy"
+            "image": "val/pancreas_135_patch_16.npy",
+            "label": "val/pancreas_135_label_16.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_135_patch_17.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_135_label_17.npy"
+            "image": "val/pancreas_135_patch_17.npy",
+            "label": "val/pancreas_135_label_17.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_194_patch_0.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_194_label_0.npy"
+            "image": "val/pancreas_194_patch_0.npy",
+            "label": "val/pancreas_194_label_0.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_194_patch_1.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_194_label_1.npy"
+            "image": "val/pancreas_194_patch_1.npy",
+            "label": "val/pancreas_194_label_1.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_194_patch_2.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_194_label_2.npy"
+            "image": "val/pancreas_194_patch_2.npy",
+            "label": "val/pancreas_194_label_2.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_194_patch_3.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_194_label_3.npy"
+            "image": "val/pancreas_194_patch_3.npy",
+            "label": "val/pancreas_194_label_3.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_194_patch_4.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_194_label_4.npy"
+            "image": "val/pancreas_194_patch_4.npy",
+            "label": "val/pancreas_194_label_4.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_194_patch_5.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_194_label_5.npy"
+            "image": "val/pancreas_194_patch_5.npy",
+            "label": "val/pancreas_194_label_5.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_194_patch_6.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_194_label_6.npy"
+            "image": "val/pancreas_194_patch_6.npy",
+            "label": "val/pancreas_194_label_6.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_194_patch_7.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_194_label_7.npy"
+            "image": "val/pancreas_194_patch_7.npy",
+            "label": "val/pancreas_194_label_7.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_194_patch_8.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_194_label_8.npy"
+            "image": "val/pancreas_194_patch_8.npy",
+            "label": "val/pancreas_194_label_8.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_194_patch_9.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_194_label_9.npy"
+            "image": "val/pancreas_194_patch_9.npy",
+            "label": "val/pancreas_194_label_9.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_194_patch_10.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_194_label_10.npy"
+            "image": "val/pancreas_194_patch_10.npy",
+            "label": "val/pancreas_194_label_10.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_194_patch_11.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_194_label_11.npy"
+            "image": "val/pancreas_194_patch_11.npy",
+            "label": "val/pancreas_194_label_11.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_194_patch_12.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_194_label_12.npy"
+            "image": "val/pancreas_194_patch_12.npy",
+            "label": "val/pancreas_194_label_12.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_194_patch_13.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_194_label_13.npy"
+            "image": "val/pancreas_194_patch_13.npy",
+            "label": "val/pancreas_194_label_13.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_194_patch_14.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_194_label_14.npy"
+            "image": "val/pancreas_194_patch_14.npy",
+            "label": "val/pancreas_194_label_14.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_399_patch_0.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_399_label_0.npy"
+            "image": "val/pancreas_399_patch_0.npy",
+            "label": "val/pancreas_399_label_0.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_399_patch_1.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_399_label_1.npy"
+            "image": "val/pancreas_399_patch_1.npy",
+            "label": "val/pancreas_399_label_1.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_399_patch_2.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_399_label_2.npy"
+            "image": "val/pancreas_399_patch_2.npy",
+            "label": "val/pancreas_399_label_2.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_399_patch_3.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_399_label_3.npy"
+            "image": "val/pancreas_399_patch_3.npy",
+            "label": "val/pancreas_399_label_3.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_399_patch_4.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_399_label_4.npy"
+            "image": "val/pancreas_399_patch_4.npy",
+            "label": "val/pancreas_399_label_4.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_399_patch_5.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_399_label_5.npy"
+            "image": "val/pancreas_399_patch_5.npy",
+            "label": "val/pancreas_399_label_5.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_399_patch_6.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_399_label_6.npy"
+            "image": "val/pancreas_399_patch_6.npy",
+            "label": "val/pancreas_399_label_6.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_399_patch_7.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_399_label_7.npy"
+            "image": "val/pancreas_399_patch_7.npy",
+            "label": "val/pancreas_399_label_7.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_399_patch_8.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_399_label_8.npy"
+            "image": "val/pancreas_399_patch_8.npy",
+            "label": "val/pancreas_399_label_8.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_399_patch_9.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_399_label_9.npy"
+            "image": "val/pancreas_399_patch_9.npy",
+            "label": "val/pancreas_399_label_9.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_399_patch_10.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_399_label_10.npy"
+            "image": "val/pancreas_399_patch_10.npy",
+            "label": "val/pancreas_399_label_10.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_399_patch_11.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_399_label_11.npy"
+            "image": "val/pancreas_399_patch_11.npy",
+            "label": "val/pancreas_399_label_11.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_399_patch_12.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_399_label_12.npy"
+            "image": "val/pancreas_399_patch_12.npy",
+            "label": "val/pancreas_399_label_12.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_399_patch_13.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_399_label_13.npy"
+            "image": "val/pancreas_399_patch_13.npy",
+            "label": "val/pancreas_399_label_13.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_399_patch_14.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_399_label_14.npy"
+            "image": "val/pancreas_399_patch_14.npy",
+            "label": "val/pancreas_399_label_14.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_399_patch_15.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_399_label_15.npy"
+            "image": "val/pancreas_399_patch_15.npy",
+            "label": "val/pancreas_399_label_15.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_399_patch_16.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_399_label_16.npy"
+            "image": "val/pancreas_399_patch_16.npy",
+            "label": "val/pancreas_399_label_16.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_399_patch_17.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_399_label_17.npy"
+            "image": "val/pancreas_399_patch_17.npy",
+            "label": "val/pancreas_399_label_17.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_342_patch_0.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_342_label_0.npy"
+            "image": "val/pancreas_342_patch_0.npy",
+            "label": "val/pancreas_342_label_0.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_342_patch_1.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_342_label_1.npy"
+            "image": "val/pancreas_342_patch_1.npy",
+            "label": "val/pancreas_342_label_1.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_342_patch_2.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_342_label_2.npy"
+            "image": "val/pancreas_342_patch_2.npy",
+            "label": "val/pancreas_342_label_2.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_342_patch_3.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_342_label_3.npy"
+            "image": "val/pancreas_342_patch_3.npy",
+            "label": "val/pancreas_342_label_3.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_342_patch_4.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_342_label_4.npy"
+            "image": "val/pancreas_342_patch_4.npy",
+            "label": "val/pancreas_342_label_4.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_342_patch_5.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_342_label_5.npy"
+            "image": "val/pancreas_342_patch_5.npy",
+            "label": "val/pancreas_342_label_5.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_342_patch_6.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_342_label_6.npy"
+            "image": "val/pancreas_342_patch_6.npy",
+            "label": "val/pancreas_342_label_6.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_342_patch_7.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_342_label_7.npy"
+            "image": "val/pancreas_342_patch_7.npy",
+            "label": "val/pancreas_342_label_7.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_342_patch_8.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_342_label_8.npy"
+            "image": "val/pancreas_342_patch_8.npy",
+            "label": "val/pancreas_342_label_8.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_342_patch_9.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_342_label_9.npy"
+            "image": "val/pancreas_342_patch_9.npy",
+            "label": "val/pancreas_342_label_9.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_342_patch_10.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_342_label_10.npy"
+            "image": "val/pancreas_342_patch_10.npy",
+            "label": "val/pancreas_342_label_10.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_342_patch_11.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_342_label_11.npy"
+            "image": "val/pancreas_342_patch_11.npy",
+            "label": "val/pancreas_342_label_11.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_342_patch_12.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_342_label_12.npy"
+            "image": "val/pancreas_342_patch_12.npy",
+            "label": "val/pancreas_342_label_12.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_342_patch_13.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_342_label_13.npy"
+            "image": "val/pancreas_342_patch_13.npy",
+            "label": "val/pancreas_342_label_13.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_342_patch_14.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_342_label_14.npy"
+            "image": "val/pancreas_342_patch_14.npy",
+            "label": "val/pancreas_342_label_14.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_342_patch_15.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_342_label_15.npy"
+            "image": "val/pancreas_342_patch_15.npy",
+            "label": "val/pancreas_342_label_15.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_342_patch_16.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_342_label_16.npy"
+            "image": "val/pancreas_342_patch_16.npy",
+            "label": "val/pancreas_342_label_16.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_342_patch_17.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_342_label_17.npy"
+            "image": "val/pancreas_342_patch_17.npy",
+            "label": "val/pancreas_342_label_17.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_211_patch_0.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_211_label_0.npy"
+            "image": "val/pancreas_211_patch_0.npy",
+            "label": "val/pancreas_211_label_0.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_211_patch_1.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_211_label_1.npy"
+            "image": "val/pancreas_211_patch_1.npy",
+            "label": "val/pancreas_211_label_1.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_211_patch_2.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_211_label_2.npy"
+            "image": "val/pancreas_211_patch_2.npy",
+            "label": "val/pancreas_211_label_2.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_211_patch_3.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_211_label_3.npy"
+            "image": "val/pancreas_211_patch_3.npy",
+            "label": "val/pancreas_211_label_3.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_211_patch_4.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_211_label_4.npy"
+            "image": "val/pancreas_211_patch_4.npy",
+            "label": "val/pancreas_211_label_4.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_211_patch_5.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_211_label_5.npy"
+            "image": "val/pancreas_211_patch_5.npy",
+            "label": "val/pancreas_211_label_5.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_211_patch_6.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_211_label_6.npy"
+            "image": "val/pancreas_211_patch_6.npy",
+            "label": "val/pancreas_211_label_6.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_211_patch_7.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_211_label_7.npy"
+            "image": "val/pancreas_211_patch_7.npy",
+            "label": "val/pancreas_211_label_7.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_211_patch_8.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_211_label_8.npy"
+            "image": "val/pancreas_211_patch_8.npy",
+            "label": "val/pancreas_211_label_8.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_211_patch_9.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_211_label_9.npy"
+            "image": "val/pancreas_211_patch_9.npy",
+            "label": "val/pancreas_211_label_9.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_211_patch_10.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_211_label_10.npy"
+            "image": "val/pancreas_211_patch_10.npy",
+            "label": "val/pancreas_211_label_10.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_211_patch_11.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_211_label_11.npy"
+            "image": "val/pancreas_211_patch_11.npy",
+            "label": "val/pancreas_211_label_11.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_211_patch_12.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_211_label_12.npy"
+            "image": "val/pancreas_211_patch_12.npy",
+            "label": "val/pancreas_211_label_12.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_211_patch_13.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_211_label_13.npy"
+            "image": "val/pancreas_211_patch_13.npy",
+            "label": "val/pancreas_211_label_13.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_211_patch_14.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_211_label_14.npy"
+            "image": "val/pancreas_211_patch_14.npy",
+            "label": "val/pancreas_211_label_14.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_211_patch_15.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_211_label_15.npy"
+            "image": "val/pancreas_211_patch_15.npy",
+            "label": "val/pancreas_211_label_15.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_211_patch_16.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_211_label_16.npy"
+            "image": "val/pancreas_211_patch_16.npy",
+            "label": "val/pancreas_211_label_16.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_211_patch_17.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_211_label_17.npy"
+            "image": "val/pancreas_211_patch_17.npy",
+            "label": "val/pancreas_211_label_17.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_088_patch_0.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_088_label_0.npy"
+            "image": "val/pancreas_088_patch_0.npy",
+            "label": "val/pancreas_088_label_0.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_088_patch_1.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_088_label_1.npy"
+            "image": "val/pancreas_088_patch_1.npy",
+            "label": "val/pancreas_088_label_1.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_088_patch_2.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_088_label_2.npy"
+            "image": "val/pancreas_088_patch_2.npy",
+            "label": "val/pancreas_088_label_2.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_088_patch_3.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_088_label_3.npy"
+            "image": "val/pancreas_088_patch_3.npy",
+            "label": "val/pancreas_088_label_3.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_088_patch_4.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_088_label_4.npy"
+            "image": "val/pancreas_088_patch_4.npy",
+            "label": "val/pancreas_088_label_4.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_088_patch_5.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_088_label_5.npy"
+            "image": "val/pancreas_088_patch_5.npy",
+            "label": "val/pancreas_088_label_5.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_088_patch_6.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_088_label_6.npy"
+            "image": "val/pancreas_088_patch_6.npy",
+            "label": "val/pancreas_088_label_6.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_088_patch_7.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_088_label_7.npy"
+            "image": "val/pancreas_088_patch_7.npy",
+            "label": "val/pancreas_088_label_7.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_088_patch_8.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_088_label_8.npy"
+            "image": "val/pancreas_088_patch_8.npy",
+            "label": "val/pancreas_088_label_8.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_088_patch_9.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_088_label_9.npy"
+            "image": "val/pancreas_088_patch_9.npy",
+            "label": "val/pancreas_088_label_9.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_088_patch_10.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_088_label_10.npy"
+            "image": "val/pancreas_088_patch_10.npy",
+            "label": "val/pancreas_088_label_10.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_088_patch_11.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_088_label_11.npy"
+            "image": "val/pancreas_088_patch_11.npy",
+            "label": "val/pancreas_088_label_11.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_088_patch_12.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_088_label_12.npy"
+            "image": "val/pancreas_088_patch_12.npy",
+            "label": "val/pancreas_088_label_12.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_088_patch_13.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_088_label_13.npy"
+            "image": "val/pancreas_088_patch_13.npy",
+            "label": "val/pancreas_088_label_13.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_088_patch_14.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_088_label_14.npy"
+            "image": "val/pancreas_088_patch_14.npy",
+            "label": "val/pancreas_088_label_14.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_088_patch_15.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_088_label_15.npy"
+            "image": "val/pancreas_088_patch_15.npy",
+            "label": "val/pancreas_088_label_15.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_175_patch_0.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_175_label_0.npy"
+            "image": "val/pancreas_175_patch_0.npy",
+            "label": "val/pancreas_175_label_0.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_175_patch_1.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_175_label_1.npy"
+            "image": "val/pancreas_175_patch_1.npy",
+            "label": "val/pancreas_175_label_1.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_175_patch_2.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_175_label_2.npy"
+            "image": "val/pancreas_175_patch_2.npy",
+            "label": "val/pancreas_175_label_2.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_175_patch_3.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_175_label_3.npy"
+            "image": "val/pancreas_175_patch_3.npy",
+            "label": "val/pancreas_175_label_3.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_175_patch_4.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_175_label_4.npy"
+            "image": "val/pancreas_175_patch_4.npy",
+            "label": "val/pancreas_175_label_4.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_175_patch_5.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_175_label_5.npy"
+            "image": "val/pancreas_175_patch_5.npy",
+            "label": "val/pancreas_175_label_5.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_175_patch_6.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_175_label_6.npy"
+            "image": "val/pancreas_175_patch_6.npy",
+            "label": "val/pancreas_175_label_6.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_175_patch_7.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_175_label_7.npy"
+            "image": "val/pancreas_175_patch_7.npy",
+            "label": "val/pancreas_175_label_7.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_175_patch_8.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_175_label_8.npy"
+            "image": "val/pancreas_175_patch_8.npy",
+            "label": "val/pancreas_175_label_8.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_175_patch_9.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_175_label_9.npy"
+            "image": "val/pancreas_175_patch_9.npy",
+            "label": "val/pancreas_175_label_9.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_175_patch_10.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_175_label_10.npy"
+            "image": "val/pancreas_175_patch_10.npy",
+            "label": "val/pancreas_175_label_10.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_175_patch_11.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_175_label_11.npy"
+            "image": "val/pancreas_175_patch_11.npy",
+            "label": "val/pancreas_175_label_11.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_175_patch_12.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_175_label_12.npy"
+            "image": "val/pancreas_175_patch_12.npy",
+            "label": "val/pancreas_175_label_12.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_175_patch_13.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_175_label_13.npy"
+            "image": "val/pancreas_175_patch_13.npy",
+            "label": "val/pancreas_175_label_13.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_035_patch_0.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_035_label_0.npy"
+            "image": "val/pancreas_035_patch_0.npy",
+            "label": "val/pancreas_035_label_0.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_035_patch_1.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_035_label_1.npy"
+            "image": "val/pancreas_035_patch_1.npy",
+            "label": "val/pancreas_035_label_1.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_035_patch_2.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_035_label_2.npy"
+            "image": "val/pancreas_035_patch_2.npy",
+            "label": "val/pancreas_035_label_2.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_035_patch_3.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_035_label_3.npy"
+            "image": "val/pancreas_035_patch_3.npy",
+            "label": "val/pancreas_035_label_3.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_035_patch_4.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_035_label_4.npy"
+            "image": "val/pancreas_035_patch_4.npy",
+            "label": "val/pancreas_035_label_4.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_035_patch_5.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_035_label_5.npy"
+            "image": "val/pancreas_035_patch_5.npy",
+            "label": "val/pancreas_035_label_5.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_035_patch_6.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_035_label_6.npy"
+            "image": "val/pancreas_035_patch_6.npy",
+            "label": "val/pancreas_035_label_6.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_035_patch_7.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_035_label_7.npy"
+            "image": "val/pancreas_035_patch_7.npy",
+            "label": "val/pancreas_035_label_7.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_035_patch_8.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_035_label_8.npy"
+            "image": "val/pancreas_035_patch_8.npy",
+            "label": "val/pancreas_035_label_8.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_035_patch_9.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_035_label_9.npy"
+            "image": "val/pancreas_035_patch_9.npy",
+            "label": "val/pancreas_035_label_9.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_035_patch_10.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_035_label_10.npy"
+            "image": "val/pancreas_035_patch_10.npy",
+            "label": "val/pancreas_035_label_10.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_315_patch_0.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_315_label_0.npy"
+            "image": "val/pancreas_315_patch_0.npy",
+            "label": "val/pancreas_315_label_0.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_315_patch_1.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_315_label_1.npy"
+            "image": "val/pancreas_315_patch_1.npy",
+            "label": "val/pancreas_315_label_1.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_315_patch_2.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_315_label_2.npy"
+            "image": "val/pancreas_315_patch_2.npy",
+            "label": "val/pancreas_315_label_2.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_315_patch_3.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_315_label_3.npy"
+            "image": "val/pancreas_315_patch_3.npy",
+            "label": "val/pancreas_315_label_3.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_315_patch_4.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_315_label_4.npy"
+            "image": "val/pancreas_315_patch_4.npy",
+            "label": "val/pancreas_315_label_4.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_315_patch_5.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_315_label_5.npy"
+            "image": "val/pancreas_315_patch_5.npy",
+            "label": "val/pancreas_315_label_5.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_315_patch_6.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_315_label_6.npy"
+            "image": "val/pancreas_315_patch_6.npy",
+            "label": "val/pancreas_315_label_6.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_315_patch_7.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_315_label_7.npy"
+            "image": "val/pancreas_315_patch_7.npy",
+            "label": "val/pancreas_315_label_7.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_315_patch_8.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_315_label_8.npy"
+            "image": "val/pancreas_315_patch_8.npy",
+            "label": "val/pancreas_315_label_8.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_315_patch_9.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_315_label_9.npy"
+            "image": "val/pancreas_315_patch_9.npy",
+            "label": "val/pancreas_315_label_9.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_315_patch_10.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_315_label_10.npy"
+            "image": "val/pancreas_315_patch_10.npy",
+            "label": "val/pancreas_315_label_10.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_315_patch_11.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_315_label_11.npy"
+            "image": "val/pancreas_315_patch_11.npy",
+            "label": "val/pancreas_315_label_11.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_315_patch_12.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_315_label_12.npy"
+            "image": "val/pancreas_315_patch_12.npy",
+            "label": "val/pancreas_315_label_12.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_315_patch_13.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_315_label_13.npy"
+            "image": "val/pancreas_315_patch_13.npy",
+            "label": "val/pancreas_315_label_13.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_291_patch_0.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_291_label_0.npy"
+            "image": "val/pancreas_291_patch_0.npy",
+            "label": "val/pancreas_291_label_0.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_291_patch_1.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_291_label_1.npy"
+            "image": "val/pancreas_291_patch_1.npy",
+            "label": "val/pancreas_291_label_1.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_291_patch_2.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_291_label_2.npy"
+            "image": "val/pancreas_291_patch_2.npy",
+            "label": "val/pancreas_291_label_2.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_291_patch_3.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_291_label_3.npy"
+            "image": "val/pancreas_291_patch_3.npy",
+            "label": "val/pancreas_291_label_3.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_291_patch_4.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_291_label_4.npy"
+            "image": "val/pancreas_291_patch_4.npy",
+            "label": "val/pancreas_291_label_4.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_291_patch_5.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_291_label_5.npy"
+            "image": "val/pancreas_291_patch_5.npy",
+            "label": "val/pancreas_291_label_5.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_291_patch_6.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_291_label_6.npy"
+            "image": "val/pancreas_291_patch_6.npy",
+            "label": "val/pancreas_291_label_6.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_291_patch_7.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_291_label_7.npy"
+            "image": "val/pancreas_291_patch_7.npy",
+            "label": "val/pancreas_291_label_7.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_291_patch_8.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_291_label_8.npy"
+            "image": "val/pancreas_291_patch_8.npy",
+            "label": "val/pancreas_291_label_8.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_291_patch_9.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_291_label_9.npy"
+            "image": "val/pancreas_291_patch_9.npy",
+            "label": "val/pancreas_291_label_9.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_291_patch_10.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_291_label_10.npy"
+            "image": "val/pancreas_291_patch_10.npy",
+            "label": "val/pancreas_291_label_10.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_291_patch_11.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_291_label_11.npy"
+            "image": "val/pancreas_291_patch_11.npy",
+            "label": "val/pancreas_291_label_11.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_291_patch_12.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_291_label_12.npy"
+            "image": "val/pancreas_291_patch_12.npy",
+            "label": "val/pancreas_291_label_12.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_291_patch_13.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_291_label_13.npy"
+            "image": "val/pancreas_291_patch_13.npy",
+            "label": "val/pancreas_291_label_13.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_291_patch_14.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_291_label_14.npy"
+            "image": "val/pancreas_291_patch_14.npy",
+            "label": "val/pancreas_291_label_14.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_262_patch_0.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_262_label_0.npy"
+            "image": "val/pancreas_262_patch_0.npy",
+            "label": "val/pancreas_262_label_0.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_262_patch_1.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_262_label_1.npy"
+            "image": "val/pancreas_262_patch_1.npy",
+            "label": "val/pancreas_262_label_1.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_262_patch_2.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_262_label_2.npy"
+            "image": "val/pancreas_262_patch_2.npy",
+            "label": "val/pancreas_262_label_2.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_262_patch_3.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_262_label_3.npy"
+            "image": "val/pancreas_262_patch_3.npy",
+            "label": "val/pancreas_262_label_3.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_262_patch_4.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_262_label_4.npy"
+            "image": "val/pancreas_262_patch_4.npy",
+            "label": "val/pancreas_262_label_4.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_262_patch_5.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_262_label_5.npy"
+            "image": "val/pancreas_262_patch_5.npy",
+            "label": "val/pancreas_262_label_5.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_262_patch_6.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_262_label_6.npy"
+            "image": "val/pancreas_262_patch_6.npy",
+            "label": "val/pancreas_262_label_6.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_262_patch_7.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_262_label_7.npy"
+            "image": "val/pancreas_262_patch_7.npy",
+            "label": "val/pancreas_262_label_7.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_262_patch_8.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_262_label_8.npy"
+            "image": "val/pancreas_262_patch_8.npy",
+            "label": "val/pancreas_262_label_8.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_262_patch_9.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_262_label_9.npy"
+            "image": "val/pancreas_262_patch_9.npy",
+            "label": "val/pancreas_262_label_9.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_262_patch_10.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_262_label_10.npy"
+            "image": "val/pancreas_262_patch_10.npy",
+            "label": "val/pancreas_262_label_10.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_370_patch_0.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_370_label_0.npy"
+            "image": "val/pancreas_370_patch_0.npy",
+            "label": "val/pancreas_370_label_0.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_370_patch_1.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_370_label_1.npy"
+            "image": "val/pancreas_370_patch_1.npy",
+            "label": "val/pancreas_370_label_1.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_370_patch_2.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_370_label_2.npy"
+            "image": "val/pancreas_370_patch_2.npy",
+            "label": "val/pancreas_370_label_2.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_370_patch_3.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_370_label_3.npy"
+            "image": "val/pancreas_370_patch_3.npy",
+            "label": "val/pancreas_370_label_3.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_370_patch_4.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_370_label_4.npy"
+            "image": "val/pancreas_370_patch_4.npy",
+            "label": "val/pancreas_370_label_4.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_370_patch_5.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_370_label_5.npy"
+            "image": "val/pancreas_370_patch_5.npy",
+            "label": "val/pancreas_370_label_5.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_370_patch_6.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_370_label_6.npy"
+            "image": "val/pancreas_370_patch_6.npy",
+            "label": "val/pancreas_370_label_6.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_370_patch_7.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_370_label_7.npy"
+            "image": "val/pancreas_370_patch_7.npy",
+            "label": "val/pancreas_370_label_7.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_370_patch_8.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_370_label_8.npy"
+            "image": "val/pancreas_370_patch_8.npy",
+            "label": "val/pancreas_370_label_8.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_370_patch_9.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_370_label_9.npy"
+            "image": "val/pancreas_370_patch_9.npy",
+            "label": "val/pancreas_370_label_9.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_370_patch_10.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_370_label_10.npy"
+            "image": "val/pancreas_370_patch_10.npy",
+            "label": "val/pancreas_370_label_10.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_370_patch_11.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_370_label_11.npy"
+            "image": "val/pancreas_370_patch_11.npy",
+            "label": "val/pancreas_370_label_11.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_370_patch_12.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_370_label_12.npy"
+            "image": "val/pancreas_370_patch_12.npy",
+            "label": "val/pancreas_370_label_12.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_370_patch_13.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_370_label_13.npy"
+            "image": "val/pancreas_370_patch_13.npy",
+            "label": "val/pancreas_370_label_13.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_370_patch_14.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_370_label_14.npy"
+            "image": "val/pancreas_370_patch_14.npy",
+            "label": "val/pancreas_370_label_14.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_370_patch_15.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_370_label_15.npy"
+            "image": "val/pancreas_370_patch_15.npy",
+            "label": "val/pancreas_370_label_15.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_370_patch_16.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_370_label_16.npy"
+            "image": "val/pancreas_370_patch_16.npy",
+            "label": "val/pancreas_370_label_16.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_370_patch_17.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_370_label_17.npy"
+            "image": "val/pancreas_370_patch_17.npy",
+            "label": "val/pancreas_370_label_17.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_370_patch_18.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_370_label_18.npy"
+            "image": "val/pancreas_370_patch_18.npy",
+            "label": "val/pancreas_370_label_18.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_370_patch_19.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_370_label_19.npy"
+            "image": "val/pancreas_370_patch_19.npy",
+            "label": "val/pancreas_370_label_19.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_370_patch_20.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_370_label_20.npy"
+            "image": "val/pancreas_370_patch_20.npy",
+            "label": "val/pancreas_370_label_20.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_370_patch_21.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_370_label_21.npy"
+            "image": "val/pancreas_370_patch_21.npy",
+            "label": "val/pancreas_370_label_21.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_370_patch_22.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_370_label_22.npy"
+            "image": "val/pancreas_370_patch_22.npy",
+            "label": "val/pancreas_370_label_22.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_370_patch_23.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_370_label_23.npy"
+            "image": "val/pancreas_370_patch_23.npy",
+            "label": "val/pancreas_370_label_23.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_370_patch_24.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_370_label_24.npy"
+            "image": "val/pancreas_370_patch_24.npy",
+            "label": "val/pancreas_370_label_24.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_370_patch_25.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_370_label_25.npy"
+            "image": "val/pancreas_370_patch_25.npy",
+            "label": "val/pancreas_370_label_25.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_370_patch_26.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_370_label_26.npy"
+            "image": "val/pancreas_370_patch_26.npy",
+            "label": "val/pancreas_370_label_26.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_370_patch_27.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_370_label_27.npy"
+            "image": "val/pancreas_370_patch_27.npy",
+            "label": "val/pancreas_370_label_27.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_094_patch_0.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_094_label_0.npy"
+            "image": "val/pancreas_094_patch_0.npy",
+            "label": "val/pancreas_094_label_0.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_094_patch_1.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_094_label_1.npy"
+            "image": "val/pancreas_094_patch_1.npy",
+            "label": "val/pancreas_094_label_1.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_094_patch_2.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_094_label_2.npy"
+            "image": "val/pancreas_094_patch_2.npy",
+            "label": "val/pancreas_094_label_2.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_094_patch_3.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_094_label_3.npy"
+            "image": "val/pancreas_094_patch_3.npy",
+            "label": "val/pancreas_094_label_3.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_094_patch_4.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_094_label_4.npy"
+            "image": "val/pancreas_094_patch_4.npy",
+            "label": "val/pancreas_094_label_4.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_094_patch_5.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_094_label_5.npy"
+            "image": "val/pancreas_094_patch_5.npy",
+            "label": "val/pancreas_094_label_5.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_094_patch_6.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_094_label_6.npy"
+            "image": "val/pancreas_094_patch_6.npy",
+            "label": "val/pancreas_094_label_6.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_094_patch_7.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_094_label_7.npy"
+            "image": "val/pancreas_094_patch_7.npy",
+            "label": "val/pancreas_094_label_7.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_094_patch_8.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_094_label_8.npy"
+            "image": "val/pancreas_094_patch_8.npy",
+            "label": "val/pancreas_094_label_8.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_094_patch_9.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_094_label_9.npy"
+            "image": "val/pancreas_094_patch_9.npy",
+            "label": "val/pancreas_094_label_9.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_094_patch_10.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_094_label_10.npy"
+            "image": "val/pancreas_094_patch_10.npy",
+            "label": "val/pancreas_094_label_10.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_094_patch_11.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_094_label_11.npy"
+            "image": "val/pancreas_094_patch_11.npy",
+            "label": "val/pancreas_094_label_11.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_094_patch_12.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_094_label_12.npy"
+            "image": "val/pancreas_094_patch_12.npy",
+            "label": "val/pancreas_094_label_12.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_414_patch_0.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_414_label_0.npy"
+            "image": "val/pancreas_414_patch_0.npy",
+            "label": "val/pancreas_414_label_0.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_414_patch_1.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_414_label_1.npy"
+            "image": "val/pancreas_414_patch_1.npy",
+            "label": "val/pancreas_414_label_1.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_414_patch_2.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_414_label_2.npy"
+            "image": "val/pancreas_414_patch_2.npy",
+            "label": "val/pancreas_414_label_2.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_414_patch_3.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_414_label_3.npy"
+            "image": "val/pancreas_414_patch_3.npy",
+            "label": "val/pancreas_414_label_3.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_414_patch_4.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_414_label_4.npy"
+            "image": "val/pancreas_414_patch_4.npy",
+            "label": "val/pancreas_414_label_4.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_414_patch_5.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_414_label_5.npy"
+            "image": "val/pancreas_414_patch_5.npy",
+            "label": "val/pancreas_414_label_5.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_414_patch_6.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_414_label_6.npy"
+            "image": "val/pancreas_414_patch_6.npy",
+            "label": "val/pancreas_414_label_6.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_414_patch_7.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_414_label_7.npy"
+            "image": "val/pancreas_414_patch_7.npy",
+            "label": "val/pancreas_414_label_7.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_414_patch_8.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_414_label_8.npy"
+            "image": "val/pancreas_414_patch_8.npy",
+            "label": "val/pancreas_414_label_8.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_414_patch_9.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_414_label_9.npy"
+            "image": "val/pancreas_414_patch_9.npy",
+            "label": "val/pancreas_414_label_9.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_414_patch_10.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_414_label_10.npy"
+            "image": "val/pancreas_414_patch_10.npy",
+            "label": "val/pancreas_414_label_10.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_414_patch_11.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_414_label_11.npy"
+            "image": "val/pancreas_414_patch_11.npy",
+            "label": "val/pancreas_414_label_11.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_414_patch_12.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_414_label_12.npy"
+            "image": "val/pancreas_414_patch_12.npy",
+            "label": "val/pancreas_414_label_12.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_268_patch_0.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_268_label_0.npy"
+            "image": "val/pancreas_268_patch_0.npy",
+            "label": "val/pancreas_268_label_0.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_268_patch_1.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_268_label_1.npy"
+            "image": "val/pancreas_268_patch_1.npy",
+            "label": "val/pancreas_268_label_1.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_268_patch_2.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_268_label_2.npy"
+            "image": "val/pancreas_268_patch_2.npy",
+            "label": "val/pancreas_268_label_2.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_268_patch_3.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_268_label_3.npy"
+            "image": "val/pancreas_268_patch_3.npy",
+            "label": "val/pancreas_268_label_3.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_268_patch_4.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_268_label_4.npy"
+            "image": "val/pancreas_268_patch_4.npy",
+            "label": "val/pancreas_268_label_4.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_268_patch_5.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_268_label_5.npy"
+            "image": "val/pancreas_268_patch_5.npy",
+            "label": "val/pancreas_268_label_5.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_268_patch_6.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_268_label_6.npy"
+            "image": "val/pancreas_268_patch_6.npy",
+            "label": "val/pancreas_268_label_6.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_268_patch_7.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_268_label_7.npy"
+            "image": "val/pancreas_268_patch_7.npy",
+            "label": "val/pancreas_268_label_7.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_268_patch_8.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_268_label_8.npy"
+            "image": "val/pancreas_268_patch_8.npy",
+            "label": "val/pancreas_268_label_8.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_268_patch_9.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_268_label_9.npy"
+            "image": "val/pancreas_268_patch_9.npy",
+            "label": "val/pancreas_268_label_9.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_032_patch_0.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_032_label_0.npy"
+            "image": "val/pancreas_032_patch_0.npy",
+            "label": "val/pancreas_032_label_0.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_032_patch_1.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_032_label_1.npy"
+            "image": "val/pancreas_032_patch_1.npy",
+            "label": "val/pancreas_032_label_1.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_032_patch_2.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_032_label_2.npy"
+            "image": "val/pancreas_032_patch_2.npy",
+            "label": "val/pancreas_032_label_2.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_032_patch_3.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_032_label_3.npy"
+            "image": "val/pancreas_032_patch_3.npy",
+            "label": "val/pancreas_032_label_3.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_032_patch_4.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_032_label_4.npy"
+            "image": "val/pancreas_032_patch_4.npy",
+            "label": "val/pancreas_032_label_4.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_032_patch_5.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_032_label_5.npy"
+            "image": "val/pancreas_032_patch_5.npy",
+            "label": "val/pancreas_032_label_5.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_032_patch_6.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_032_label_6.npy"
+            "image": "val/pancreas_032_patch_6.npy",
+            "label": "val/pancreas_032_label_6.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_032_patch_7.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_032_label_7.npy"
+            "image": "val/pancreas_032_patch_7.npy",
+            "label": "val/pancreas_032_label_7.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_032_patch_8.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_032_label_8.npy"
+            "image": "val/pancreas_032_patch_8.npy",
+            "label": "val/pancreas_032_label_8.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_032_patch_9.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_032_label_9.npy"
+            "image": "val/pancreas_032_patch_9.npy",
+            "label": "val/pancreas_032_label_9.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_032_patch_10.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_032_label_10.npy"
+            "image": "val/pancreas_032_patch_10.npy",
+            "label": "val/pancreas_032_label_10.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_032_patch_11.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_032_label_11.npy"
+            "image": "val/pancreas_032_patch_11.npy",
+            "label": "val/pancreas_032_label_11.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_032_patch_12.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_032_label_12.npy"
+            "image": "val/pancreas_032_patch_12.npy",
+            "label": "val/pancreas_032_label_12.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_218_patch_0.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_218_label_0.npy"
+            "image": "val/pancreas_218_patch_0.npy",
+            "label": "val/pancreas_218_label_0.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_218_patch_1.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_218_label_1.npy"
+            "image": "val/pancreas_218_patch_1.npy",
+            "label": "val/pancreas_218_label_1.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_218_patch_2.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_218_label_2.npy"
+            "image": "val/pancreas_218_patch_2.npy",
+            "label": "val/pancreas_218_label_2.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_218_patch_3.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_218_label_3.npy"
+            "image": "val/pancreas_218_patch_3.npy",
+            "label": "val/pancreas_218_label_3.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_218_patch_4.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_218_label_4.npy"
+            "image": "val/pancreas_218_patch_4.npy",
+            "label": "val/pancreas_218_label_4.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_218_patch_5.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_218_label_5.npy"
+            "image": "val/pancreas_218_patch_5.npy",
+            "label": "val/pancreas_218_label_5.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_218_patch_6.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_218_label_6.npy"
+            "image": "val/pancreas_218_patch_6.npy",
+            "label": "val/pancreas_218_label_6.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_218_patch_7.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_218_label_7.npy"
+            "image": "val/pancreas_218_patch_7.npy",
+            "label": "val/pancreas_218_label_7.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_218_patch_8.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_218_label_8.npy"
+            "image": "val/pancreas_218_patch_8.npy",
+            "label": "val/pancreas_218_label_8.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_218_patch_9.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_218_label_9.npy"
+            "image": "val/pancreas_218_patch_9.npy",
+            "label": "val/pancreas_218_label_9.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_218_patch_10.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_218_label_10.npy"
+            "image": "val/pancreas_218_patch_10.npy",
+            "label": "val/pancreas_218_label_10.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_218_patch_11.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_218_label_11.npy"
+            "image": "val/pancreas_218_patch_11.npy",
+            "label": "val/pancreas_218_label_11.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_218_patch_12.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_218_label_12.npy"
+            "image": "val/pancreas_218_patch_12.npy",
+            "label": "val/pancreas_218_label_12.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_218_patch_13.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_218_label_13.npy"
+            "image": "val/pancreas_218_patch_13.npy",
+            "label": "val/pancreas_218_label_13.npy"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_218_patch_14.npy",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val/pancreas_218_label_14.npy"
+            "image": "val/pancreas_218_patch_14.npy",
+            "label": "val/pancreas_218_label_14.npy"
         }
     ]
 }

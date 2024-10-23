@@ -149,10 +149,14 @@ class PreprocessPancreasDataset:
             nib.save(nib.Nifti1Image(image_resampled.transpose(1, 2, 0), img_nifti.affine), dest_img_path)
             nib.save(nib.Nifti1Image(label_resampled.transpose(1, 2, 0), label_nifti.affine), dest_label_path)
 
+            # Store the paths in the preprocessed data with relative paths
+            relative_img_path = os.path.relpath(dest_img_path, self.output_dir)
+            relative_label_path = os.path.relpath(dest_label_path, self.output_dir)
+
             # Store the paths in the preprocessed data
             self.preprocessed_data['test'].append({
-                "image": dest_img_path,
-                "label": dest_label_path
+                "image": relative_img_path,
+                "label": relative_label_path
             })
 
 
@@ -202,9 +206,14 @@ class PreprocessPancreasDataset:
             np.save(os.path.join(phase_dir, label_file), label)
 
             # Append metadata for the preprocessed data for saving to JSON later
+            relative_patch_file = os.path.relpath(os.path.join(phase_dir, patch_file), self.output_dir)
+            relative_label_file = os.path.relpath(os.path.join(phase_dir, label_file), self.output_dir)
+
+
+            # Append metadata for the preprocessed data for saving to JSON later
             self.preprocessed_data[phase].append({
-                "image": os.path.join(phase_dir, patch_file),
-                "label": os.path.join(phase_dir, label_file)
+                "image": relative_patch_file,
+                "label": relative_label_file
             })
 
             print(f"Saved patch: {os.path.join(phase_dir, patch_file)} from {image_basename}")

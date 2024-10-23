@@ -1,120 +1,120 @@
 {
     "test": [
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/test/pancreas_361.nii.gz",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/test/pancreas_361_label.nii.gz"
+            "image": "test/pancreas_361.nii.gz",
+            "label": "test/pancreas_361_label.nii.gz"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/test/pancreas_301.nii.gz",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/test/pancreas_301_label.nii.gz"
+            "image": "test/pancreas_301.nii.gz",
+            "label": "test/pancreas_301_label.nii.gz"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/test/pancreas_374.nii.gz",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/test/pancreas_374_label.nii.gz"
+            "image": "test/pancreas_374.nii.gz",
+            "label": "test/pancreas_374_label.nii.gz"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/test/pancreas_084.nii.gz",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/test/pancreas_084_label.nii.gz"
+            "image": "test/pancreas_084.nii.gz",
+            "label": "test/pancreas_084_label.nii.gz"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/test/pancreas_388.nii.gz",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/test/pancreas_388_label.nii.gz"
+            "image": "test/pancreas_388.nii.gz",
+            "label": "test/pancreas_388_label.nii.gz"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/test/pancreas_103.nii.gz",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/test/pancreas_103_label.nii.gz"
+            "image": "test/pancreas_103.nii.gz",
+            "label": "test/pancreas_103_label.nii.gz"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/test/pancreas_358.nii.gz",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/test/pancreas_358_label.nii.gz"
+            "image": "test/pancreas_358.nii.gz",
+            "label": "test/pancreas_358_label.nii.gz"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/test/pancreas_372.nii.gz",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/test/pancreas_372_label.nii.gz"
+            "image": "test/pancreas_372.nii.gz",
+            "label": "test/pancreas_372_label.nii.gz"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/test/pancreas_092.nii.gz",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/test/pancreas_092_label.nii.gz"
+            "image": "test/pancreas_092.nii.gz",
+            "label": "test/pancreas_092_label.nii.gz"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/test/pancreas_201.nii.gz",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/test/pancreas_201_label.nii.gz"
+            "image": "test/pancreas_201.nii.gz",
+            "label": "test/pancreas_201_label.nii.gz"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/test/pancreas_080.nii.gz",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/test/pancreas_080_label.nii.gz"
+            "image": "test/pancreas_080.nii.gz",
+            "label": "test/pancreas_080_label.nii.gz"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/test/pancreas_178.nii.gz",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/test/pancreas_178_label.nii.gz"
+            "image": "test/pancreas_178.nii.gz",
+            "label": "test/pancreas_178_label.nii.gz"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/test/pancreas_276.nii.gz",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/test/pancreas_276_label.nii.gz"
+            "image": "test/pancreas_276.nii.gz",
+            "label": "test/pancreas_276_label.nii.gz"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/test/pancreas_051.nii.gz",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/test/pancreas_051_label.nii.gz"
+            "image": "test/pancreas_051.nii.gz",
+            "label": "test/pancreas_051_label.nii.gz"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/test/pancreas_345.nii.gz",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/test/pancreas_345_label.nii.gz"
+            "image": "test/pancreas_345.nii.gz",
+            "label": "test/pancreas_345_label.nii.gz"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/test/pancreas_106.nii.gz",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/test/pancreas_106_label.nii.gz"
+            "image": "test/pancreas_106.nii.gz",
+            "label": "test/pancreas_106_label.nii.gz"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/test/pancreas_170.nii.gz",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/test/pancreas_170_label.nii.gz"
+            "image": "test/pancreas_170.nii.gz",
+            "label": "test/pancreas_170_label.nii.gz"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/test/pancreas_105.nii.gz",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/test/pancreas_105_label.nii.gz"
+            "image": "test/pancreas_105.nii.gz",
+            "label": "test/pancreas_105_label.nii.gz"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/test/pancreas_243.nii.gz",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/test/pancreas_243_label.nii.gz"
+            "image": "test/pancreas_243.nii.gz",
+            "label": "test/pancreas_243_label.nii.gz"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/test/pancreas_325.nii.gz",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/test/pancreas_325_label.nii.gz"
+            "image": "test/pancreas_325.nii.gz",
+            "label": "test/pancreas_325_label.nii.gz"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/test/pancreas_350.nii.gz",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/test/pancreas_350_label.nii.gz"
+            "image": "test/pancreas_350.nii.gz",
+            "label": "test/pancreas_350_label.nii.gz"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/test/pancreas_327.nii.gz",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/test/pancreas_327_label.nii.gz"
+            "image": "test/pancreas_327.nii.gz",
+            "label": "test/pancreas_327_label.nii.gz"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/test/pancreas_409.nii.gz",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/test/pancreas_409_label.nii.gz"
+            "image": "test/pancreas_409.nii.gz",
+            "label": "test/pancreas_409_label.nii.gz"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/test/pancreas_299.nii.gz",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/test/pancreas_299_label.nii.gz"
+            "image": "test/pancreas_299.nii.gz",
+            "label": "test/pancreas_299_label.nii.gz"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/test/pancreas_334.nii.gz",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/test/pancreas_334_label.nii.gz"
+            "image": "test/pancreas_334.nii.gz",
+            "label": "test/pancreas_334_label.nii.gz"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/test/pancreas_222.nii.gz",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/test/pancreas_222_label.nii.gz"
+            "image": "test/pancreas_222.nii.gz",
+            "label": "test/pancreas_222_label.nii.gz"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/test/pancreas_001.nii.gz",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/test/pancreas_001_label.nii.gz"
+            "image": "test/pancreas_001.nii.gz",
+            "label": "test/pancreas_001_label.nii.gz"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/test/pancreas_402.nii.gz",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/test/pancreas_402_label.nii.gz"
+            "image": "test/pancreas_402.nii.gz",
+            "label": "test/pancreas_402_label.nii.gz"
         },
         {
-            "image": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/test/pancreas_004.nii.gz",
-            "label": "/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/test/pancreas_004_label.nii.gz"
+            "image": "test/pancreas_004.nii.gz",
+            "label": "test/pancreas_004_label.nii.gz"
         }
     ]
 }
