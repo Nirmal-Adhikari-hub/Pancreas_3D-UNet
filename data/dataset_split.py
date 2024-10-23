@@ -4,6 +4,7 @@ import json
 import nibabel as nib
 from sklearn.model_selection import train_test_split
 import sys
+from scipy.ndimage import zoom # For resampling
 
 
 # Logger class to log stdout and stderr to both terminal and file
@@ -61,6 +62,21 @@ class PreprocessPancreasDataset:
             "test": []
         }
 
+
+    def resample_volume(self, image, voxel_spacing, target_spacing=[1,1,1], is_label=False):
+        """
+        Resample the image based on the provided voxel spacing.
+        Only resampling along the z-axis.
+        """
+        zoom_factors = np.array(voxel_spacing) / np.array(target_spacing)
+        # Use the nearest neighbour interpolation for labels (0) and linear for image(1)
+        order = 0 if is_label else 1
+        # Resample the volume
+        resampled_image = zoom(image, (zoom_factors[2], 1, 1), order=order)
+        print(f"Label Shape {image.shape} resampled to {resampled_image.shape}\n") if is_label else print(f"Image Shape {image.shape} resampled to {resampled_image.shape}\n")
+        return resampled_image
+    
+
     def process_and_save(self):
         """
         Process the train and validation sets by slicing patches, saving them, and storing 
@@ -96,8 +112,13 @@ class PreprocessPancreasDataset:
                 image = np.transpose(np.array(img_nifti.get_fdata(), dtype=np.float32), (2, 0, 1)) # Shape: (D, H, W)
                 label = np.transpose(np.array(label_nifti.get_fdata(), dtype=np.uint8), (2, 0, 1)) # Shape: (D, H, W)
 
+                # Voxel Resampling (along the depth axis only)
+                voxel_spacing = img_nifti.header.get_zooms()[:3]
+                image_resampled = self.resample_volume(image, voxel_spacing)
+                label_resampled = self.resample_volume(label, voxel_spacing, is_label=True)
+
                 # Slice the pathces and save them
-                patches, labels = self.get_patches(image, label)
+                patches, labels = self.get_patches(image_resampled, label_resampled)
                 self.save_patches(phase, patches, labels, entry['image'])
 
         # Process the Test set (no slicing, just save the full scans)
@@ -107,15 +128,26 @@ class PreprocessPancreasDataset:
 
             print(f"Saving raw scan for test: {img_path}")
 
+            # Load and resample the NIfTI files
+            img_nifti = nib.load(img_path)
+            label_nifti = nib.load(label_path)
+
+            image = np.transpose(np.array(img_nifti.get_fdata(), dtype=np.float32), (2, 0, 1)) # Shape: (D, H, W)
+            label = np.transpose(np.array(label_nifti.get_fdata(), dtype=np.float32), (2, 0, 1)) # Shape: (D, H, W)
+
+            voxel_spacing = img_nifti.header.get_zooms()[:3]
+            image_resampled = self.resample_volume(image, voxel_spacing)
+            label_resampled = self.resample_volume(label, voxel_spacing, is_label=True)
+
             # Create destination paths inside the test directory
             image_filename = os.path.basename(img_path)
             label_filename = os.path.basename(label_path).replace('.nii.gz', '_label.nii.gz')
             dest_img_path = os.path.join(test_dir, image_filename)
             dest_label_path = os.path.join(test_dir, label_filename)
 
-            # Copy the raw CT scan files to the test folder
-            nib.save(nib.load(img_path), dest_img_path)
-            nib.save(nib.load(label_path), dest_label_path)
+            # Save the resampled CT scan files to the test folder
+            nib.save(nib.Nifti1Image(image_resampled.transpose(1, 2, 0), img_nifti.affine), dest_img_path)
+            nib.save(nib.Nifti1Image(label_resampled.transpose(1, 2, 0), label_nifti.affine), dest_label_path)
 
             # Store the paths in the preprocessed data
             self.preprocessed_data['test'].append({
@@ -132,6 +164,8 @@ class PreprocessPancreasDataset:
         Extract patches from a 3D image and corresponding labels.
         """
         depth, height, width = self.config.input_size
+        image = pad_if_needed(image, depth)
+        label = pad_if_needed(label, depth)
         patch_slices = get_patch_slices(image.shape, depth, self.config.patch_overlap)
 
         patches, labels = [], []
