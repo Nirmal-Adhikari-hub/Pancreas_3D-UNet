@@ -33,7 +33,7 @@ from utils.distributed import get_patch_slices, pad_if_needed
 
 
 class PreprocessPancreasDataset:
-    def __init__(self, config, output_dir="/shared/home/xvoice/nirmal/data/Task07_Pancreas/2mm"):
+    def __init__(self, config, output_dir="/shared/home/xvoice/nirmal/data/Task07_Pancreas/2_5mm"):
         self.config = config
         self.output_dir = output_dir
 
@@ -63,7 +63,7 @@ class PreprocessPancreasDataset:
         }
 
 
-    def resample_volume(self, image, voxel_spacing, target_spacing=[2,1,1], is_label=False):
+    def resample_volume(self, image, voxel_spacing, target_spacing=[2.5,1,1], is_label=False):
         """
         Resample the image based on the provided voxel spacing.
         Only resampling along the z-axis.
