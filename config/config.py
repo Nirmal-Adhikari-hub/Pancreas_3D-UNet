@@ -14,7 +14,7 @@ class Config:
 
         # Model Architecture
         self.level_channels = [64, 128, 256, 512]  # Channel sizes for U-Net encoder layers
-        self.depth_downsampling = [64, 32, 16, 16, 16] # Downsampling along z-axis with index 0 having input's depth value
+        self.depth_downsampling = [32, 16, 16, 16, 16] # Downsampling along z-axis with index 0 having input's depth value
         self.spatial_downsampling = [256, 128, 64, 32]
         self.bottleneck_channel = self.level_channels[-1] * 2  # Bottleneck layer channel size
 

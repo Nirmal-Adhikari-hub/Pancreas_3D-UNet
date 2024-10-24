@@ -39,13 +39,10 @@ class Conv3DBlock(nn.Module):
     
     def forward(self, input):
         res = self.relu(self.bn1(self.conv1(input)))
-        # print(f"First Con: {res.shape}")
         res = self.relu(self.bn2(self.conv2(res)))
-        # print(f"Second Con: {res.shape}")
         out = None
         if not self.bottleneck:
             out = self.pooling(res)
-            # print(f"After Pool: {out.shape}")
         else:
             out = res
         return out, res
@@ -77,28 +74,22 @@ class UpConv3DBlock(nn.Module):
         else:
             self.upconv1 = nn.ConvTranspose3d(in_channels=in_channels, out_channels=in_channels, kernel_size=(2, 2, 2), stride=2)
 
-        # self.upconv1 = nn.ConvTranspose3d(in_channels=in_channels, out_channels=in_channels, kernel_size=(2, 2, 2), stride=2)
         self.relu = nn.ReLU()
         self.bn = nn.BatchNorm3d(num_features=in_channels//2)
         self.conv1 = nn.Conv3d(in_channels=in_channels+res_channels, out_channels=in_channels//2, kernel_size=(3,3,3), padding=(1,1,1))
         self.conv2 = nn.Conv3d(in_channels=in_channels//2, out_channels=in_channels//2, kernel_size=(3,3,3), padding=(1,1,1))
         self.last_layer = last_layer
-        # print(f"Last layer:{last_layer}, Num Classes: {num_classes}")
         if last_layer:
-            # print(f"Last layer")
             self.conv3 = nn.Conv3d(in_channels=in_channels//2, out_channels=num_classes, kernel_size=(1,1,1))
             
         
     def forward(self, input, residual=None):
         out = self.upconv1(input)
-        # print(f"First Upconv: {out.shape}")
         if residual!=None: 
             out = torch.cat((out, residual), 1)
             print(f"Concat: {out.shape}")
         out = self.relu(self.bn(self.conv1(out)))
-        # print(f"Decode Conv: {out.shape}")
         out = self.relu(self.bn(self.conv2(out)))
-        # print(f"DEcoder Conv: {out.shape}")
         if self.last_layer: out = self.conv3(out)
         return out
         
@@ -137,11 +128,6 @@ class UNet3D(nn.Module):
             self.down_convs.append(Conv3DBlock(previous_channels, channels, fix_depth=fix_depth))
             previous_channels = channels
 
-        # self.a_block1 = Conv3DBlock(in_channels=in_channels, out_channels=level_1_chnls)
-        # self.a_block2 = Conv3DBlock(in_channels=level_1_chnls, out_channels=level_2_chnls)
-        # self.a_block3 = Conv3DBlock(in_channels=level_2_chnls, out_channels=level_3_chnls, fix_depth=True)
-        # self.a_block4 = Conv3DBlock(in_channels=level_3_chnls, out_channels=level_4_chnls, fix_depth=True)
-
         # Bottleneck
         self.bottleNeck = Conv3DBlock(in_channels=previous_channels, out_channels=self.bottleneck_channel, bottleneck= True)
         previous_channels = self.bottleneck_channel
@@ -155,11 +141,6 @@ class UNet3D(nn.Module):
             fix_depth = self.depth_downsampling[-i-1] == self.depth_downsampling[-i-2]
             self.upconvs.append(UpConv3DBlock(in_channels=previous_channels, res_channels=channels, last_layer=last_layer, num_classes=num_classes, fix_depth=fix_depth))
             previous_channels = channels
-
-        # self.s_block4 = UpConv3DBlock(in_channels=bottleneck_channel, res_channels=level_4_chnls, fix_depth=True)
-        # self.s_block3 = UpConv3DBlock(in_channels=level_4_chnls, res_channels=level_3_chnls, fix_depth=True)
-        # self.s_block2 = UpConv3DBlock(in_channels=level_3_chnls, res_channels=level_2_chnls)
-        # self.s_block1 = UpConv3DBlock(in_channels=level_2_chnls, res_channels=level_1_chnls, num_classes=num_classes, last_layer=True)
 
     
     def forward(self, x):
@@ -178,29 +159,6 @@ class UNet3D(nn.Module):
             res = residual_out.pop()
             x = ups(x, res)
             print(f"Decoder: {x.shape}")
-
-        # #Analysis path forward feed
-        # out, residual_level1 = self.a_block1(input)
-        # # print(out.shape)
-        # out, residual_level2 = self.a_block2(out)
-        # # print(out.shape)
-        # out, residual_level3 = self.a_block3(out)
-        # # print(out.shape)
-        # out, residual_level4 = self.a_block4(out)
-        # # print(out.shape)
-
-        # out, _ = self.bottleNeck(out)
-        # # print(f"Bottlencek: {out.shape}")
-
-        # #Synthesis path forward feed
-        # out = self.s_block4(out, residual_level4)
-        # # print(out.shape)
-        # out = self.s_block3(out, residual_level3)
-        # # print(out.shape)
-        # out = self.s_block2(out, residual_level2)
-        # # print(out.shape)
-        # out = self.s_block1(out, residual_level1)
-        # # print(out.shape)
         return x
 
 
@@ -209,8 +167,6 @@ if __name__ == '__main__':
     import os
     import sys
 
-    # sys.path.append(os.path.dirname(os.path))
-    # sys.path(os.path.dirname(os.path.dirname((os.path.abspath(__file__)))))
     sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
     from config.config import Config
 
@@ -223,7 +179,7 @@ if __name__ == '__main__':
     # device = 'cpu'
     torch.cuda.empty_cache()
     model = model.to(device)
-    input_tensor = torch.randn(1, 1, 64, 512, 512).to(device)
+    input_tensor = torch.randn(1, 1, 32, 512, 512).to(device)
     output = model(input_tensor)
     print(f"Output shape: {output.shape}")
     # summary(model=model, input_size=(1, 128, 512, 512), batch_size=-1, device="cpu")
