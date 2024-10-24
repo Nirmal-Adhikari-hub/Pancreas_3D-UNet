@@ -14,8 +14,10 @@ class Config:
 
         # Model Architecture
         self.level_channels = [64, 128, 256, 512]  # Channel sizes for U-Net encoder layers
-        self.bottleneck_channel = 1024  # Bottleneck layer channel size
-        
+        self.depth_downsampling = [64, 32, 16, 16, 16] # Downsampling along z-axis with index 0 having input's depth value
+        self.spatial_downsampling = [256, 128, 64, 32]
+        self.bottleneck_channel = self.level_channels[-1] * 2  # Bottleneck layer channel size
+
         # Training Settings
         self.batch_size = int(os.getenv('BATCH_SIZE', 4))  # Batch size, can be passed via environment variables
         self.epochs = int(os.getenv('EPOCHS', 100))  # Number of epochs for training
@@ -24,6 +26,9 @@ class Config:
         self.patch_overlap = 16  # Overlap between patches along the depth axis
         self.mixed_precision = bool(int(os.getenv('MIXED_PRECISION', 1)))  # Mixed precision training (1=True, 0=False)
         self.optimizer = os.getenv('OPTIMIZER', 'adam')  # Optimizer type
+
+        # self.dataset_json = os.getenv('DATASET_JSON', 'D:/Nirmal/pancreas/Task07_Pancreas/Task07_Pancreas/dataset.json')
+        # self.dataset_path = os.getenv('DATASET_PATH', 'D:/Nirmal/pancreas/Task07_Pancreas/Task07_Pancreas')
         
         # Data paths (fixed for your project)
         self.preprocessed_dir = '/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed'
