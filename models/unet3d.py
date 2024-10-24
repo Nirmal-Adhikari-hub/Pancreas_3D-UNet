@@ -1,4 +1,5 @@
 from torch import nn
+import torch.amp
 from torchsummary import summary
 import torch
 import time
@@ -166,11 +167,24 @@ if __name__ == '__main__':
 
     import os
     import sys
+    import torch.cuda as cuda
+    from torch.cuda.amp import autocast, GradScaler
+    scaler = torch.GradScaler("cuda")
 
     sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
     from config.config import Config
 
     config = Config()
+
+    def print_memory_usage(device):
+        """Helper function to print memory usage stats."""
+        current_memory = cuda.memory_allocated(device)
+        max_memory = cuda.max_memory_allocated(device)
+        total_memory = cuda.get_device_properties(device).total_memory
+
+        print(f"Current GPU memory usage: {current_memory / (1024**3):.2f} GB")
+        print(f"Max GPU memory usage: {max_memory / (1024**3):.2f} GB")
+        print(f"Total GPU memory: {total_memory / (1024**3):.2f} GB")
 
     #Configurations according to the Xenopus kidney dataset
     model = UNet3D(config)
@@ -178,10 +192,27 @@ if __name__ == '__main__':
     device = 'cuda' if torch.cuda.is_available() else 'cpu'
     # device = 'cpu'
     torch.cuda.empty_cache()
+    if torch.cuda.device_count() > 1:
+        print(f"Using {torch.cuda.device_count()} GPUs for data parallelism")
+        model = nn.DataParallel(model)
     model = model.to(device)
-    input_tensor = torch.randn(1, 1, 32, 512, 512).to(device)
-    output = model(input_tensor)
-    print(f"Output shape: {output.shape}")
+    input_tensor = torch.randn(1, 1, 64, 512, 512).to(device)
+
+    try:
+        with torch.autocast(device_type=device):
+            output = model(input_tensor)
+
+        # Print the memory stats after model execution
+        print_memory_usage(device)
+
+        print(f"Output shape: {output.shape}")
+    except RuntimeError as e:
+        if 'out of memory' in str(e):
+            print(f"Caught out of memory error!")
+            print_memory_usage(device)
+        else:
+            raise e
+
     # summary(model=model, input_size=(1, 128, 512, 512), batch_size=-1, device="cpu")
     print("--- %s seconds ---" % (time.time() - start_time))
 
