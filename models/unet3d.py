@@ -220,7 +220,7 @@ if __name__ == '__main__':
     model = UNet3D(config)
     start_time = time.time()
     device = 'cuda' if torch.cuda.is_available() else 'cpu'
-    device = 'cpu'
+    # device = 'cpu'
     torch.cuda.empty_cache()
     model = model.to(device)
     input_tensor = torch.randn(1, 1, 64, 512, 512).to(device)
