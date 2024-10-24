@@ -196,7 +196,7 @@ if __name__ == '__main__':
         print(f"Using {torch.cuda.device_count()} GPUs for data parallelism")
         model = nn.DataParallel(model)
     model = model.to(device)
-    input_tensor = torch.randn(1, 1, 64, 512, 512).to(device)
+    input_tensor = torch.randn(1, 1, 48, 512, 512).to(device)
 
     try:
         with torch.autocast(device_type=device):
