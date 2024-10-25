@@ -5,7 +5,7 @@ from torch.utils.data import DataLoader, Dataset, DistributedSampler
 import numpy as np
 import nibabel as nib
 import torchio as tio
-
+from torchio import SubjectsLoader
 
 def load_npy_file(file_path):
     return np.load(file_path)
@@ -67,19 +67,29 @@ class PancreasPatchDataset(Dataset):
         image = torch.from_numpy(image).float().unsqueeze(0) # Add the channel dimension (1, 32, 512, 512)
         label = torch.from_numpy(label).long().unsqueeze(0) # Assuming labels are stores as integers
 
-        # Apply augmentations if it's an augmented sample and augmentations are defined
-        if augmentation_index != 0 and self.transform:
-            subject = tio.Subject(
+        # The datatype expected by the SubjectsLoader is tio type
+        subject = tio.Subject(
                 image=tio.ScalarImage(tensor=image), 
                 label=tio.LabelMap(tensor=label)
             )
-            transformed = self.transform(subject)
-            image, label = transformed.image.tensor, transformed.label.tensor
+        
+        if augmentation_index != 0 and self.transform:
+            subject = self.transform(subject)
 
-        image = image.float()
-        label = label.long()
+        # Apply augmentations if it's an augmented sample and augmentations are defined
+        # if augmentation_index != 0 and self.transform:
+        #     subject = tio.Subject(
+        #         image=tio.ScalarImage(tensor=image), 
+        #         label=tio.LabelMap(tensor=label)
+        #     )
+        #     transformed = self.transform(subject)
+        #     image, label = transformed.image.tensor, transformed.label.tensor
 
-        return image, label
+        # image = image.float()
+        # label = label.long()
+
+        # return image, label
+        return subject
 
 
 # Dataset class for Test scans (full NIfTI volumes)
@@ -140,7 +150,7 @@ def get_augmentation_transform():
     return tio.Compose([
         tio.RandomFlip(axes=(0, 1, 2), flip_probability=0.5),  # Random flips along x, y, and z axes
         tio.RandomAffine(scales=(0.9, 1.1), degrees=(0, 20), translation=(0, 10)),  # Random affine transformations
-        tio.RandomElasticDeformation(num_control_points=12, max_displacement=(2, 7, 7), locked_borders=2),  # Elastic deformation
+        tio.RandomElasticDeformation(num_control_points=12, max_displacement=(1, 7, 7), locked_borders=2),  # Elastic deformation
         tio.RandomGamma(log_gamma=(-0.3, 0.3), p=0.5),  # Random gamma correction (adjust exposure)
         tio.RandomBiasField(p=0.5),  # Bias field to simulate scanner intensity bias
         tio.RandomNoise(mean=0, std=(0, 0.25), p=0.5),  # Gaussian noise
@@ -164,7 +174,7 @@ def get_patch_dataloader(config, shuffle=True, num_workers=4, train=True):
     else:
         sampler = None
 
-    dataloader = DataLoader(dataset, 
+    dataloader = SubjectsLoader(dataset, 
                             batch_size=config.batch_size, 
                             shuffle=shuffle, 
                             num_workers=num_workers, 
@@ -206,15 +216,16 @@ if __name__ == '__main__':
     train_loader = get_patch_dataloader(config=config, train=True)
 
     # Check the first batch
-    for batch_idx, (images, labels) in enumerate(train_loader):
+    for batch_idx, batch in enumerate(train_loader):
         print(f"Batch {batch_idx+1}")
-        print(f"Images shape: {images.shape}")  # Expected shape: (batch_size, 1, z, x, y)
-        print(f"Labels shape: {labels.shape}")  # Expected shape: (batch_size, z, x, y) without channel dimension
         
-        # Print some basic statistics
+        images = batch['image']['data']  # Access the image tensor data
+        labels = batch['label']['data']  # Access the label tensor data
+        
+        print(f"Images shape: {images.shape}")
+        print(f"Labels shape: {labels.shape}")
         print(f"Image pixel range: [{images.min().item()}, {images.max().item()}]")
         print(f"Label unique values: {torch.unique(labels)}")
 
-        # Break after one batch to keep it short for testing
         if batch_idx == 4:
             break

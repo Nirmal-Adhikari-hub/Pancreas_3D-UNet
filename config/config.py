@@ -28,18 +28,18 @@ class Config:
         self.mixed_precision = bool(int(os.getenv('MIXED_PRECISION', 1)))  # Mixed precision training (1=True, 0=False)
         self.optimizer = os.getenv('OPTIMIZER', 'adam')  # Optimizer type
 
-        # self.dataset_json = os.getenv('DATASET_JSON', 'D:/Nirmal/pancreas/Task07_Pancreas/Task07_Pancreas/dataset.json')
-        # self.dataset_path = os.getenv('DATASET_PATH', 'D:/Nirmal/pancreas/Task07_Pancreas/Task07_Pancreas')
+        self.dataset_json = os.getenv('DATASET_JSON', 'D:/Nirmal/pancreas/Task07_Pancreas/Task07_Pancreas/dataset.json')
+        self.dataset_path = os.getenv('DATASET_PATH', 'D:/Nirmal/pancreas/Task07_Pancreas/Task07_Pancreas')
         
         # Data paths (fixed for your project)
-        # self.preprocessed_dir = 'D:/Nirmal/pancreas/Preprocessed/'
-        # self.train_dataset_json = os.getenv('TRAIN_DATASET_JSON', 'D:/Nirmal/pancreas/Preprocessed/train_dataset_preprocessed.json')
+        self.preprocessed_dir = 'D:/Nirmal/pancreas/Preprocessed/'
+        self.train_dataset_json = os.getenv('TRAIN_DATASET_JSON', 'D:/Nirmal/pancreas/Preprocessed/train_dataset_preprocessed.json')
 
-        self.preprocessed_dir = '/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed'
-        self.train_dataset_json = os.getenv('TRAIN_DATASET_JSON', '/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/train_dataset_preprocessed.json')
+        # self.preprocessed_dir = '/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed'
+        # self.train_dataset_json = os.getenv('TRAIN_DATASET_JSON', '/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/train_dataset_preprocessed.json')
         self.val_dataset_json = os.getenv('VAL_DATASET_JSON', '/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val_dataset_preprocessed.json')
         self.test_dataset_json = os.getenv('TEST_DATASET_JSON', '/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/test_dataset_preprocessed.json')
-        self.dataset_path = os.getenv('DATASET_PATH', '/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed')
+        # self.dataset_path = os.getenv('DATASET_PATH', '/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed')
         self.checkpoint_dir = os.getenv('CKPT_DIR', '/shared/home/xvoice/nirmal/exp/3d-unet/checkpoints')
         self.log_dir = os.getenv('LOG_DIR', '/shared/home/xvoice/nirmal/exp/3d-unet/log-common')
 
