@@ -1,6 +1,6 @@
 import torch
 import torch.optim as optim
-
+import torch.distributed as dist
 import sys
 import os
 
@@ -19,21 +19,34 @@ def main():
     config.batch_size = 4
     config.learning_rate = 1e-4
 
-    # Initialize model, optimizer, and DataLoaders
-    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    # Initialize distributed process group
+    dist.init_process_group(backend="nccl")  # 'nccl' backend is optimal for multi-GPU training
+
+    # Set device based on local rank
+    local_rank = int(os.getenv("LOCAL_RANK", 0))
+    torch.cuda.set_device(local_rank)
+    device = torch.device(f"cuda:{local_rank}")
+
+    # Initialize model and move to device
     model = UNet3D(config).to(device)
+    model = torch.nn.parallel.DistributedDataParallel(model, device_ids=[local_rank])
+
+    # Optimizer
     optimizer = optim.Adam(model.parameters(), lr=config.learning_rate)
 
-    # Loaders
-    train_loader = get_patch_dataloader(config=config, train=True)
-    val_loader = get_patch_dataloader(config=config, train=False)
+    # Dataloader setup for distributed training
+    train_loader = get_patch_dataloader(config=config, train=True, distributed=True)
+    val_loader = get_patch_dataloader(config=config, train=False, distributed=True)
 
     # Trainer setup
     trainer = Trainer(model, optimizer, train_loader, val_loader, config)
 
     # Start training
-    print("[Debug] Starting Training")
+    print("[Debug] Starting Training with Distributed Data Parallel")
     trainer.train()
+
+    # Cleanup
+    dist.destroy_process_group()
 
 if __name__ == '__main__':
     main()
