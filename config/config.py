@@ -32,11 +32,11 @@ class Config:
         # self.dataset_path = os.getenv('DATASET_PATH', 'D:/Nirmal/pancreas/Task07_Pancreas/Task07_Pancreas')
         
         # Data paths (fixed for your project)
-        self.preprocessed_dir = 'D:/Nirmal/pancreas/Preprocessed/'
-        self.train_dataset_json = os.getenv('TRAIN_DATASET_JSON', 'D:/Nirmal/pancreas/Preprocessed/train_dataset_preprocessed.json')
+        # self.preprocessed_dir = 'D:/Nirmal/pancreas/Preprocessed/'
+        # self.train_dataset_json = os.getenv('TRAIN_DATASET_JSON', 'D:/Nirmal/pancreas/Preprocessed/train_dataset_preprocessed.json')
 
-        # self.preprocessed_dir = '/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed'
-        # self.train_dataset_json = os.getenv('TRAIN_DATASET_JSON', '/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/train_dataset_preprocessed.json')
+        self.preprocessed_dir = '/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed'
+        self.train_dataset_json = os.getenv('TRAIN_DATASET_JSON', '/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/train_dataset_preprocessed.json')
         self.val_dataset_json = os.getenv('VAL_DATASET_JSON', '/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val_dataset_preprocessed.json')
         self.test_dataset_json = os.getenv('TEST_DATASET_JSON', '/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/test_dataset_preprocessed.json')
         self.dataset_path = os.getenv('DATASET_PATH', '/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed')
