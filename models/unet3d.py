@@ -18,7 +18,7 @@ class Conv3DBlock(nn.Module):
     :return -> Tensor
     """
 
-    def __init__(self, in_channels, out_channels, bottleneck = False, fix_depth=False) -> None:
+    def __init__(self, in_channels, out_channels, bottleneck = False, fix_depth=False, preserve_resolution=True) -> None:
         super(Conv3DBlock, self).__init__()
         self.conv1 = nn.Conv3d(in_channels= in_channels, out_channels=out_channels//2, kernel_size=(3,3,3), padding=1)
         self.bn1 = nn.BatchNorm3d(num_features=out_channels//2)
@@ -30,11 +30,18 @@ class Conv3DBlock(nn.Module):
         self.fix_depth = fix_depth  # To stop downsampling along the depth axis
 
         if not bottleneck:
-            # Adjust pooling kernel to avoid depth downsampling after the 4th layer
-            if fix_depth:
-                self.pooling = nn.MaxPool3d(kernel_size=(1, 2, 2), stride=(1, 2, 2))  # No downsampling along depth
+            if preserve_resolution and fix_depth:
+                # No downsampling in any direction
+                self.pooling = nn.Identity()  # No downsampling
+            elif preserve_resolution:
+                # No downsampling along x and y, but downsampling along z
+                self.pooling = nn.MaxPool3d(kernel_size=(2, 1, 1), stride=(2, 1, 1))
+            elif fix_depth:
+                # No downsampling in z, but downsampling in x and y
+                self.pooling = nn.MaxPool3d(kernel_size=(1, 2, 2), stride=(1, 2, 2))
             else:
-                self.pooling = nn.MaxPool3d(kernel_size=(2, 2, 2), stride=2)  # Normal downsampling otherwise
+                # Normal downsampling in all directions
+                self.pooling = nn.MaxPool3d(kernel_size=(2, 2, 2), stride=2)
 
 
     
@@ -65,14 +72,21 @@ class UpConv3DBlock(nn.Module):
     :return -> Tensor
     """
 
-    def __init__(self, in_channels, res_channels=0, last_layer=False, num_classes=None, fix_depth=False) -> None:
+    def __init__(self, in_channels, res_channels=0, last_layer=False, num_classes=None, fix_depth=False, preserve_resolution=False) -> None:
         super(UpConv3DBlock, self).__init__()
         assert (last_layer==False and num_classes==None) or (last_layer==True and num_classes!=None), 'Invalid arguments'
 
-        # Up-convolution without depth upsampling if fix_depth is True
-        if fix_depth:
+        if preserve_resolution and fix_depth:
+            # No upsampling in any direction
+            self.upconv1 = nn.Identity()
+        elif preserve_resolution:
+            # Upsample only in z
+            self.upconv1 = nn.ConvTranspose3d(in_channels=in_channels, out_channels=in_channels, kernel_size=(2, 1, 1), stride=(2, 1, 1))
+        elif fix_depth:
+            # Upsample only in x and y, not z
             self.upconv1 = nn.ConvTranspose3d(in_channels=in_channels, out_channels=in_channels, kernel_size=(1, 2, 2), stride=(1, 2, 2))
         else:
+            # Normal upsampling in all directions
             self.upconv1 = nn.ConvTranspose3d(in_channels=in_channels, out_channels=in_channels, kernel_size=(2, 2, 2), stride=2)
 
         self.relu = nn.ReLU()
@@ -126,7 +140,8 @@ class UNet3D(nn.Module):
         previous_channels = self.in_channels
         for i, channels in enumerate(self.level_channels):
             fix_depth = self.depth_downsampling[i] == self.depth_downsampling[i+1]
-            self.down_convs.append(Conv3DBlock(previous_channels, channels, fix_depth=fix_depth))
+            preserve_resolution = self.spatial_downsampling[i] == self.spatial_downsampling[i + 1]
+            self.down_convs.append(Conv3DBlock(previous_channels, channels, fix_depth=fix_depth, preserve_resolution=preserve_resolution))
             previous_channels = channels
 
         # Bottleneck
@@ -140,7 +155,8 @@ class UNet3D(nn.Module):
             num_classes = self.num_classes if last_layer else None
             # print(f"Last layer: {last_layer}, Num_classes: {num_classes}")
             fix_depth = self.depth_downsampling[-i-1] == self.depth_downsampling[-i-2]
-            self.upconvs.append(UpConv3DBlock(in_channels=previous_channels, res_channels=channels, last_layer=last_layer, num_classes=num_classes, fix_depth=fix_depth))
+            preserve_resolution = self.spatial_downsampling[-i - 1] == self.spatial_downsampling[-i - 2]
+            self.upconvs.append(UpConv3DBlock(in_channels=previous_channels, res_channels=channels, last_layer=last_layer, num_classes=num_classes, fix_depth=fix_depth, preserve_resolution=preserve_resolution))
             previous_channels = channels
 
     
@@ -196,7 +212,7 @@ if __name__ == '__main__':
         print(f"Using {torch.cuda.device_count()} GPUs for data parallelism")
         model = nn.DataParallel(model)
     model = model.to(device)
-    input_tensor = torch.randn(1, 1, 64, 512, 512).to(device)
+    input_tensor = torch.randn(1, 1, 4, 512, 512).to(device)
 
     try:
         with torch.autocast(device_type=device):

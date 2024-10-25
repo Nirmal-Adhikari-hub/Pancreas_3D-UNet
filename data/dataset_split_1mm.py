@@ -29,7 +29,7 @@ sys.stderr = TeeLogger(log_filename)
 
 # Add parent directory to the Python path for module imports
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from utils.distributed import get_patch_slices, pad_if_needed
+from utils.patch_slicing import get_patch_slices, pad_if_needed
 
 
 class PreprocessPancreasDataset:

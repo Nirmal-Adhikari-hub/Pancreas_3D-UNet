@@ -1,212 +1,220 @@
 import os
-import torch
-import numpy as np
 import json
-from torch.utils.data import Dataset, DataLoader
-import torch.distributed as dist
-from monai.transforms import (
-    RandFlip, RandRotate90, RandScaleIntensity, RandZoom, Compose, RandGaussianNoise
-    # RandFlip, RandRotate90, RandScaleIntensity, RandZoom, Compose, RandGaussianNoise, RandElasticDeformation
-)
-import nibabel as nib  # To load the NIfTI files
-import sys
-import logging
-
-# Logger class to log stdout and stderr to both terminal and file
-class TeeLogger:
-    def __init__(self, log_file):
-        self.terminal = sys.stdout
-        self.log_file = open(log_file, "w")
-
-    def write(self, message):
-        self.terminal.write(message)
-        self.log_file.write(message)
-        self.log_file.flush()
-
-    def flush(self):
-        self.terminal.flush()
-        self.log_file.flush()
-
-# Set up the log file and redirect stdout/stderr
-log_filename = "logs.log"
-sys.stdout = TeeLogger(log_filename)
-sys.stderr = TeeLogger(log_filename)
-
-# Add the parent directory to the Python path for module imports
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from utils.distributed import get_patch_slices, pad_if_needed
+import torch
+from torch.utils.data import DataLoader, Dataset, DistributedSampler
+import numpy as np
+import nibabel as nib
+import torchio as tio
 
 
-class PancreasDataset(Dataset):
-    def __init__(self, config, train=True):
+def load_npy_file(file_path):
+    return np.load(file_path)
+
+
+def load_nifti_file(file_path):
+    nifti_img = nib.load(file_path)
+    image = np.transpose(nifti_img.get_fdata(), (2, 0, 1)) # Convert to (z, x, y)
+    return image, nifti_img.affine
+
+
+# Dataset class for Train/Val patches
+class PancreasPatchDataset(Dataset):
+    def __init__(self, config, transform=None, train=True):
         """
-        Pancreas Dataset for loading and augmenting 3D CT scans dynamically.
-        :param config: Configuration object containing paths, batch_size, etc.
-        :param train: Boolean to indicate training or validation mode.
+        Custom Dataset for pancreas segmentation patches.
+        :param dataset_json: Path to the JSON file that contains the list of .npy files (image/label paths).
+        :param base_dir: Base directory to which the relative paths are appended.
+        :param transform: Optional augmentations to apply.
+        :param augment: Whether to apply augmentations during training.
         """
         self.config = config
-        self.train = train
+        self.dataset_json = config.train_dataset_json if train else config.val_dataset_json
+        self.base_dir = config.preprocessed_dir or os.path.dirname(self.dataset_json)
+        with open(self.dataset_json, 'r') as f:
+            self.data_info = json.load(f)  # Load .npy paths and metadata
 
-        # Load dataset info (dataset.json)
-        with open(config.dataset_json, 'r') as f:
-            dataset_info = json.load(f)
+        self.phase = "train" if train else "val"
+        
+        # Extract list of image/label pairs from JSON (for training and validation)
+        self.data_list = self.data_info.get(self.phase, [])
+        
+        self.transform = transform
+        self.augmented_samples = config.augmented_samples
 
-        self.data_info = dataset_info['training'] if train else dataset_info['test']
+    def __len__(self):
+        return len(self.data_list) * self.augmented_samples
+    
+    def __getitem__(self, index):
+        """
+        Load a patch and its corresponding segmentation mask.
+        The first sample is the original, and subsequent ones are augmented, if config.augmented_samples > 1
+        """
+        # Adjust the index based on the augmented samples
+        original_index = index // self.augmented_samples
+        augmentation_index = index % self.augmented_samples
 
-        # Augmentation configuration based on number of augmented samples
-        self.augmented_samples = config.augmented_samples  # New parameter to control augmented samples
+        item_info = self.data_list[original_index]
 
-        if self.train:
-            # Augmentations based on best practices in medical imaging:
-            self.transforms = Compose([
-                RandFlip(spatial_axis=[1], prob=0.5),  # Flip along x-axis
-                RandFlip(spatial_axis=[2], prob=0.5),  # Flip along y-axis
-                RandFlip(spatial_axis=[0], prob=0.5),  # Flip along z-axis
-                # RandRotate90(prob=0.5, max_k=3, spatial_axes=(1, 2)),  # Random 90-degree rotation on XY plane
-                # RandScaleIntensity(factors=0.1, prob=0.5),  # Random intensity scaling
-                # RandZoom(min_zoom=0.9, max_zoom=1.1, prob=0.5),  # Random zooming
-                # RandGaussianNoise(prob=0.2),  # Adding Gaussian noise
-                # RandElasticDeformation(prob=0.3, sigma_range=(5, 10))  # Elastic deformation for tissue-like distortion
-            ]) if self.augmented_samples > 1 else None
-        else:
-            self.transforms = None  # No augmentation for validation or test data
+        # Construct the full path by combining base_dir and relative paths
+        image_path = os.path.join(self.base_dir, item_info["image"])
+        label_path = os.path.join(self.base_dir, item_info["label"])
+
+        # Load the image and label from .npy files
+        image = load_npy_file(image_path)
+        label = load_npy_file(label_path)
+
+        # Convert to torch tensor
+        image = torch.from_numpy(image).float().unsqueeze(0) # Add the channel dimension (1, 32, 512, 512)
+        label = torch.from_numpy(label).long().unsqueeze(0) # Assuming labels are stores as integers
+
+        # Apply augmentations if it's an augmented sample and augmentations are defined
+        if augmentation_index != 0 and self.transform:
+            subject = tio.Subject(
+                image=tio.ScalarImage(tensor=image), 
+                label=tio.LabelMap(tensor=label)
+            )
+            transformed = self.transform(subject)
+            image, label = transformed.image.tensor, transformed.label.tensor
+
+        image = image.float()
+        label = label.long()
+
+        return image, label
+
+
+# Dataset class for Test scans (full NIfTI volumes)
+class PancreasTestDataset(Dataset):
+    def __init__(self, config, transform=None):
+        """
+        Custom Dataser for full CT scans (test set).
+        :param dataset_json: Path to JSON file containing paths to .nii.gz files
+        :para base_dir: Base directory for relative paths 
+        :param transform: Optional transforms (used less frequently for test data).
+        """
+        self.config = config
+        self.dataset_json = config.test_dataset_json
+        self.base_dir = config.preprocessed_dir or os.path.dirname(self.dataset_json)
+        with open(self.dataset_json, 'r') as f:
+            self.data_info = json.load(f)["test"] # Load the test set information
+
+        self.transform = transform
+
 
     def __len__(self):
         return len(self.data_info)
-
+    
     def __getitem__(self, idx):
-        # Get file paths for the image and the corresponding label
-        img_path = os.path.join(self.config.dataset_path, self.data_info[idx]['image'])
-        label_path = os.path.join(self.config.dataset_path, self.data_info[idx]['label'])
+        # Get the item info
+        item_info = self.data_info[idx]
 
-        # Load the NIfTI files (3D medical imaging format)
-        img_nifti = nib.load(img_path)
-        label_nifti = nib.load(label_path)
+        # Construct full paths for images and labels
+        image_path = os.path.join(self.base_dir, item_info["image"])
+        label_path = os.path.join(self.base_dir, item_info["label"])
 
-        # Convert to numpy arrays and ensure correct axes order
-        image = np.transpose(np.array(img_nifti.get_fdata(), dtype=np.float32), (2, 0, 1))  # Shape: (D, H, W)
-        label = np.transpose(np.array(label_nifti.get_fdata(), dtype=np.uint8), (2, 0, 1))  # Shape: (D, H, W)
+        # Load the image and label from NIfTI files
+        image, affine = load_nifti_file(image_path)
+        label, _ = load_nifti_file(label_path)
 
-        # Apply patch extraction based on the configuration settings
-        depth, height, width = self.config.input_size
-        patches, labels = self.get_patches(image, label, depth, height, width)
+        # Convert to torch tensor (Optional: add channel dim if needed)
+        image = torch.from_numpy(image).float().unsqueeze(0) # Add channel dimension
+        label = torch.from_numpy(label).long().unsqueeze(0)
 
-        print(f"Number of patches: {len(patches)}, \n Number of Labels: {len(labels)}")
+        # Apply transforms if any
+        if self.transform:
+            subject = tio.Subject(
+                image=tio.ScalarImage(tensor=image), 
+                label=tio.LabelMap(tensor=label)
+            )
+            transformed = self.transform(subject)
+            image, label = transformed.image.tensor, transformed.label.tensor
 
-        augmented_patches, augmented_labels = [], []
+        return image, label
+    
 
-        if self.train:
-            for patch, label_patch in zip(patches, labels):
-                # Always add the original scan first
-                augmented_patches.append(torch.tensor(patch))  # Original scan
-                augmented_labels.append(torch.tensor(label_patch))  # Convert original label to tensor
-                
-                # Generate the required number of augmented samples
-                for _ in range(self.config.augmented_samples - 1):
-                    # print(f"Original patch shape: {patch.shape}")
-                    if self.transforms:                        
-                        # Apply augmentation (operates on NumPy arrays)
-                        aug_patch = self.transforms(patch)
+# Augmentation and DataLoader Functions
 
-                        # Assert the shape after augmentation
-                        assert aug_patch.shape == (32, 512, 512), f"Augmented patch shape mismatch: expected (32, 512, 512), got {aug_patch.shape}"
-
-                        
-                        # Convert augmented patch back to tensor
-                        aug_patch_tensor = torch.from_numpy(aug_patch)
-                        # print(f"Augmented patch shape: {aug_patch_tensor.shape}")
-                        
-                        # Append the augmented patch and the corresponding label tensor
-                        augmented_patches.append(aug_patch_tensor)
-                        augmented_labels.append(torch.tensor(label_patch))  # Convert label to tensor (consistent with patch)
-
-            # Stack the augmented patches and labels
-            print(f"After Augmentation: \n Patches - {torch.stack(augmented_patches).shape}, Labels -> {torch.stack(augmented_labels).shape}")
-
-            return torch.stack(augmented_patches), torch.stack(augmented_labels)
-        else:
-            return torch.stack(patches), torch.stack(labels)
+def get_augmentation_transform():
+    """
+    Returns a composed transform that applies various augmentations to the medical images.
+    """
+    return tio.Compose([
+        tio.RandomFlip(axes=(0, 1, 2), flip_probability=0.5),  # Random flips along x, y, and z axes
+        tio.RandomAffine(scales=(0.9, 1.1), degrees=(0, 20), translation=(0, 10)),  # Random affine transformations
+        tio.RandomElasticDeformation(num_control_points=12, max_displacement=(2, 7, 7), locked_borders=2),  # Elastic deformation
+        tio.RandomGamma(log_gamma=(-0.3, 0.3), p=0.5),  # Random gamma correction (adjust exposure)
+        tio.RandomBiasField(p=0.5),  # Bias field to simulate scanner intensity bias
+        tio.RandomNoise(mean=0, std=(0, 0.25), p=0.5),  # Gaussian noise
+        tio.RescaleIntensity(out_min_max=(0, 1), p=0.5)  # Rescale intensity (replaces contrast adjustment)
+    ])
 
 
-    def get_patches(self, image, label, depth, height, width):
-        """
-        Extract overlapping patches from 3D volume and corresponding labels.
-        :param image: 3D numpy array (CT scan)
-        :param label: 3D numpy array (Segmentation mask)
-        :return: Patches from image and corresponding label patches
-        """
-        image = pad_if_needed(image, depth)
-        label = pad_if_needed(label, depth)
-        patch_slices = get_patch_slices(image.shape, depth, self.config.patch_overlap)
-        patches, labels = [], []
+# Dataloader functions for training/validation patches
+def get_patch_dataloader(config, shuffle=True, num_workers=4, train=True):
+    """
+    Create Dataloader for pancreas segmentation patches (train/val).
+    """
+    augment_transform = get_augmentation_transform() if config.augmented_samples > 1 else None
+    dataset = PancreasPatchDataset(config=config,
+                                   transform=augment_transform,
+                                   train=train)
 
-        for sl in patch_slices:
-            patches.append(image[sl].copy())
-            labels.append(label[sl].copy())
-
-        return patches, labels
-
-
-# Dataloader function to return DataLoader objects for training and validation
-def get_dataloaders(config):
-    train_dataset = PancreasDataset(config, train=True)
-    val_dataset = PancreasDataset(config, train=False)
-
-    # Get the distributed rank and world size (for distributed training)
-    rank = config.get_local_rank()
-    world_size = config.get_world_size()
-    if torch.distributed.get_rank() == 0:  # Ensure only the main process logs
-        print(f"World Size: {world_size} \n Local Rank: {rank}")
-
-    # For distributed data loading
-    if world_size > 1:
-        train_sampler = torch.utils.data.distributed.DistributedSampler(train_dataset, num_replicas=world_size, rank=rank)
-        val_sampler = torch.utils.data.distributed.DistributedSampler(val_dataset, num_replicas=world_size, rank=rank)
+    if config.distributed:
+        sampler = DistributedSampler(dataset)
+        shuffle = False # Shuffling is handled by the sampler
     else:
-        train_sampler = torch.utils.data.RandomSampler(train_dataset)
-        val_sampler = torch.utils.data.SequentialSampler(val_dataset)
+        sampler = None
 
-    # Train and validation dataloaders
-    train_loader = DataLoader(
-        train_dataset, batch_size=config.batch_size, sampler=train_sampler, num_workers=4, pin_memory=True
-    )
-
-    val_loader = DataLoader(
-        val_dataset, batch_size=config.batch_size, sampler=val_sampler, num_workers=4, pin_memory=True
-    )
-
-    return train_loader, val_loader
+    dataloader = DataLoader(dataset, 
+                            batch_size=config.batch_size, 
+                            shuffle=shuffle, 
+                            num_workers=num_workers, 
+                            pin_memory=True, 
+                            sampler=sampler)
+    return dataloader
 
 
-if __name__ == "__main__":
+# DataLoader function for test scans
+def get_test_dataloader(config,transform=None, num_workers=2):
+    """
+    Create DataLoader for pancreas segmentation test scans (full NifTI volumes).
+    """
+    dataset = PancreasTestDataset(config=config, 
+                                  transform=transform)
+    dataloader = DataLoader(dataset, 
+                            batch_size=config.test_batch_size, 
+                            shuffle=False, 
+                            num_workers=num_workers, 
+                            pin_memory=True)
+    return dataloader
+
+
+
+if __name__ == '__main__':
+    import sys
+    import os
+
+    # sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
     sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-    from config.config import Config
-    from models.unet3d import UNet3D
-    from data.dataloader import get_dataloaders
-
+    from config.config import Config  # Assuming config.py is in the right place
+    
+    # Initialize the configuration
     config = Config()
+    config.augmented_samples = 3  # Set the number of augmented samples to 3 for testing
+    config.batch_size = 2  # Testing with a small batch size
 
-    config.init_distributed()
+    # Get the DataLoader for the training phase
+    train_loader = get_patch_dataloader(config=config, train=True)
 
-    # Set the correct local rank for each process
-    local_rank = int(os.getenv("LOCAL_RANK", 0))
-    torch.cuda.set_device(local_rank)
+    # Check the first batch
+    for batch_idx, (images, labels) in enumerate(train_loader):
+        print(f"Batch {batch_idx+1}")
+        print(f"Images shape: {images.shape}")  # Expected shape: (batch_size, 1, z, x, y)
+        print(f"Labels shape: {labels.shape}")  # Expected shape: (batch_size, z, x, y) without channel dimension
+        
+        # Print some basic statistics
+        print(f"Image pixel range: [{images.min().item()}, {images.max().item()}]")
+        print(f"Label unique values: {torch.unique(labels)}")
 
-    print(f"Using {config.num_gpus} GPUs on {config.device}")
-
-    print(f"DIST.IS_AVAILABLE(): {dist.is_available()} DIST.IS_INITIALIZED(): {dist.is_initialized()}")
-
-    # Initialize dataloaders
-    train_loader, val_loader = get_dataloaders(config)
-
-    # Initialize the model, DDP wraps it around
-    model = UNet3D(config.in_channels, config.num_classes).to(config.device)
-    if config.world_size > 1:
-        model = torch.nn.parallel.DistributedDataParallel(model, device_ids=[local_rank])
-
-
-    # Testing with one batch from the train_loader
-    for batch_data, batch_labels in train_loader:
-        print(f"Batch data shape: {batch_data.shape}")  # Expected shape: (Batch, Patches, C, D, H, W)
-        print(f"Batch labels shape: {batch_labels.shape}")  # Expected shape: (Batch, Patches, D, H, W)
-        break  # Just run one batch to check
+        # Break after one batch to keep it short for testing
+        if batch_idx == 4:
+            break

@@ -15,11 +15,12 @@ class Config:
         # Model Architecture
         self.level_channels = [64, 128, 256]  # Channel sizes for U-Net encoder layers
         self.depth_downsampling = [32, 16, 16, 16] # Downsampling along z-axis with index 0 having input's depth value
-        self.spatial_downsampling = [256, 128, 64, 32]
+        self.spatial_downsampling = [512, 256, 128, 128] # elements equal the number of layer
         self.bottleneck_channel = self.level_channels[-1] * 2  # Bottleneck layer channel size
 
         # Training Settings
         self.batch_size = int(os.getenv('BATCH_SIZE', 4))  # Batch size, can be passed via environment variables
+        self.test_batch_size = int(os.getenv('BATCH_SIZE', 1))  # Batch size, can be passed via environment variables
         self.epochs = int(os.getenv('EPOCHS', 100))  # Number of epochs for training
         self.learning_rate = float(os.getenv('LR', 1e-3))  # Learning rate
         self.patch_size = 32  # Patch depth for 3D data
@@ -31,10 +32,14 @@ class Config:
         # self.dataset_path = os.getenv('DATASET_PATH', 'D:/Nirmal/pancreas/Task07_Pancreas/Task07_Pancreas')
         
         # Data paths (fixed for your project)
-        self.preprocessed_dir = '/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed'
-        
-        self.dataset_json = os.getenv('DATASET_JSON', '/shared/home/xvoice/nirmal/data/Task07_Pancreas/dataset.json')
-        self.dataset_path = os.getenv('DATASET_PATH', '/shared/home/xvoice/nirmal/data/Task07_Pancreas')
+        self.preprocessed_dir = 'D:/Nirmal/pancreas/Preprocessed/'
+        self.train_dataset_json = os.getenv('TRAIN_DATASET_JSON', 'D:/Nirmal/pancreas/Preprocessed/train_dataset_preprocessed.json')
+
+        # self.preprocessed_dir = '/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed'
+        # self.train_dataset_json = os.getenv('TRAIN_DATASET_JSON', '/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/train_dataset_preprocessed.json')
+        self.val_dataset_json = os.getenv('VAL_DATASET_JSON', '/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/val_dataset_preprocessed.json')
+        self.test_dataset_json = os.getenv('TEST_DATASET_JSON', '/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed/test_dataset_preprocessed.json')
+        self.dataset_path = os.getenv('DATASET_PATH', '/shared/home/xvoice/nirmal/data/Task07_Pancreas/Preprocessed')
         self.checkpoint_dir = os.getenv('CKPT_DIR', '/shared/home/xvoice/nirmal/exp/3d-unet/checkpoints')
         self.log_dir = os.getenv('LOG_DIR', '/shared/home/xvoice/nirmal/exp/3d-unet/log-common')
 
